@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 主界面fragment -->
+    <item name="home_content" type="id" />
+    <!--RadioGroup-->
+    <item name="rg_main" type="id" />
+    <!--首页-->
+    <item name="rb_home" type="id" />
+    <!--订单-->
+    <item name="rb_orders" type="id" />
+    <!--我的-->
+    <item name="rb_mine" type="id" />
+
+    <!--titlebar-->
+    <item name="title_bar" type="id" />
+    <!--titlebar left button-->
+    <item name="title_bar_left" type="id" />
+    <!--titlebar right button-->
+    <item name="title_bar_right" type="id" />
+    <!--titlebar text-->
+    <item name="title_bar_text" type="id" />
+    <item name="title_bar_right_second" type="id" />
+
+    <!--主页-->
+    <item name="tv_fix_iphone" type="id" />
+    <item name="tv_viewpager_desc" type="id" />
+    <item name="ll_dotLayout" type="id" />
+    <item name="v_dot1" type="id" />
+    <item name="ll_fix_iphone" type="id" />
+    <item name="v_dot2" type="id" />
+    <item name="autoScrollViewPager" type="id" />
+    <!--修小米-->
+    <item name="tv_fix_xiaomi" type="id" />
+    <item name="ll_fix_xiaomi" type="id" />
+    <!--修锁-->
+    <item name="tv_fix_lock" type="id" />
+    <item name="ll_fix_lock" type="id" />
+    <!--手机回收-->
+    <item name="tv_recycle_phone" type="id" />
+    <item name="ll_recycle_phone" type="id" />
+
+
+    <!--登录注册页面-->
+    <!--上面的RadioGroup-->
+    <item name="rg_login_regist" type="id" />
+    <!--登录RB-->
+    <item name="rb_login" type="id" />
+    <!--注册RB-->
+    <item name="rb_regist" type="id" />
+    <!--登录的VViewPager-->
+    <item name="login_regist_content" type="id" />
+
+    <!--登录界面Pager-->
+    <!--填写手机号-->
+    <item name="et_phonenumber" type="id" />
+    <!--填写密码-->
+    <item name="et_password" type="id" />
+    <!--忘记密码-->
+    <item name="tv_forgot_password" type="id" />
+    <!--立即登录-->
+    <item name="tv_login_instantly" type="id" />
+    <!--显示密码-->
+    <item name="tv_show_password" type="id" />
+
+
+    <!--注册界面Pager-->
+    <!--验证码-->
+    <item name="et_authcode" type="id" />
+    <!--获取验证码button-->
+    <item name="btn_getauthcode" type="id" />
+    <item name="tv_reset" type="id" />
+    <!--去注册-->
+    <item name="tv_to_go_regist" type="id" />
+
+    <!--修神资料页面-->
+    <!--顶部图片-->
+    <item name="iv_top_image" type="id" />
+    <!--修神姓名-->
+    <item name="tv_fixer_info_name" type="id" />
+    <!--修神实名认证-->
+    <item name="iv_certification" type="id"/>
+    <!--修龄-->
+    <item name="tv_fixer_info_ages" type="id" />
+    <!--修神性别-->
+    <item name="tv_fixer_info_sex" type="id"/>
+    <!--修神联系方式-->
+    <item name="tv_fixer_info_phone" type="id"/>
+    <!--联系人信息-->
+    <item name="tv_contacts_info" type="id" />
+    <!--修神头像-->
+    <item name="iv_fixer_info_photo" type="id" />
+    <!--修神精通-->
+    <item name="tv_fixer_info_master" type="id" />
+    <!--技术认证图片-->
+    <item name="tv_tech_null" type="id" />
+    <item name="iv_tech_photo1" type="id" />
+    <item name="iv_tech_photo2" type="id" />
+    <item name="iv_tech_photo3" type="id" />
+
+    <!--编辑精通技能页面-->
+    <!--填写精通技能-->
+    <item name="et_fixer_desc" type="id"/>
+    <!--提交-->
+    <item name="tv_submit_fixer_desc" type="id"/>
+
+
+    <!--个人中心-->
+    <!-- 用户未登录时显示 -->
+    <item name="rl_login" type="id" />
+    <!-- 用户登录后显示 -->
+    <item name="rl_personal_desc" type="id" />
+    <!-- 用户账号 -->
+    <item name="tv_personal_phone" type="id" />
+    <!-- 常用地址 -->
+    <item name="rl_address" type="id" />
+    <item name="rl_my_comment" type="id" />
+    <item name="rl_my_customer" type="id" />
+    <item name="rl_my_shop" type="id" />
+    <!-- 我的修神 -->
+    <item name="rl_my_fixer" type="id" />
+    <!-- 告诉朋友 -->
+    <item name="rl_share" type="id" />
+    <!-- 给修神马好评 -->
+    <item name="rl_rating_xsm" type="id" />
+    <!-- 更多设置 -->
+    <item name="rl_more_setting" type="id" />
+    <item name="rl_user_feedback" type="id" />
+
+    <!--订单列表-->
+    <!--订单类型-->
+    <item name="ll_order_type" type="id"/>
+    <item name="tv_go_store_order" type="id" />
+    <item name="tv_mail_fix_order" type="id" />
+    <item name="tv_on_site_order" type="id" />
+    <item name="lv_order_list" type="id" />
+    <item name="rl_no_order" type="id"/>
+    <item name="rl_order_login" type="id"/>
+    <item name="tv_not_login" type="id"/>
+    <item name="btn_login" type="id"/>
+    <!-- 订单项 -->
+    <!-- 订单项图片 -->
+    <item name="iv_order_item_picture" type="id" />
+    <!-- 订单项描述 -->
+    <item name="tv_order_item_name" type="id" />
+    <!-- 订单项总价 -->
+    <item name="tv_order_item_price" type="id" />
+    <!-- 订单项状态 -->
+    <item name="tv_order_item_status" type="id" />
+    <!--订单项完成后状态-->
+    <item name="tv_order_item_checkstatus" type="id" />
+    <!--订单详情-->
+    <!--RadioGroup-->
+    <item name="rg_order_detail_selector" type="id" />
+    <!--RB-->
+    <item name="rb_order_status" type="id" />
+    <item name="rb_order_detail" type="id" />
+    <!--ViewPager-->
+    <item name="order_detail_content" type="id" />
+    <!--订单详情-->
+    <item name="ll_order_status_first" type="id" />
+    <item name="tv_order_id" type="id" />
+    <item name="ll_order_id" type="id" />
+    <item name="tv_ordered_success" type="id" />
+    <item name="tv_ordered_success_time" type="id" />
+    <item name="ll_waiting_confirm" type="id" />
+    <item name="tv_waiting_confirm_time" type="id" />
+    <item name="tv_on_the_way_time" type="id" />
+    <item name="ll_fix_finished" type="id" />
+    <item name="tv_fix_finished_time" type="id" />
+    <item name="tv_fixer_arrive" type="id" />
+    <item name="tv_fixer_arrive_time" type="id" />
+    <item name="tv_fixer_arrive_2" type="id" />
+    <item name="tv_fix_finished2" type="id" />
+    <item name="tv_waiting_comment_2" type="id" />
+    <item name="iv_order_status_forth" type="id" />
+    <item name="iv_order_status_fifth" type="id" />
+    <item name="iv_order_status_third" type="id" />
+    <item name="tv_on_the_way_2" type="id" />
+    <item name="tv_waiting_confirm_2" type="id" />
+    <item name="iv_order_status_second" type="id" />
+    <item name="tv_ordered_success_2" type="id" />
+    <item name="iv_order_status_first" type="id" />
+    <item name="rl_order_status" type="id" />
+    <item name="tv_go_comment" type="id" />
+    <item name="ll_on_the_way" type="id" />
+
+
+    <!-- 附近的修神列表 -->
+    <!-- 修神列表 -->
+    <item name="lv_nearby_fixer_list" type="id" />
+    <!--离我最近-->
+    <item name="tv_sort_by_location" type="id" />
+    <!--修理最多-->
+    <item name="tv_sort_by_number" type="id" />
+    <!--评价最高-->
+    <item name="tv_sort_by_comment" type="id" />
+    <!-- 当前位置 -->
+    <item name="tv_current_location" type="id" />
+    <!--刷新位置-->
+    <item name="iv_refresh_location" type="id" />
+    <!-- 修神项 -->
+    <!-- 修神项标题 -->
+    <item name="tv_fixer_item_title" type="id" />
+    <!-- 距离 -->
+    <item name="tv_fixer_item_distance" type="id" />
+    <!-- 修神图片 -->
+    <item name="iv_fixer_item_picture" type="id" />
+    <!-- 修神姓名 -->
+    <item name="tv_fixer_item_name" type="id" />
+    <!-- 修神描述 -->
+    <item name="tv_fixer_item_desc" type="id" />
+    <!-- 已修手机 -->
+    <item name="tv_fixer_item_number" type="id" />
+    <!-- 评星 -->
+    <item name="rb_fixer_item_comment_star" type="id" />
+
+
+    <!--开店-->
+    <item name="tv_go_open_shop" type="id" />
+    <item name="tv_my_service_type" type="id" />
+    <item name="tv_my_fix_brand" type="id" />
+    <item name="tv_my_fix_category" type="id" />
+    <item name="tv_service_provided" type="id" />
+    <item name="tv_shop_name" type="id" />
+    <item name="tv_shop_address" type="id" />
+    <item name="ll_fixer_address_detail" type="id"/>
+    <item name="tv_fixer_name" type="id"/>
+    <item name="tv_fixer_gender" type="id"/>
+    <item name="tv_fixer_phone" type="id"/>
+    <item name="tv_fixer_address" type="id"/>
+    <item name="gv_shop_ads" type="id" />
+    <item name="gv_extra_service" type="id" />
+    <item name="et_shop_name" type="id" />
+    <item name="tv_shop_verify" type="id" />
+    <item name="btn_confirm_name" type="id" />
+
+    <!--XListView-->
+    <item name="rl_footer_content" type="id" />
+    <item name="tv_footer_hint_textview" type="id" />
+    <item name="pb_footer_progressbar" type="id" />
+    <item name="rl_header_content" type="id" />
+    <item name="ll_header_text" type="id" />
+    <item name="tv_header_hint_textview" type="id" />
+    <item name="tv_header_time" type="id" />
+    <item name="iv_header_arrow" type="id" />
+    <item name="pb_header_progressbar" type="id" />
+    <item name="iv_footer_arrow" type="id" />
+
+    <!--webview-->
+    <item name="banner_webview" type="id" />
+
+    <!--无网络占位图-->
+    <item name="rl_no_network" type="id" />
+
+    <!--增加修神地址页面-->
+    <!--填写姓名-->
+    <item name="et_fill_name" type="id" />
+    <item name="et_id_number" type="id" />
+    <item name="et_fixed_year" type="id" />
+    <!--选择性别的RadioGroup-->
+    <item name="rg_select_gender" type="id" />
+    <!--先生-->
+    <item name="rb_male" type="id" />
+    <!--女士-->
+    <item name="rb_female" type="id" />
+    <!--输入地区-->
+    <item name="et_type_in_area" type="id" />
+    <!--输入门牌号-->
+    <item name="et_type_in_location" type="id" />
+    <!--输入手机号码-->
+    <item name="et_type_in_phonenumber" type="id" />
+    <!--确定-->
+    <item name="tv_submit_location" type="id" />
+    <!--联系人信息-->
+
+    <!--联系人列表-->
+    <item name="lv_fixer_address_list" type="id" />
+    <!--列表项-->
+    <item name="hsv_list_item" type="id" />
+    <!--列表正文部分-->
+    <item name="ll_content" type="id" />
+    <!--单选指示按钮-->
+    <item name="rb_info_checked" type="id" />
+    <!--联系人信息-->
+    <item name="ll_contacts_info" type="id" />
+    <!--联系人姓名-->
+    <item name="tv_contacts_info_name" type="id" />
+    <!--联系人性别-->
+    <item name="tv_contacts_info_sex" type="id" />
+    <!--联系人电话-->
+    <item name="tv_contacts_info_phone" type="id" />
+    <!--联系人地址-->
+    <item name="tv_contacts_info_address" type="id" />
+    <!--编辑联系人信息-->
+    <item name="iv_contacts_info_edit" type="id" />
+    <!--列表隐藏部分-->
+    <item name="ll_action" type="id" />
+    <!--删除列表项-->
+    <item name="tv_delete" type="id" />
+    <!--新增地址项-->
+    <item name="tv_add_new_location" type="id" />
+
+    <!--我的店铺-->
+    <!-- 上门服务 -->
+    <item name="tv_on_site_service" type="id" />
+    <!-- 寄修 -->
+    <item name="tv_send_service" type="id" />
+    <!-- 我要进店 -->
+    <item name="tv_go_shop_service" type="id" />
+    <!-- 照片墙 -->
+    <item name="gallery_picture" type="id" />
+    <!-- 照片数 -->
+    <item name="gallery_picture_count" type="id" />
+    <!--修神资料-->
+    <item name="ll_fixer_info" type="id" />
+    <!-- 修神标题 -->
+    <item name="tv_fixer_details_title" type="id" />
+    <!-- 修神姓名 -->
+    <item name="tv_fixer_details_name" type="id" />
+    <!-- 修神描述 -->
+    <item name="tv_fixer_details_desc" type="id" />
+    <!-- 已修手机 -->
+    <item name="tv_fixer_details_number" type="id" />
+    <!-- 好评 -->
+    <item name="tv_fixer_details_high_opinion" type="id" />
+    <!-- 评价数量 -->
+    <item name="tv_fixer_details_comment_number" type="id" />
+    <!--评价-->
+    <item name="rl_fixer_details_comment" type="id" />
+    <item name="ll_share_and_like" type="id" />
+    <!-- 评星 -->
+    <item name="rb_fixer_details_comment_star" type="id" />
+    <!-- 晒单数量 -->
+    <item name="tv_fixer_details_share_order_number" type="id" />
+    <!-- 晒单点赞数 -->
+    <item name="tv_fixer_details_share_order_like" type="id" />
+    <item name="tv_fixer_goods_title" type="id" />
+    <item name="ll_fixer_goods" type="id" />
+    <!-- 商品一图片 -->
+    <item name="iv_fixer_details_other_goods_first_image" type="id" />
+    <!-- 商品一名称 -->
+    <item name="tv_fixer_details_other_goods_first_name" type="id" />
+    <!-- 商品一价格-->
+    <item name="tv_fixer_details_other_goods_first_price" type="id" />
+    <!-- 商品二图片 -->
+    <item name="iv_fixer_details_other_goods_second_image" type="id" />
+    <!-- 商品二名称 -->
+    <item name="tv_fixer_details_other_goods_second_name" type="id" />
+    <!-- 商品二价格-->
+    <item name="tv_fixer_details_other_goods_second_price" type="id" />
+    <!-- 商品三图片 -->
+    <item name="iv_fixer_details_other_goods_third_image" type="id" />
+    <!-- 商品三名称 -->
+    <item name="tv_fixer_details_other_goods_third_name" type="id" />
+    <!-- 商品三价格-->
+    <item name="tv_fixer_details_other_goods_third_price" type="id" />
+    <item name="tv_fixer_details_other_goods_first_price_origin" type="id" />
+    <item name="tv_fixer_details_other_goods_second_price_origin" type="id" />
+    <item name="tv_fixer_details_other_goods_third_price_origin" type="id" />
+    <!--编辑店铺-->
+    <item name="tv_edit_my_shop" type="id"/>
+    <!--评价与晒单-->
+    <item name="ll_comment_and_like" type="id"/>
+    <!--修神照片-->
+    <item name="gvp_fixer_pics" type="id" />
+
+
+    <!--订单相关-->
+
+    <item name="tv_order_phone_number" type="id"/>
+    <item name="tv_order_submit_time" type="id"/>
+    <item name="tv_order_address" type="id"/>
+    <item name="tv_order_visit_time" type="id"/>
+    <item name="ll_quote_price" type="id"/>
+    <item name="tv_order_detail_total_money" type="id"/>
+    <item name="tv_order_phone_model" type="id"/>
+    <item name="tv_order_button" type="id"/>
+    <item name="tv_order_button2" type="id"/>
+    <item name="tv_order_breakdown_desc" type="id"/>
+    <item name="tv_order_other_needs" type="id"/>
+    <item name="ll_order_comment_info" type="id"/>
+    <item name="rb_order_comment_rating" type="id"/>
+    <item name="tv_order_comment_time" type="id"/>
+    <item name="tv_order_comment_content" type="id"/>
+
+    <!--评论-->
+    <item name="lv_comment_list" type="id"/>
+    <item name="tv_comment_item_mobile" type="id"/>
+    <item name="rb_comment_item_score" type="id"/>
+    <item name="tv_comment_item_time" type="id"/>
+    <item name="tv_comment_item_description" type="id"/>
+
+    <!--更多设置-->
+
+    <!--更多设置-->
+    <item name="rl_welcome_page" type="id" />
+    <item name="rl_user_protocal" type="id" />
+    <item name="rl_common_issues" type="id" />
+    <item name="rl_update_version" type="id" />
+    <item name="rl_about_us" type="id" />
+    <item name="arrow" type="id" />
+    <item name="tv_logout" type="id" />
+    <item name="tv_version_number" type="id" />
+    <item
+        type="id"
+        name="scrapped_view" />
+
+</resources>

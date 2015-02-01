@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.studypay.xpkc.fragment.ListenTestFragment" >
+    
+	
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+         >
+    	<com.zzmstring.viewset.View.DragGrid
+        	android:id="@+id/vgv" 
+        	android:layout_height="wrap_content" 
+        	android:layout_width="fill_parent" 
+        	android:numColumns="2"
+        	android:scrollbars="vertical"
+        	android:stretchMode="columnWidth"
+        	android:horizontalSpacing="14dip"
+        	android:verticalSpacing="14.0px"
+        	>
+    	</com.zzmstring.viewset.View.DragGrid>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,57 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#ebebeb"
+    android:layout_height="match_parent"
+
+     >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_margin="12dp"
+                android:background="#ffffff"
+
+                android:text="可拖动的gridview"
+                android:id="@+id/bt_gridview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:id="@+id/bt_quickreturn"
+                android:text="quickreturn"
+                android:layout_margin="12dp"
+                android:background="#ffffff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:layout_margin="12dp"
+                android:background="#ffffff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:layout_margin="12dp"
+                android:background="#ffffff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:layout_margin="12dp"
+                android:background="#ffffff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:background="#ffffff"
+                android:layout_margin="12dp"
+                android:id="@+id/bt_backup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            </LinearLayout>
+        </ScrollView>
+
+
+
+</LinearLayout>
