@@ -42,6 +42,8 @@
         </activity>
         <activity android:name=".UI.DragGridViewActivity"/>
         <activity android:name=".UI.QuickReturnActivity"/>
+        <activity android:name=".UI.JNI1Activity"/>
+        <activity android:name=".UI.HoverProgressBarActivity"/>
     </application>
 
 </manifest>

@@ -4,5 +4,6 @@
     <string name="app_name">ViewSet</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-
+    <string name="pull_load_more">上拉加载更多...</string>
+    <string name="pull_refresh">下拉刷新</string>
 </resources>

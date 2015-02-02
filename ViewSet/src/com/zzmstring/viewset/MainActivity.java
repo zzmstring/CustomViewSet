@@ -10,6 +10,7 @@ import android.widget.Button;
 import com.lidroid.xutils.ViewUtils;
 import com.lidroid.xutils.view.annotation.ViewInject;
 import com.zzmstring.viewset.UI.DragGridViewActivity;
+import com.zzmstring.viewset.UI.JNI1Activity;
 import com.zzmstring.viewset.UI.QuickReturnActivity;
 
 
@@ -18,6 +19,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
     Button bt_gridview;
     @ViewInject(R.id.bt_quickreturn)
     Button bt_quickreturn;
+    @ViewInject(R.id.bt_jni1)
+    Button bt_jni1;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -25,10 +28,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
         ViewUtils.inject(this);
         bt_gridview.setOnClickListener(this);
         bt_quickreturn.setOnClickListener(this);
+        bt_jni1.setOnClickListener(this);
 	}
     @Override
     public void onClick(View v) {
-
         switch (v.getId()){
             case R.id.bt_gridview:
                 Intent intent=new Intent(this, DragGridViewActivity.class);
@@ -37,6 +40,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
             case R.id.bt_quickreturn:
                 Intent intent1=new Intent(this, QuickReturnActivity.class);
                 startActivity(intent1);
+                break;
+            case R.id.bt_jni1:
+                Intent intent2=new Intent(this, JNI1Activity.class);
+                startActivity(intent2);
                 break;
         }
 
