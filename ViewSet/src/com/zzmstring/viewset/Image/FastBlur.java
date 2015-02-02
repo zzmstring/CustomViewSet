@@ -2,7 +2,7 @@ package com.zzmstring.viewset.Image;
 
 import android.graphics.Bitmap;
 
-import com.zzmstring.viewset.jni.ImageBlur;
+import com.lhkj.blurdemo.jni.ImageBlur;
 
 
 /**

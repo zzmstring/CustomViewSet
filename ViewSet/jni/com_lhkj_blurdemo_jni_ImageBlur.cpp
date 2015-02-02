@@ -4,7 +4,7 @@
 #include <android/bitmap.h>
 
 
-JNIEXPORT void JNICALL Java_com_zzmstring_viewset_jni_ImageBlur_blurIntArray
+JNIEXPORT void JNICALL Java_com_lhkj_blurdemo_jni_ImageBlur_blurIntArray
 (JNIEnv *env, jclass obj, jintArray arrIn, jint w, jint h, jint r)
 {
 	jint *pix;
@@ -21,7 +21,7 @@ JNIEXPORT void JNICALL Java_com_zzmstring_viewset_jni_ImageBlur_blurIntArray
 	//return result;
 }
 
-JNIEXPORT void JNICALL Java_com_zzmstring_viewset_jni_ImageBlur_blurBitMap
+JNIEXPORT void JNICALL Java_com_lhkj_blurdemo_jni_ImageBlur_blurBitMap
 (JNIEnv *env, jclass obj, jobject bitmapIn, jint r)
 {
 	AndroidBitmapInfo infoIn;

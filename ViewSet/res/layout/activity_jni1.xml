@@ -5,8 +5,8 @@
     <ImageView
         android:src="@drawable/img7"
         android:id="@+id/iv_mainjni"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_width="200dp"
+        android:layout_height="70dp" />
     <TextView
         android:id="@+id/tv_text"
         android:text="jni"

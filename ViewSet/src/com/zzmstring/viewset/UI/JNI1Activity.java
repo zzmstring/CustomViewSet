@@ -1,6 +1,7 @@
 package com.zzmstring.viewset.UI;
 
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.drawable.BitmapDrawable;
@@ -33,13 +34,20 @@ public class JNI1Activity extends BaseActivity{
         setContentView(R.layout.activity_jni1);
         ViewUtils.inject(this);
         System.loadLibrary("JNI_ImageBlur");
-        applyBlur();
+
+        Bitmap tempbitmap= BitmapFactory.decodeResource(getResources(),R.id.iv_mainjni);
+        blur(tempbitmap, tv_text);
+        iv_mainjni.setImageBitmap(tempbitmap);
+
     }
     @Override
     public void initListener() {
 
     }
 
+    /**
+     *
+     */
     @Override
     public void initData() {
 
