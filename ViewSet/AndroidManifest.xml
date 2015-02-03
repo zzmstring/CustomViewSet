@@ -44,6 +44,7 @@
         <activity android:name=".UI.QuickReturnActivity"/>
         <activity android:name=".UI.JNI1Activity"/>
         <activity android:name=".UI.HoverProgressBarActivity"/>
+        <activity android:name=".UI.TClipActivity"/>
     </application>
 
 </manifest>

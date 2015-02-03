@@ -12,6 +12,7 @@ import com.lidroid.xutils.view.annotation.ViewInject;
 import com.zzmstring.viewset.UI.DragGridViewActivity;
 import com.zzmstring.viewset.UI.JNI1Activity;
 import com.zzmstring.viewset.UI.QuickReturnActivity;
+import com.zzmstring.viewset.UI.TClipActivity;
 
 
 public class MainActivity extends Activity implements View.OnClickListener {
@@ -21,6 +22,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
     Button bt_quickreturn;
     @ViewInject(R.id.bt_jni1)
     Button bt_jni1;
+    @ViewInject(R.id.bt_tclip)
+    Button bt_tclip;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -29,6 +32,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         bt_gridview.setOnClickListener(this);
         bt_quickreturn.setOnClickListener(this);
         bt_jni1.setOnClickListener(this);
+        bt_tclip.setOnClickListener(this);
 	}
     @Override
     public void onClick(View v) {
@@ -44,6 +48,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
             case R.id.bt_jni1:
                 Intent intent2=new Intent(this, JNI1Activity.class);
                 startActivity(intent2);
+                break;
+            case R.id.bt_tclip:
+                Intent intent3=new Intent(this, TClipActivity.class);
+                startActivity(intent3);
                 break;
         }
 

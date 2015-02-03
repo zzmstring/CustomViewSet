@@ -21,7 +21,6 @@ public class HoverProgressBarActivity extends BaseActivity{
     @Override
     public void initData() {
 
-
     }
 
     @Override
