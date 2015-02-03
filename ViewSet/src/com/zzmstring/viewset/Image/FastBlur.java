@@ -46,7 +46,6 @@ public class FastBlur {
         }
         //Jni BitMap
         ImageBlur.blurBitMap(bitmap, radius);
-
         return (bitmap);
     }
 
