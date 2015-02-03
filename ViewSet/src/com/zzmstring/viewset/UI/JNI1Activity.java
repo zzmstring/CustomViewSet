@@ -16,6 +16,7 @@ import com.lidroid.xutils.view.annotation.ViewInject;
 import com.zzmstring.viewset.Base.BaseActivity;
 import com.zzmstring.viewset.Image.FastBlur;
 import com.zzmstring.viewset.R;
+import com.zzmstring.viewset.Utils.ExLog;
 
 /**
  * Created by ZGL on 2015/2/2.
@@ -24,7 +25,7 @@ public class JNI1Activity extends BaseActivity{
     @ViewInject(R.id.iv_mainjni)
     ImageView iv_mainjni;
     @ViewInject(R.id.tv_text)
-    TextView tv_text;
+    View tv_text;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,11 +34,9 @@ public class JNI1Activity extends BaseActivity{
     public void initView() {
         setContentView(R.layout.activity_jni1);
         ViewUtils.inject(this);
-        System.loadLibrary("JNI_ImageBlur");
 
-        Bitmap tempbitmap= BitmapFactory.decodeResource(getResources(),R.id.iv_mainjni);
-        blur(tempbitmap, tv_text);
-        iv_mainjni.setImageBitmap(tempbitmap);
+
+        applyBlur();
 
     }
     @Override
@@ -59,12 +58,15 @@ public class JNI1Activity extends BaseActivity{
                 iv_mainjni.getViewTreeObserver().removeOnPreDrawListener(this);
                 iv_mainjni.buildDrawingCache();
                 Bitmap bmp = iv_mainjni.getDrawingCache();
+                boolean is=bmp==null;
+                ExLog.l("bmp==null>>"+is);
                 blur(bmp, tv_text);
                 return true;
             }
         });
     }
     private void blur(Bitmap bkg, View view) {
+        ExLog.l("执行了"+ExLog.getCurrentMethodName());
         long startMs = System.currentTimeMillis();
         float scaleFactor = 1;
         float radius = 20;
