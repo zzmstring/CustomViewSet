@@ -75,16 +75,13 @@ public class CroutonActivity extends BaseActivity implements AdapterView.OnItemS
     }
     private void showCrouton() {
         Style croutonStyle = getSelectedStyleFromSpinner();
-
         if (croutonStyle != null) {
             showBuiltInCrouton(croutonStyle);
         } else {
             showAdvancedCrouton();
         }
     }
-
     private Style getSelectedStyleFromSpinner() {
-
         switch ((int) styleSpinner.getSelectedItemId()) {
             case 0: {
                 return Style.ALERT;
@@ -107,10 +104,8 @@ public class CroutonActivity extends BaseActivity implements AdapterView.OnItemS
             }
         }
     }
-
     private String getCroutonText() {
         String croutonText = croutonTextEdit.getText().toString().trim();
-
         if (TextUtils.isEmpty(croutonText)) {
             croutonText = getString(R.string.text_demo);
         }
