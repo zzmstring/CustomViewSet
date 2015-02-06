@@ -45,6 +45,7 @@
         <activity android:name=".UI.JNI1Activity"/>
         <activity android:name=".UI.HoverProgressBarActivity"/>
         <activity android:name=".UI.TClipActivity"/>
+        <activity android:name="com.zzmstring.viewset.UI.CroutonActivity"/>
     </application>
 
 </manifest>

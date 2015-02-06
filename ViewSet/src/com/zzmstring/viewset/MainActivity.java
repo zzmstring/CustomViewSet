@@ -9,6 +9,7 @@ import android.widget.Button;
 
 import com.lidroid.xutils.ViewUtils;
 import com.lidroid.xutils.view.annotation.ViewInject;
+import com.zzmstring.viewset.UI.CroutonActivity;
 import com.zzmstring.viewset.UI.DragGridViewActivity;
 import com.zzmstring.viewset.UI.JNI1Activity;
 import com.zzmstring.viewset.UI.QuickReturnActivity;
@@ -24,6 +25,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
     Button bt_jni1;
     @ViewInject(R.id.bt_tclip)
     Button bt_tclip;
+    @ViewInject(R.id.bt_crouton)
+    Button bt_crouton;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -33,6 +36,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         bt_quickreturn.setOnClickListener(this);
         bt_jni1.setOnClickListener(this);
         bt_tclip.setOnClickListener(this);
+        bt_crouton.setOnClickListener(this);
 	}
     @Override
     public void onClick(View v) {
@@ -52,6 +56,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
             case R.id.bt_tclip:
                 Intent intent3=new Intent(this, TClipActivity.class);
                 startActivity(intent3);
+                break;
+            case R.id.bt_crouton:
+                Intent intent4=new Intent(this, CroutonActivity.class);
+                startActivity(intent4);
                 break;
         }
 

@@ -43,6 +43,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:text="crouton"
+                android:id="@+id/bt_crouton"
                 android:layout_margin="12dp"
                 android:background="#ffffff"
                 android:layout_width="match_parent"
