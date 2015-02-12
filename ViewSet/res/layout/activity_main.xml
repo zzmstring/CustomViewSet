@@ -50,9 +50,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
+                android:text="loadingprogresbar"
                 android:background="#ffffff"
                 android:layout_margin="12dp"
-                android:id="@+id/bt_backup"
+                android:id="@+id/bt_loadingprogresbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:text="null"
+                android:background="#ffffff"
+                android:layout_margin="12dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:text="null"
+                android:background="#ffffff"
+                android:layout_margin="12dp"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             </LinearLayout>
