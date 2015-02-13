@@ -57,10 +57,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
-                android:text="null"
+                android:text="DragTopLayout"
                 android:background="#ffffff"
                 android:layout_margin="12dp"
-
+                android:id="@+id/bt_DragTopLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button

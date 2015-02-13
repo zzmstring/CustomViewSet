@@ -47,6 +47,7 @@
         <activity android:name=".UI.TClipActivity"/>
         <activity android:name="com.zzmstring.viewset.UI.CroutonActivity"/>
         <activity android:name=".UI.LoadingProgressBarActivity"/>
+        <activity android:name=".UI.DragTopLayoutActivity"/>
     </application>
 
 </manifest>

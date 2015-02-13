@@ -11,6 +11,7 @@ import com.lidroid.xutils.ViewUtils;
 import com.lidroid.xutils.view.annotation.ViewInject;
 import com.zzmstring.viewset.UI.CroutonActivity;
 import com.zzmstring.viewset.UI.DragGridViewActivity;
+import com.zzmstring.viewset.UI.DragTopLayoutActivity;
 import com.zzmstring.viewset.UI.JNI1Activity;
 import com.zzmstring.viewset.UI.LoadingProgressBarActivity;
 import com.zzmstring.viewset.UI.QuickReturnActivity;
@@ -30,6 +31,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
     Button bt_crouton;
     @ViewInject(R.id.bt_loadingprogresbar)
     Button bt_loadingprogresbar;
+    @ViewInject(R.id.bt_DragTopLayout)
+    Button bt_DragTopLayout;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -41,6 +44,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         bt_tclip.setOnClickListener(this);
         bt_crouton.setOnClickListener(this);
         bt_loadingprogresbar.setOnClickListener(this);
+        bt_DragTopLayout.setOnClickListener(this);
 	}
     @Override
     public void onClick(View v) {
@@ -68,6 +72,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
             case R.id.bt_loadingprogresbar:
                 Intent intent5=new Intent(this, LoadingProgressBarActivity.class);
                 startActivity(intent5);
+                break;
+            case R.id.bt_DragTopLayout:
+                Intent intent6=new Intent(this, DragTopLayoutActivity.class);
+                startActivity(intent6);
                 break;
         }
 
