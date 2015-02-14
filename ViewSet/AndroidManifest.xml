@@ -48,6 +48,7 @@
         <activity android:name="com.zzmstring.viewset.UI.CroutonActivity"/>
         <activity android:name=".UI.LoadingProgressBarActivity"/>
         <activity android:name=".UI.DragTopLayoutActivity"/>
+        <activity android:name=".UI.SmoothProgressBarActivity"/>
     </application>
 
 </manifest>

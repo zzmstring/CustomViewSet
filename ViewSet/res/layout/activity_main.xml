@@ -64,7 +64,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <Button
-                android:text="null"
+                android:id="@+id/bt_smoothprogressbar"
+                android:text="smoothprogressbar"
                 android:background="#ffffff"
                 android:layout_margin="12dp"
 

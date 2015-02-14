@@ -30,4 +30,10 @@
     <string name="action_about">About</string>
     <string name="action_offset">Offset</string>
     <string name="action_over">OverDrag</string>
+    <string-array name="interpolators">
+        <item>Accelerate</item>
+        <item>Linear</item>
+        <item>AccelerateDecelerate</item>
+        <item>Decelerate</item>
+    </string-array>
 </resources>
