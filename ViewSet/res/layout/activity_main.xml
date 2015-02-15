@@ -68,9 +68,36 @@
                 android:text="smoothprogressbar"
                 android:background="#ffffff"
                 android:layout_margin="12dp"
-
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+            <LinearLayout
+                android:weightSum="3"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/bt_RetalsPull"
+                    android:layout_weight="1"
+                    android:text="RetalsPull"
+                    android:background="#ffffff"
+                    android:layout_margin="3dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:layout_weight="1"
+                    android:text="smoothprogressbar"
+                    android:background="#ffffff"
+                    android:layout_margin="3dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:layout_weight="1"
+                    android:text="smoothprogressbar"
+                    android:background="#ffffff"
+                    android:layout_margin="3dp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                </LinearLayout>
             </LinearLayout>
         </ScrollView>
 

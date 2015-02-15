@@ -313,5 +313,6 @@
         <item name="spb_progressiveStart_activated">true</item>
         <item name="spb_generate_background_with_colors">false</item>
     </style>
+    <!--<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar"/>-->
 
 </resources>

@@ -15,6 +15,7 @@ import com.zzmstring.viewset.UI.DragTopLayoutActivity;
 import com.zzmstring.viewset.UI.JNI1Activity;
 import com.zzmstring.viewset.UI.LoadingProgressBarActivity;
 import com.zzmstring.viewset.UI.QuickReturnActivity;
+import com.zzmstring.viewset.UI.RetalsPullToRefreshActvity;
 import com.zzmstring.viewset.UI.SmoothProgressBarActivity;
 import com.zzmstring.viewset.UI.TClipActivity;
 
@@ -36,6 +37,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
     Button bt_DragTopLayout;
     @ViewInject(R.id.bt_smoothprogressbar)
     Button bt_smoothprogressbar;
+    @ViewInject(R.id.bt_RetalsPull)
+    Button bt_RetalsPull;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -49,6 +52,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         bt_loadingprogresbar.setOnClickListener(this);
         bt_DragTopLayout.setOnClickListener(this);
         bt_smoothprogressbar.setOnClickListener(this);
+        bt_RetalsPull.setOnClickListener(this);
 	}
     @Override
     public void onClick(View v) {
@@ -84,6 +88,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
             case R.id.bt_smoothprogressbar:
                 Intent intent7=new Intent(this, SmoothProgressBarActivity.class);
                 startActivity(intent7);
+                break;
+            case R.id.bt_RetalsPull:
+                Intent intent8=new Intent(this, RetalsPullToRefreshActvity.class);
+                startActivity(intent8);
                 break;
         }
 

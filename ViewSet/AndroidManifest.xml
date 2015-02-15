@@ -49,6 +49,7 @@
         <activity android:name=".UI.LoadingProgressBarActivity"/>
         <activity android:name=".UI.DragTopLayoutActivity"/>
         <activity android:name=".UI.SmoothProgressBarActivity"/>
+        <activity android:name=".UI.RetalsPullToRefreshActvity"/>
     </application>
 
 </manifest>

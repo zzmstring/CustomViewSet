@@ -7,15 +7,18 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.zzmstring.viewset.R;
+import com.zzmstring.viewset.Utils.RandomColor.RandomColor;
 
 
 /**
  * Created by zzmx on 2015/1/27.
  */
 public class TestAdapter extends BaseAdapter {
+    RandomColor randomColor;
     private Context context;
     public TestAdapter(Context context){
         this.context=context;
+        randomColor=new RandomColor();
     }
     @Override
     public int getCount() {
@@ -35,6 +38,7 @@ public class TestAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View view=View.inflate(context, R.layout.item_test,null);
+        view.setBackgroundColor(randomColor.randomColor());
         return view;
     }
     public static class ViewHolder{
