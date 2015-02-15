@@ -57,6 +57,8 @@ public class RetalsPullToRefreshActvity extends Activity {
 
 
         ListView listView = (ListView) findViewById(R.id.list_view);
+
+
 //        listView.setAdapter(new SampleAdapter(this, R.layout.list_item, sampleList));
         listView.setAdapter(mAdapter);
         mPullToRefreshView = (PullToRefreshView) findViewById(R.id.pull_to_refresh);
@@ -97,6 +99,9 @@ public class RetalsPullToRefreshActvity extends Activity {
                 convertView.setTag(viewHolder);
             } else {
                 viewHolder = (ViewHolder) convertView.getTag();
+
+
+
             }
 
             viewHolder.imageViewIcon.setImageResource(mData.get(position).get(KEY_ICON));
