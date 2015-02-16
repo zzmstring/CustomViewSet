@@ -57,8 +57,6 @@ public class RetalsPullToRefreshActvity extends Activity {
 
 
         ListView listView = (ListView) findViewById(R.id.list_view);
-
-
 //        listView.setAdapter(new SampleAdapter(this, R.layout.list_item, sampleList));
         listView.setAdapter(mAdapter);
         mPullToRefreshView = (PullToRefreshView) findViewById(R.id.pull_to_refresh);
