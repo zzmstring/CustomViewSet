@@ -315,4 +315,33 @@
     </style>
     <!--<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar"/>-->
 
+
+    <!--<style name="AppTheme.Ligth" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/nliveo_cyan_colorPrimary</item>
+        <item name="colorPrimaryDark">@color/nliveo_cyan_alpha_colorPrimaryDark</item>
+        <item name="colorControlHighlight">@color/nliveo_cyan_colorPrimary</item>
+        <item name="colorAccent">@color/nliveo_cyan_colorPrimary</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowActionModeOverlay">true</item>
+
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="theme">@style/ThemeOverlay.AppCompat.Light</item>
+    </style>-->
+
+    <!--<style name="AppTheme.DarkActionBar" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/nliveo_cyan_colorPrimary</item>
+        <item name="colorPrimaryDark">@color/nliveo_cyan_alpha_colorPrimaryDark</item>
+        <item name="colorAccent">@color/nliveo_cyan_colorPrimary</item>
+        <item name="colorControlHighlight">@color/nliveo_cyan_colorPrimary</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowActionModeOverlay">true</item>
+
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+    </style>
+
+    <style name="nLiveo.Theme.Light" parent="AppTheme.Ligth" />
+    <style name="nLiveo.Theme.DarkActionBar" parent="AppTheme.DarkActionBar" />-->
 </resources>
