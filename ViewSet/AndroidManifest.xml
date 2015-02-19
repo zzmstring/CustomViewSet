@@ -50,7 +50,8 @@
         <activity android:name=".UI.DragTopLayoutActivity"/>
         <activity android:name=".UI.SmoothProgressBarActivity"/>
         <activity android:name=".UI.RetalsPullToRefreshActvity"/>
-        <activity android:name=".UI.RetalsPullToRefreshActvity"/>
+        <activity android:name="com.zzmstring.viewset.UI.RefreshAndLoadActivity"/>
+        <activity android:name=".UI.PullToRefresh.UltraPulltoRefreshActivity"/>
     </application>
 
 </manifest>
