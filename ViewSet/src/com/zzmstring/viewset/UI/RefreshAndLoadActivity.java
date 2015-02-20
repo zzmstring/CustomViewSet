@@ -9,6 +9,7 @@ import com.lidroid.xutils.ViewUtils;
 import com.lidroid.xutils.view.annotation.ViewInject;
 import com.zzmstring.viewset.Base.BaseActivity;
 import com.zzmstring.viewset.R;
+import com.zzmstring.viewset.UI.PullToRefresh.DropAndDownListViewActivity;
 import com.zzmstring.viewset.UI.PullToRefresh.UltraPulltoRefreshActivity;
 
 /**
@@ -52,6 +53,9 @@ public class RefreshAndLoadActivity extends BaseActivity {
                 startActivity(intent);
                 break;
             case R.id.bt_loadmore:
+                Intent intent1=new Intent(this, DropAndDownListViewActivity.class);
+                startActivity(intent1);
+                break;
 
         }
     }

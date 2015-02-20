@@ -52,6 +52,7 @@
         <activity android:name=".UI.RetalsPullToRefreshActvity"/>
         <activity android:name="com.zzmstring.viewset.UI.RefreshAndLoadActivity"/>
         <activity android:name=".UI.PullToRefresh.UltraPulltoRefreshActivity"/>
+        <activity android:name="com.zzmstring.viewset.UI.PullToRefresh.DropAndDownListViewActivity"/>
     </application>
 
 </manifest>
