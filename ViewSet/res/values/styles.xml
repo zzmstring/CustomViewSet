@@ -369,4 +369,10 @@
         <item name="android:textColor">@color/drop_down_list_footer_font_color</item>
         <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
     </style>
+
+    <declare-styleable name="CompoundButton">
+        <attr name="android:button" />
+        <attr name="drawableWidth" format="dimension" />
+        <attr name="drawableHeight" format="dimension" />
+    </declare-styleable>
 </resources>

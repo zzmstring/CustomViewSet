@@ -19,6 +19,7 @@ import com.zzmstring.viewset.UI.RefreshAndLoadActivity;
 import com.zzmstring.viewset.UI.RetalsPullToRefreshActvity;
 import com.zzmstring.viewset.UI.SmoothProgressBarActivity;
 import com.zzmstring.viewset.UI.TClipActivity;
+import com.zzmstring.viewset.UI.WandouIndexActivity;
 
 
 public class MainActivity extends Activity implements View.OnClickListener {
@@ -42,6 +43,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
     Button bt_RetalsPull;
     @ViewInject(R.id.bt_refresh)
     Button bt_refresh;
+    @ViewInject(R.id.bt_wandouindex)
+    Button bt_wandouindex;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -57,6 +60,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
         bt_smoothprogressbar.setOnClickListener(this);
         bt_RetalsPull.setOnClickListener(this);
         bt_refresh.setOnClickListener(this);
+        bt_wandouindex.setOnClickListener(this);
+
 	}
     @Override
     public void onClick(View v) {
@@ -101,6 +106,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 Intent intent9=new Intent(this, RefreshAndLoadActivity.class);
                 startActivity(intent9);
                 break;
+            case R.id.bt_wandouindex:
+                Intent intent10=new Intent(this, WandouIndexActivity.class);
+                startActivity(intent10);
+                break;
+
         }
 
 
