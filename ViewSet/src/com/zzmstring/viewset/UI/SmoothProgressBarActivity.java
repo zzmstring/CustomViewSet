@@ -28,6 +28,11 @@ public class SmoothProgressBarActivity extends BaseActivity {
     public void initView() {
         setContentView(R.layout.activity_smothprogressbar);
         ViewUtils.inject(this);
+
+    }
+
+    @Override
+    public void initListener() {
         gradient.progressiveStart();
 
         google_now.setSmoothProgressDrawableBackgroundDrawable(
@@ -35,10 +40,6 @@ public class SmoothProgressBarActivity extends BaseActivity {
                         getResources().getIntArray(R.array.pocket_background_colors),
                         ((SmoothProgressDrawable) google_now.getIndeterminateDrawable()).getStrokeWidth()));
         google_now.progressiveStart();
-    }
-
-    @Override
-    public void initListener() {
 
     }
 

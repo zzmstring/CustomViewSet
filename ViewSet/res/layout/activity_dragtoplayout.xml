@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorAccent"
+        android:orientation="vertical">
+        <com.zzmstring.viewset.View.DragTopLayout.DragTopLayout
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:background="@color/colorPrimary"
+            android:id="@+id/drag_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <!--top view-->
+            <LinearLayout
+                android:id="@+id/top_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:gravity="center"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/text"
+                    android:text="Top View"
+                    android:textSize="18sp"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="40dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:id="@+id/image_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:src="@drawable/ic_launcher"/>
+            </LinearLayout>
+            <!--content view-->
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/drag_content_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <com.zzmstring.viewset.View.PagerSlidingTabStrip.PagerSlidingTabStrip
+                    android:id="@+id/tabs"
+                    app:pstsShouldExpand="false"
+                    app:pstsIndicatorColor="@color/gray_light"
+                    android:textColor="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="#ebebeb" />
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/view_pager"
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </android.support.v4.view.ViewPager>
+            </LinearLayout>
+        </com.zzmstring.viewset.View.DragTopLayout.DragTopLayout>
+    </LinearLayout>
+</RelativeLayout>
