@@ -113,9 +113,9 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content" />
                 <Button
-                    android:id="@+id/bt_"
+                    android:id="@+id/bt_slidemenu"
                     android:layout_weight="1"
-                    android:text="refresh"
+                    android:text="slidemenu"
                     android:background="#ffffff"
                     android:layout_margin="3dp"
                     android:layout_width="0dp"

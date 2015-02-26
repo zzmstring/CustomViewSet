@@ -54,6 +54,7 @@
         <activity android:name=".UI.PullToRefresh.UltraPulltoRefreshActivity"/>
         <activity android:name="com.zzmstring.viewset.UI.PullToRefresh.DropAndDownListViewActivity"/>
         <activity android:name="com.zzmstring.viewset.UI.WandouIndexActivity"/>
+        <activity android:name="com.zzmstring.viewset.UI.SlidingMenuActivity"/>
     </application>
 
 </manifest>

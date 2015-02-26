@@ -1,6 +1,4 @@
 package com.zzmstring.viewset;
-
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,11 +15,10 @@ import com.zzmstring.viewset.UI.LoadingProgressBarActivity;
 import com.zzmstring.viewset.UI.QuickReturnActivity;
 import com.zzmstring.viewset.UI.RefreshAndLoadActivity;
 import com.zzmstring.viewset.UI.RetalsPullToRefreshActvity;
+import com.zzmstring.viewset.UI.SlidingMenuActivity;
 import com.zzmstring.viewset.UI.SmoothProgressBarActivity;
 import com.zzmstring.viewset.UI.TClipActivity;
 import com.zzmstring.viewset.UI.WandouIndexActivity;
-
-
 public class MainActivity extends Activity implements View.OnClickListener {
     @ViewInject(R.id.bt_gridview)
     Button bt_gridview;
@@ -45,6 +42,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
     Button bt_refresh;
     @ViewInject(R.id.bt_wandouindex)
     Button bt_wandouindex;
+    @ViewInject(R.id.bt_slidemenu)
+    Button bt_slidemenu;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -61,7 +60,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         bt_RetalsPull.setOnClickListener(this);
         bt_refresh.setOnClickListener(this);
         bt_wandouindex.setOnClickListener(this);
-
+        bt_slidemenu.setOnClickListener(this);
 	}
     @Override
     public void onClick(View v) {
@@ -110,12 +109,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 Intent intent10=new Intent(this, WandouIndexActivity.class);
                 startActivity(intent10);
                 break;
-
+            case R.id.bt_slidemenu:
+                Intent intent11=new Intent(this, SlidingMenuActivity.class);
+                startActivity(intent11);
+                break;
         }
-
-
-
-
     }
 	
 }
