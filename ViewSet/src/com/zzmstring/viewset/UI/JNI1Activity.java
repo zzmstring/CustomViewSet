@@ -34,8 +34,6 @@ public class JNI1Activity extends BaseActivity{
     public void initView() {
         setContentView(R.layout.activity_jni1);
         ViewUtils.inject(this);
-
-
         applyBlur();
 
     }

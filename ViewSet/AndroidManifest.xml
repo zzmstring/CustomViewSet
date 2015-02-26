@@ -32,7 +32,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppBaseTheme" >
         <activity
-            android:name=".MainActivity"
+            android:name="com.zzmstring.viewset.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -40,7 +40,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".UI.DragGridViewActivity"/>
+        <activity android:name="com.zzmstring.viewset.UI.DragGridViewActivity"/>
         <activity android:name=".UI.QuickReturnActivity"/>
         <activity android:name=".UI.JNI1Activity"/>
         <activity android:name=".UI.HoverProgressBarActivity"/>

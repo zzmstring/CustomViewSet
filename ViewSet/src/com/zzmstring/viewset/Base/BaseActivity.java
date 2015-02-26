@@ -58,14 +58,10 @@ public  class BaseActivity extends FragmentActivity implements View.OnClickListe
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-
-
 		initView();
 		initListener();
 		initData();
 	}
-
-
 	
 	public  void initView(){
 
