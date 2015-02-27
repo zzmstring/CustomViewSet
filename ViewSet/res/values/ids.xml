@@ -405,4 +405,6 @@
         type="id"
         name="scrapped_view" />
 
+
+    <item name="selected_view" type="id"/>
 </resources>
