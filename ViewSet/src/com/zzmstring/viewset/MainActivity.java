@@ -7,6 +7,7 @@ import android.widget.Button;
 
 import com.lidroid.xutils.ViewUtils;
 import com.lidroid.xutils.view.annotation.ViewInject;
+import com.zzmstring.viewset.UI.AppMsgActivity;
 import com.zzmstring.viewset.UI.CroutonActivity;
 import com.zzmstring.viewset.UI.DragGridViewActivity;
 import com.zzmstring.viewset.UI.DragTopLayoutActivity;
@@ -44,6 +45,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
     Button bt_wandouindex;
     @ViewInject(R.id.bt_slidemenu)
     Button bt_slidemenu;
+    @ViewInject(R.id.bt_appmsg)
+    Button bt_appmsg;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -61,6 +64,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         bt_refresh.setOnClickListener(this);
         bt_wandouindex.setOnClickListener(this);
         bt_slidemenu.setOnClickListener(this);
+        bt_appmsg.setOnClickListener(this);
 	}
     @Override
     public void onClick(View v) {
@@ -112,6 +116,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
             case R.id.bt_slidemenu:
                 Intent intent11=new Intent(this, SlidingMenuActivity.class);
                 startActivity(intent11);
+                break;
+            case R.id.bt_appmsg:
+                Intent intent12=new Intent(this, AppMsgActivity.class);
+                startActivity(intent12);
                 break;
         }
     }

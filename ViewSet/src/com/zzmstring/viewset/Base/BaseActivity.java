@@ -29,6 +29,7 @@ public  class BaseActivity extends FragmentActivity implements View.OnClickListe
      */
 
     private static final List<BaseActivity> mActivities = new LinkedList<BaseActivity>();
+
     /**
      * 记录处于前台的Activity
      */

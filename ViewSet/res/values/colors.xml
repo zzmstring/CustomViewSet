@@ -129,4 +129,11 @@
     <color name="drop_down_list_footer_font_color">#000000</color>
 
     <color name="blank">#00000000</color>
+
+    <color name="alert">#CC0000</color>
+    <color name="confirm">#FF8800</color>
+    <color name="info">#669900</color>
+
+    <color name="custom">#ff0099CC</color>
+    <color name="sticky">#ffffcd5a</color>
 </resources>

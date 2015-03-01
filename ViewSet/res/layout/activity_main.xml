@@ -121,8 +121,9 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content" />
                 <Button
+                    android:id="@+id/bt_appmsg"
                     android:layout_weight="1"
-                    android:text="smooth"
+                    android:text="appmsg"
                     android:background="#ffffff"
                     android:layout_margin="3dp"
                     android:layout_width="0dp"
