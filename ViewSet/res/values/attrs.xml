@@ -152,4 +152,10 @@
         <attr name="selectorEnabled" format="boolean" />
         <attr name="selectorDrawable" format="reference" />
     </declare-styleable>
+
+
+    <declare-styleable name="MaterialImageView">
+        <attr name="shadow_size" format="integer" />
+        <attr name="radius_size" format="integer" />
+    </declare-styleable>
 </resources>

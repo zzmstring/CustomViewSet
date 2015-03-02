@@ -15,6 +15,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         </RelativeLayout>
+    <com.zzmstring.viewset.View.single.MaterialImageView
+        android:id="@+id/pic1"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/dogsleep2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
 
 
 </RelativeLayout>

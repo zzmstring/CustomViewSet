@@ -8,6 +8,7 @@ import com.lidroid.xutils.ViewUtils;
 import com.lidroid.xutils.view.annotation.ViewInject;
 import com.zzmstring.viewset.Base.BaseActivity;
 import com.zzmstring.viewset.R;
+import com.zzmstring.viewset.View.single.MaterialImageView;
 import com.zzmstring.viewset.View.slidingmenu.SlidingMenu;
 
 /**
@@ -16,6 +17,8 @@ import com.zzmstring.viewset.View.slidingmenu.SlidingMenu;
 public class SlidingMenuActivity extends BaseActivity {
     @ViewInject(R.id.iv_toggle)
     ImageView iv_toggle;
+    @ViewInject(R.id.pic1)
+    MaterialImageView pic1;
     SlidingMenu menu;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +33,7 @@ public class SlidingMenuActivity extends BaseActivity {
     @Override
     public void initListener() {
         iv_toggle.setOnClickListener(this);
+        pic1.setRotation(-10);
 
     }
     @Override
