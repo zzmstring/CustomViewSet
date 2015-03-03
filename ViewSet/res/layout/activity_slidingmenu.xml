@@ -27,6 +27,12 @@
         android:text="pluginapp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+    <Button
+        android:layout_below="@id/bt_pluginapp"
+        android:id="@+id/bt_jiazai"
+        android:text="直接加载app"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 
 </RelativeLayout>

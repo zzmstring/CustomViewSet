@@ -13,6 +13,11 @@ import com.zzmstring.viewset.R;
 import com.zzmstring.viewset.View.single.MaterialImageView;
 import com.zzmstring.viewset.View.slidingmenu.SlidingMenu;
 
+import java.io.File;
+
+import androidx.pluginmgr.PlugInfo;
+import androidx.pluginmgr.PluginManager;
+
 /**
  * Created by zzmstring on 2015/2/26.
  */
@@ -23,6 +28,8 @@ public class SlidingMenuActivity extends BaseActivity {
     MaterialImageView pic1;
     @ViewInject(R.id.bt_pluginapp)
     Button bt_pluginapp;
+    @ViewInject(R.id.bt_jiazai)
+    Button bt_jiazai;
     SlidingMenu menu;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +46,7 @@ public class SlidingMenuActivity extends BaseActivity {
         iv_toggle.setOnClickListener(this);
         pic1.setRotation(-10);
         bt_pluginapp.setOnClickListener(this);
-
+        bt_jiazai.setOnClickListener(this);
     }
     @Override
     public void initData() {
@@ -62,6 +69,17 @@ public class SlidingMenuActivity extends BaseActivity {
             case R.id.bt_pluginapp:
                 Intent intent=new Intent(this,PluginAppActivity.class);
                 startActivity(intent);
+                break;
+            case R.id.bt_jiazai:
+                PluginManager pluginMgr = PluginManager.getInstance(this);
+                File myPlug = new File("/storage/sdcard0/Download/Anroid.apk");
+                PlugInfo plug = null;
+                try {
+                    plug = pluginMgr.loadPlugin(myPlug).iterator().next();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                pluginMgr.startMainActivity(this, plug.getPackageName());
                 break;
         }
     }
