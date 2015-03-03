@@ -1,7 +1,9 @@
 package com.zzmstring.viewset.UI;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import com.lidroid.xutils.ViewUtils;
@@ -19,6 +21,8 @@ public class SlidingMenuActivity extends BaseActivity {
     ImageView iv_toggle;
     @ViewInject(R.id.pic1)
     MaterialImageView pic1;
+    @ViewInject(R.id.bt_pluginapp)
+    Button bt_pluginapp;
     SlidingMenu menu;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +38,7 @@ public class SlidingMenuActivity extends BaseActivity {
     public void initListener() {
         iv_toggle.setOnClickListener(this);
         pic1.setRotation(-10);
+        bt_pluginapp.setOnClickListener(this);
 
     }
     @Override
@@ -53,6 +58,10 @@ public class SlidingMenuActivity extends BaseActivity {
         switch (v.getId()){
             case R.id.iv_toggle:
                     menu.toggle();
+                break;
+            case R.id.bt_pluginapp:
+                Intent intent=new Intent(this,PluginAppActivity.class);
+                startActivity(intent);
                 break;
         }
     }

@@ -140,4 +140,10 @@
     <color name="shadow_end_color">#03000000</color>
     <color name="shadow_start_color">#4f000000</color>
     <!--37-->
+
+    <color name="black_text_color">#000000</color>
+    <color name="content_pint">#FAEBD7</color>
+    <color name="content_grey">#686868</color>
+    <color name="time_grey">#9c9c9c</color>
+    <color name="list_diveder_grey">#e3e3e3 </color>
 </resources>
