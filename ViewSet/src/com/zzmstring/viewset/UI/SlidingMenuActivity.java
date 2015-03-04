@@ -2,6 +2,8 @@ package com.zzmstring.viewset.UI;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -10,6 +12,7 @@ import com.lidroid.xutils.ViewUtils;
 import com.lidroid.xutils.view.annotation.ViewInject;
 import com.zzmstring.viewset.Base.BaseActivity;
 import com.zzmstring.viewset.R;
+import com.zzmstring.viewset.Utils.ExLog;
 import com.zzmstring.viewset.View.single.MaterialImageView;
 import com.zzmstring.viewset.View.slidingmenu.SlidingMenu;
 
@@ -31,6 +34,12 @@ public class SlidingMenuActivity extends BaseActivity {
     @ViewInject(R.id.bt_jiazai)
     Button bt_jiazai;
     SlidingMenu menu;
+    Handler handler=new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+
+        }
+    };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,6 +85,8 @@ public class SlidingMenuActivity extends BaseActivity {
                 PlugInfo plug = null;
                 try {
                     plug = pluginMgr.loadPlugin(myPlug).iterator().next();
+                    boolean isnull=plug==null;
+                    ExLog.l("plug>>"+isnull);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }

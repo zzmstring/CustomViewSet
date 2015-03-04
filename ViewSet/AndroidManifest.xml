@@ -59,6 +59,7 @@
         <activity android:name="com.zzmstring.viewset.UI.PluginAppActivity"/>
         <activity android:name="com.zzmstring.viewset.UI.zokesupport.ZokeSupportMainActivity"/>
         <activity android:name="com.zzmstring.viewset.UI.zokesupport.ReboundActivity"/>
+        <activity android:name="androidx.pluginmgr.PluginActivity" />
     </application>
 
 </manifest>

@@ -146,4 +146,10 @@
     <color name="content_grey">#686868</color>
     <color name="time_grey">#9c9c9c</color>
     <color name="list_diveder_grey">#e3e3e3 </color>
+
+
+    <color name="pressColor">#CBCBCB</color>
+    <color name="none">#00000000</color>
+    <color name="_float_normal">#323232</color>
+    <color name="_float_selected">#fd7357</color>
 </resources>

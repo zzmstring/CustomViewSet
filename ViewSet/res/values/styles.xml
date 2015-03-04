@@ -381,4 +381,11 @@
     <style name="SelectableItem">
         <item name="android:background">@android:drawable/list_selector_background</item>
     </style>
+
+    <style name="basedialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@color/none</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+    </style>
 </resources>
