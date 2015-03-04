@@ -57,7 +57,8 @@
         <activity android:name="com.zzmstring.viewset.UI.SlidingMenuActivity"/>
         <activity android:name="com.zzmstring.viewset.UI.AppMsgActivity"/>
         <activity android:name="com.zzmstring.viewset.UI.PluginAppActivity"/>
-
+        <activity android:name="com.zzmstring.viewset.UI.zokesupport.ZokeSupportMainActivity"/>
+        <activity android:name="com.zzmstring.viewset.UI.zokesupport.ReboundActivity"/>
     </application>
 
 </manifest>

@@ -20,6 +20,8 @@ import com.zzmstring.viewset.UI.SlidingMenuActivity;
 import com.zzmstring.viewset.UI.SmoothProgressBarActivity;
 import com.zzmstring.viewset.UI.TClipActivity;
 import com.zzmstring.viewset.UI.WandouIndexActivity;
+import com.zzmstring.viewset.UI.zokesupport.ZokeSupportMainActivity;
+
 public class MainActivity extends Activity implements View.OnClickListener {
     @ViewInject(R.id.bt_gridview)
     Button bt_gridview;
@@ -47,6 +49,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
     Button bt_slidemenu;
     @ViewInject(R.id.bt_appmsg)
     Button bt_appmsg;
+    @ViewInject(R.id.bt_zoke)
+    Button bt_zoke;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -65,6 +69,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         bt_wandouindex.setOnClickListener(this);
         bt_slidemenu.setOnClickListener(this);
         bt_appmsg.setOnClickListener(this);
+        bt_zoke.setOnClickListener(this);
 	}
     @Override
     public void onClick(View v) {
@@ -120,6 +125,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
             case R.id.bt_appmsg:
                 Intent intent12=new Intent(this, AppMsgActivity.class);
                 startActivity(intent12);
+                break;
+            case R.id.bt_zoke:
+                Intent intent13=new Intent(this, ZokeSupportMainActivity.class);
+                startActivity(intent13);
                 break;
         }
     }
