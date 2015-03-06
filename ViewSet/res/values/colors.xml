@@ -152,4 +152,11 @@
     <color name="none">#00000000</color>
     <color name="_float_normal">#323232</color>
     <color name="_float_selected">#fd7357</color>
+
+
+
+    <color name="title_color">#37BCB2</color>
+
+    <color name="black6c">#CCCCCC</color>
+    <color name="black6e">#eeeeee</color>
 </resources>

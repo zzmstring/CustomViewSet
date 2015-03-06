@@ -42,13 +42,29 @@
                 android:background="#ffffff"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
-            <Button
-                android:text="crouton"
-                android:id="@+id/bt_crouton"
-                android:layout_margin="12dp"
-                android:background="#ffffff"
+            <LinearLayout
+                android:weightSum="3"
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content">
+                <Button
+                    android:layout_weight="1"
+                    android:text="crouton"
+                    android:id="@+id/bt_crouton"
+                    android:layout_margin="3dp"
+                    android:background="#ffffff"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:layout_margin="3dp"
+                    android:background="#ffffff"
+                    android:id="@+id/bt_wel"
+                    android:text="welcom"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                </LinearLayout>
+
             <Button
                 android:text="loadingprogresbar"
                 android:background="#ffffff"
