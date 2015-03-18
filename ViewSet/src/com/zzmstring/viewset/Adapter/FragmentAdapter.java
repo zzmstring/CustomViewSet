@@ -21,6 +21,7 @@ public class FragmentAdapter extends FragmentPagerAdapter {
 	public int getCount() {
 		return list.size();
 	}
+
 	public String getPageTitle(int i){
         return "这就是一个临时的text";
     }

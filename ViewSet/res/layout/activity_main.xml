@@ -9,18 +9,109 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <Button
-                android:layout_margin="12dp"
-                android:background="#ffffff"
-
-                android:text="可拖动的gridview"
-                android:id="@+id/bt_gridview"
+            <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content">
+                <Button
+                    android:layout_weight="1"
+                    android:background="#ffffff"
+                    android:text="动的gridview"
+                    android:id="@+id/bt_gridview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <Button
+                    android:layout_weight="1"
+                    android:text="jni1"
+                    android:id="@+id/bt_jni1"
+                    android:background="#ffffff"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:layout_weight="1"
+                    android:text="tclip"
+                    android:id="@+id/bt_tclip"
+                    android:background="#ffffff"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:background="#ffffff"
+                    android:layout_weight="1"
+                    android:text="各种layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:background="#ffffff"
+                    android:layout_weight="1"
+                    android:text="各种progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:background="#ffffff"
+                    android:layout_weight="1"
+                    android:text="各种dialog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:background="#ffffff"
+                    android:layout_weight="1"
+                    android:text="各种listview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:background="#ffffff"
+                    android:layout_weight="1"
+                    android:text="各种MD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:background="#ffffff"
+                    android:layout_weight="1"
+                    android:text="各种refresh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:background="#ffffff"
+                    android:layout_weight="1"
+                    android:text="各种listview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:background="#ffffff"
+                    android:layout_weight="1"
+                    android:text="各种MD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:background="#ffffff"
+                    android:layout_weight="1"
+                    android:text="各种refresh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
             <Button
                 android:id="@+id/bt_quickreturn"
                 android:text="quickreturn"
@@ -28,20 +119,8 @@
                 android:background="#ffffff"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
-            <Button
-                android:text="jni1"
-                android:id="@+id/bt_jni1"
-                android:layout_margin="12dp"
-                android:background="#ffffff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:text="tclip"
-                android:id="@+id/bt_tclip"
-                android:layout_margin="12dp"
-                android:background="#ffffff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+
+
             <LinearLayout
                 android:weightSum="3"
                 android:orientation="horizontal"

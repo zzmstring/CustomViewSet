@@ -48,7 +48,7 @@
                 android:layout_height="match_parent">
                 <com.zzmstring.viewset.View.PagerSlidingTabStrip.PagerSlidingTabStrip
                     android:id="@+id/tabs"
-                    app:pstsShouldExpand="false"
+                    app:pstsShouldExpand="true"
                     app:pstsIndicatorColor="@color/gray_light"
                     android:textColor="@color/black"
                     android:layout_width="match_parent"

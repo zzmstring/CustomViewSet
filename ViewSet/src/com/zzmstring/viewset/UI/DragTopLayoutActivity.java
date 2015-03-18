@@ -43,7 +43,6 @@ public class DragTopLayoutActivity extends BaseActivity{
     @Override
     public void initView() {
         setContentView(R.layout.activity_dragtoplayout);
-
         mListFragment=new ArrayList<Fragment>();
         viewPager = (ViewPager) findViewById(R.id.view_pager);
         dragLayout = (DragTopLayout) findViewById(R.id.drag_layout);
