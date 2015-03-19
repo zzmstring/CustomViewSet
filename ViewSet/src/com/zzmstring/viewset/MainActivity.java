@@ -54,6 +54,24 @@ public class MainActivity extends Activity implements View.OnClickListener {
     Button bt_zoke;
     @ViewInject(R.id.bt_wel)
     Button bt_wel;
+    @ViewInject(R.id.bt_layout)
+    Button bt_layout;
+    @ViewInject(R.id.bt_progressbar)
+    Button bt_progressbar;
+    @ViewInject(R.id.bt_dialog)
+    Button bt_dialog;
+    @ViewInject(R.id.bt_listview)
+    Button bt_listview;
+    @ViewInject(R.id.bt_materialD)
+    Button bt_materialD;
+    @ViewInject(R.id.bt_fresh)
+    Button bt_fresh;
+    @ViewInject(R.id.bt_drawer)
+    Button bt_drawer;
+    @ViewInject(R.id.iv_image)
+    Button iv_image;
+
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -74,6 +92,14 @@ public class MainActivity extends Activity implements View.OnClickListener {
         bt_appmsg.setOnClickListener(this);
         bt_zoke.setOnClickListener(this);
         bt_wel.setOnClickListener(this);
+        bt_layout.setOnClickListener(this);
+        bt_progressbar.setOnClickListener(this);
+        bt_dialog.setOnClickListener(this);
+        bt_listview.setOnClickListener(this);
+        bt_materialD.setOnClickListener(this);
+        bt_fresh.setOnClickListener(this);
+        bt_drawer.setOnClickListener(this);
+        iv_image.setOnClickListener(this);
 	}
     @Override
     public void onClick(View v) {
@@ -137,6 +163,22 @@ public class MainActivity extends Activity implements View.OnClickListener {
             case R.id.bt_wel:
                 Intent intent14=new Intent(this, WelActivity.class);
                 startActivity(intent14);
+                break;
+            case R.id.bt_layout:
+                break;
+            case R.id.bt_progressbar:
+                break;
+            case R.id.bt_dialog:
+                break;
+            case R.id.bt_listview:
+                break;
+            case R.id.bt_materialD:
+                break;
+            case R.id.bt_fresh:
+                break;
+            case R.id.bt_drawer:
+                break;
+            case R.id.iv_image:
                 break;
         }
     }

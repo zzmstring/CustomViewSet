@@ -46,22 +46,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <Button
+                    android:id="@+id/bt_layout"
                     android:background="#ffffff"
                     android:layout_weight="1"
                     android:text="各种layout"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <Button
+                    android:id="@+id/bt_progressbar"
                     android:background="#ffffff"
                     android:layout_weight="1"
                     android:text="各种progress"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <Button
+                    android:id="@+id/bt_dialog"
                     android:background="#ffffff"
                     android:layout_weight="1"
                     android:text="各种dialog"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 </LinearLayout>
             <LinearLayout
@@ -70,22 +73,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <Button
+                    android:id="@+id/bt_listview"
                     android:background="#ffffff"
                     android:layout_weight="1"
                     android:text="各种listview"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <Button
+                    android:id="@+id/bt_materialD"
                     android:background="#ffffff"
                     android:layout_weight="1"
                     android:text="各种MD"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <Button
+                    android:id="@+id/bt_fresh"
                     android:background="#ffffff"
                     android:layout_weight="1"
                     android:text="各种refresh"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </LinearLayout>
             <LinearLayout
@@ -94,22 +100,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <Button
+                    android:id="@+id/bt_drawer"
                     android:background="#ffffff"
                     android:layout_weight="1"
-                    android:text="各种listview"
-                    android:layout_width="wrap_content"
+                    android:text="各种drawer"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <Button
+                    android:id="@+id/iv_image"
                     android:background="#ffffff"
                     android:layout_weight="1"
-                    android:text="各种MD"
-                    android:layout_width="wrap_content"
+                    android:text="各种Image"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <Button
                     android:background="#ffffff"
                     android:layout_weight="1"
                     android:text="各种refresh"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </LinearLayout>
             <Button
