@@ -19,6 +19,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <Button
+                    android:layout_margin="3dp"
                     android:layout_weight="1"
                     android:background="#ffffff"
                     android:text="动的gridview"
@@ -26,6 +27,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
                 <Button
+                    android:layout_margin="3dp"
                     android:layout_weight="1"
                     android:text="jni1"
                     android:id="@+id/bt_jni1"
@@ -33,6 +35,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <Button
+                    android:layout_margin="3dp"
                     android:layout_weight="1"
                     android:text="tclip"
                     android:id="@+id/bt_tclip"
@@ -46,6 +49,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <Button
+                    android:layout_margin="3dp"
                     android:id="@+id/bt_layout"
                     android:background="#ffffff"
                     android:layout_weight="1"
@@ -53,6 +57,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <Button
+                    android:layout_margin="3dp"
                     android:id="@+id/bt_progressbar"
                     android:background="#ffffff"
                     android:layout_weight="1"
@@ -60,6 +65,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <Button
+                    android:layout_margin="3dp"
                     android:id="@+id/bt_dialog"
                     android:background="#ffffff"
                     android:layout_weight="1"
@@ -80,6 +86,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <Button
+                    android:layout_margin="3dp"
                     android:id="@+id/bt_materialD"
                     android:background="#ffffff"
                     android:layout_weight="1"
@@ -87,6 +94,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <Button
+                    android:layout_margin="3dp"
                     android:id="@+id/bt_fresh"
                     android:background="#ffffff"
                     android:layout_weight="1"
@@ -100,6 +108,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <Button
+                    android:layout_margin="3dp"
                     android:id="@+id/bt_drawer"
                     android:background="#ffffff"
                     android:layout_weight="1"
@@ -107,6 +116,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <Button
+                    android:layout_margin="3dp"
                     android:id="@+id/iv_image"
                     android:background="#ffffff"
                     android:layout_weight="1"
@@ -114,71 +124,87 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <Button
+                    android:layout_margin="3dp"
                     android:background="#ffffff"
                     android:layout_weight="1"
                     android:text="各种refresh"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </LinearLayout>
-            <Button
-                android:id="@+id/bt_quickreturn"
-                android:text="quickreturn"
-                android:layout_margin="12dp"
-                android:background="#ffffff"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-
             <LinearLayout
-                android:weightSum="3"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <Button
-                    android:layout_weight="1"
-                    android:text="crouton"
-                    android:id="@+id/bt_crouton"
                     android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:id="@+id/bt_quickreturn"
+                    android:text="quickreturn"
+
                     android:background="#ffffff"
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <Button
                     android:layout_margin="3dp"
+                    android:layout_weight="1"
+                    android:text="crouton"
+                    android:id="@+id/bt_crouton"
+
+                    android:background="#ffffff"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <Button
+                    android:layout_margin="3dp"
+
                     android:background="#ffffff"
                     android:id="@+id/bt_wel"
                     android:text="welcom"
                     android:layout_weight="1"
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:layout_margin="3dp"
+                        android:text="loesbar"
+                        android:background="#ffffff"
+                        android:layout_weight="1"
+                        android:id="@+id/bt_loadingprogresbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <Button
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:text="DTLayout"
+                        android:background="#ffffff"
 
-            <Button
-                android:text="loadingprogresbar"
-                android:background="#ffffff"
-                android:layout_margin="12dp"
-                android:id="@+id/bt_loadingprogresbar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:text="DragTopLayout"
-                android:background="#ffffff"
-                android:layout_margin="12dp"
-                android:id="@+id/bt_DragTopLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-            <Button
-                android:id="@+id/bt_smoothprogressbar"
-                android:text="smoothprogressbar"
-                android:background="#ffffff"
-                android:layout_margin="12dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                        android:id="@+id/bt_DragTopLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <Button
+                        android:layout_margin="3dp"
+                        android:layout_weight="1"
+                        android:id="@+id/bt_smoothprogressbar"
+                        android:text="sssbar"
+                        android:background="#ffffff"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+
+
+
             <LinearLayout
                 android:weightSum="3"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <Button
+
                     android:id="@+id/bt_RetalsPull"
                     android:layout_weight="1"
                     android:text="RetalsPull"

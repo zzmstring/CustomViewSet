@@ -65,6 +65,14 @@
         <activity android:name="com.zzmstring.viewset.UI.splash.activity.viewFlipper.ViewFlipperActivity"/>
         <activity android:name="com.zzmstring.viewset.UI.splash.activity.splash.SplashActivity"/>
         <activity android:name="com.zzmstring.viewset.UI.splash.activity.scrollView.ScollerViewActivity"/>
+        <activity android:name="com.zzmstring.viewset.UI.every.EdialogAty"/>
+        <activity android:name="com.zzmstring.viewset.UI.every.EdrawerAty"/>
+        <activity android:name="com.zzmstring.viewset.UI.every.EImageAty"/>
+        <activity android:name="com.zzmstring.viewset.UI.every.ElayoutAty"/>
+        <activity android:name="com.zzmstring.viewset.UI.every.ElistViewAty"/>
+        <activity android:name="com.zzmstring.viewset.UI.every.EMdAty"/>
+        <activity android:name="com.zzmstring.viewset.UI.every.EprogressAty"/>
+        <activity android:name="com.zzmstring.viewset.UI.every.ErefreshAty"/>
     </application>
 
 </manifest>

@@ -20,6 +20,14 @@ import com.zzmstring.viewset.UI.SlidingMenuActivity;
 import com.zzmstring.viewset.UI.SmoothProgressBarActivity;
 import com.zzmstring.viewset.UI.TClipActivity;
 import com.zzmstring.viewset.UI.WandouIndexActivity;
+import com.zzmstring.viewset.UI.every.EImageAty;
+import com.zzmstring.viewset.UI.every.EMdAty;
+import com.zzmstring.viewset.UI.every.EdialogAty;
+import com.zzmstring.viewset.UI.every.EdrawerAty;
+import com.zzmstring.viewset.UI.every.ElayoutAty;
+import com.zzmstring.viewset.UI.every.ElistViewAty;
+import com.zzmstring.viewset.UI.every.EprogressAty;
+import com.zzmstring.viewset.UI.every.ErefreshAty;
 import com.zzmstring.viewset.UI.splash.WelActivity;
 import com.zzmstring.viewset.UI.zokesupport.ZokeSupportMainActivity;
 
@@ -165,20 +173,36 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 startActivity(intent14);
                 break;
             case R.id.bt_layout:
+                Intent intent15=new Intent(this, ElayoutAty.class);
+                startActivity(intent15);
                 break;
             case R.id.bt_progressbar:
+                Intent intent16=new Intent(this, EprogressAty.class);
+                startActivity(intent16);
                 break;
             case R.id.bt_dialog:
+                Intent intent17=new Intent(this, EdialogAty.class);
+                startActivity(intent17);
                 break;
             case R.id.bt_listview:
+                Intent intent18=new Intent(this, ElistViewAty.class);
+                startActivity(intent18);
                 break;
             case R.id.bt_materialD:
+                Intent intent19=new Intent(this, EMdAty.class);
+                startActivity(intent19);
                 break;
             case R.id.bt_fresh:
+                Intent intent20=new Intent(this, ErefreshAty.class);
+                startActivity(intent20);
                 break;
             case R.id.bt_drawer:
+                Intent intent21=new Intent(this, EdrawerAty.class);
+                startActivity(intent21);
                 break;
             case R.id.iv_image:
+                Intent intent22=new Intent(this, EImageAty.class);
+                startActivity(intent22);
                 break;
         }
     }
