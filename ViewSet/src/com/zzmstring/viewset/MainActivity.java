@@ -31,6 +31,9 @@ import com.zzmstring.viewset.UI.every.ErefreshAty;
 import com.zzmstring.viewset.UI.splash.WelActivity;
 import com.zzmstring.viewset.UI.zokesupport.ZokeSupportMainActivity;
 
+import butterknife.ButterKnife;
+import butterknife.InjectView;
+
 public class MainActivity extends Activity implements View.OnClickListener {
     @ViewInject(R.id.bt_gridview)
     Button bt_gridview;
