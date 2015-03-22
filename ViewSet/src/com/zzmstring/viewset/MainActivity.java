@@ -144,70 +144,58 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 startActivity(intent6);
                 break;
             case R.id.bt_smoothprogressbar:
-                Intent intent7=new Intent(this, SmoothProgressBarActivity.class);
-                startActivity(intent7);
+                skipActivity(SmoothProgressBarActivity.class);
                 break;
             case R.id.bt_RetalsPull:
-                Intent intent8=new Intent(this, RetalsPullToRefreshActvity.class);
-                startActivity(intent8);
+                skipActivity(RetalsPullToRefreshActvity.class);
                 break;
             case R.id.bt_refresh:
-                Intent intent9=new Intent(this, RefreshAndLoadActivity.class);
-                startActivity(intent9);
+                skipActivity(RefreshAndLoadActivity.class);
                 break;
             case R.id.bt_wandouindex:
-                Intent intent10=new Intent(this, WandouIndexActivity.class);
-                startActivity(intent10);
+                skipActivity(WandouIndexActivity.class);
                 break;
             case R.id.bt_slidemenu:
-                Intent intent11=new Intent(this, SlidingMenuActivity.class);
-                startActivity(intent11);
+                skipActivity(SlidingMenuActivity.class);
                 break;
             case R.id.bt_appmsg:
-                Intent intent12=new Intent(this, AppMsgActivity.class);
-                startActivity(intent12);
+                skipActivity(AppMsgActivity.class);
                 break;
             case R.id.bt_zoke:
-                Intent intent13=new Intent(this, ZokeSupportMainActivity.class);
-                startActivity(intent13);
+                skipActivity(ZokeSupportMainActivity.class);
                 break;
             case R.id.bt_wel:
-                Intent intent14=new Intent(this, WelActivity.class);
-                startActivity(intent14);
+                skipActivity(WelActivity.class);
                 break;
             case R.id.bt_layout:
-                Intent intent15=new Intent(this, ElayoutAty.class);
-                startActivity(intent15);
+                skipActivity(ElayoutAty.class);
                 break;
             case R.id.bt_progressbar:
-                Intent intent16=new Intent(this, EprogressAty.class);
-                startActivity(intent16);
+                skipActivity(EprogressAty.class);
                 break;
             case R.id.bt_dialog:
-                Intent intent17=new Intent(this, EdialogAty.class);
-                startActivity(intent17);
+                skipActivity(EdialogAty.class);
                 break;
             case R.id.bt_listview:
-                Intent intent18=new Intent(this, ElistViewAty.class);
-                startActivity(intent18);
+                skipActivity(ElistViewAty.class);
                 break;
             case R.id.bt_materialD:
-                Intent intent19=new Intent(this, EMdAty.class);
-                startActivity(intent19);
+                skipActivity(EMdAty.class);
                 break;
             case R.id.bt_fresh:
-                Intent intent20=new Intent(this, ErefreshAty.class);
-                startActivity(intent20);
+                skipActivity(ErefreshAty.class);
                 break;
             case R.id.bt_drawer:
-                Intent intent21=new Intent(this, EdrawerAty.class);
-                startActivity(intent21);
+                skipActivity(EdrawerAty.class);
                 break;
             case R.id.iv_image:
-                Intent intent22=new Intent(this, EImageAty.class);
-                startActivity(intent22);
+                skipActivity(EImageAty.class);
                 break;
         }
+    }
+    private void skipActivity(Class<?> classOf) {
+        Intent intent = new Intent(getApplicationContext(), classOf);
+        startActivity(intent);
     }
 	
 }

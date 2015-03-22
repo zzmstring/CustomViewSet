@@ -45,6 +45,7 @@ public class XListView extends ListView implements OnScrollListener {
     // when disable pull refresh.
     private RelativeLayout mHeaderViewContent;
     private TextView mHeaderTimeView;
+
     private int mHeaderViewHeight; // header view's height
     private boolean mEnablePullRefresh = true;
     private boolean mPullRefreshing = false; // is refreashing.
