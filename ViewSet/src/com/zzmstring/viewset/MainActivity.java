@@ -30,9 +30,10 @@ import com.zzmstring.viewset.UI.every.EprogressAty;
 import com.zzmstring.viewset.UI.every.ErefreshAty;
 import com.zzmstring.viewset.UI.splash.WelActivity;
 import com.zzmstring.viewset.UI.zokesupport.ZokeSupportMainActivity;
+import com.zzmstring.viewset.Utils.orhan.LogLevel;
+import com.zzmstring.viewset.Utils.orhan.Logger;
 
-import butterknife.ButterKnife;
-import butterknife.InjectView;
+
 
 public class MainActivity extends Activity implements View.OnClickListener {
     @ViewInject(R.id.bt_gridview)
@@ -81,11 +82,24 @@ public class MainActivity extends Activity implements View.OnClickListener {
     Button bt_drawer;
     @ViewInject(R.id.iv_image)
     Button iv_image;
-
-
+    @ViewInject(R.id.bt_test)
+    Button bt_test;
+    private static final String TAG = MainActivity.class.getSimpleName();
+    public String testjson="{\n" +
+            "  \"posts\": [\n" +
+            "    { \"id\": 1, \"title\": \"json-server\", \"author\": \"typicode\" }\n" +
+            "  ],\n" +
+            "  \"comments\": [\n" +
+            "    { \"id\": 1, \"body\": \"some comment\", \"postId\": 1 }\n" +
+            "  ]\n" +
+            "}";
+    public String testjson2="{posts: [{ id: 1, title: json-server, author: typicode }],comments: [{ id: 1, body: some comment, postId: 1 }]}";
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+        Logger.init()
+                .setMethodCount(1)
+                .setLogLevel(LogLevel.FULL);
 		setContentView(R.layout.activity_main);
         ViewUtils.inject(this);
         bt_gridview.setOnClickListener(this);
@@ -111,29 +125,26 @@ public class MainActivity extends Activity implements View.OnClickListener {
         bt_fresh.setOnClickListener(this);
         bt_drawer.setOnClickListener(this);
         iv_image.setOnClickListener(this);
+        bt_test.setOnClickListener(this);
+
 	}
     @Override
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.bt_gridview:
-                Intent intent=new Intent(this, DragGridViewActivity.class);
-                startActivity(intent);
+                skipActivity(DragGridViewActivity.class);
                 break;
             case R.id.bt_quickreturn:
-                Intent intent1=new Intent(this, QuickReturnActivity.class);
-                startActivity(intent1);
+                skipActivity(QuickReturnActivity.class);
                 break;
             case R.id.bt_jni1:
-                Intent intent2=new Intent(this, JNI1Activity.class);
-                startActivity(intent2);
+                skipActivity(JNI1Activity.class);
                 break;
             case R.id.bt_tclip:
-                Intent intent3=new Intent(this, TClipActivity.class);
-                startActivity(intent3);
+                skipActivity(TClipActivity.class);
                 break;
             case R.id.bt_crouton:
-                Intent intent4=new Intent(this, CroutonActivity.class);
-                startActivity(intent4);
+                skipActivity(CroutonActivity.class);
                 break;
             case R.id.bt_loadingprogresbar:
                 Intent intent5=new Intent(this, LoadingProgressBarActivity.class);
@@ -191,11 +202,25 @@ public class MainActivity extends Activity implements View.OnClickListener {
             case R.id.iv_image:
                 skipActivity(EImageAty.class);
                 break;
+            case R.id.bt_test:
+                test();
+                break;
         }
     }
     private void skipActivity(Class<?> classOf) {
         Intent intent = new Intent(getApplicationContext(), classOf);
         startActivity(intent);
+    }
+
+    private void test(){
+        Logger.v("test2", 3);
+        Logger.v("test3", 0);
+        Logger.v("MYTAG", "test3", 2);
+        Logger.wtf("test3", 1);
+        Logger.d(TAG, "logger with tag");
+        Logger.d("tag3", "logger with tag");
+        Logger.d("ta", "logger with tag");
+        Logger.json(testjson);
     }
 	
 }

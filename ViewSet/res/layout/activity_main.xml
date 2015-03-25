@@ -124,10 +124,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <Button
+                    android:id="@+id/bt_test"
                     android:layout_margin="3dp"
                     android:background="#ffffff"
                     android:layout_weight="1"
-                    android:text="各种refresh"
+                    android:text="testbutton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </LinearLayout>
