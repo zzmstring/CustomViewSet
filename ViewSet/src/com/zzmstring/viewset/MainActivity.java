@@ -7,6 +7,7 @@ import android.widget.Button;
 
 import com.lidroid.xutils.ViewUtils;
 import com.lidroid.xutils.view.annotation.ViewInject;
+import com.percolate.caffeine.DialogUtils;
 import com.zzmstring.viewset.UI.AppMsgActivity;
 import com.zzmstring.viewset.UI.CroutonActivity;
 import com.zzmstring.viewset.UI.DragGridViewActivity;
@@ -85,14 +86,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     @ViewInject(R.id.bt_test)
     Button bt_test;
     private static final String TAG = MainActivity.class.getSimpleName();
-    public String testjson="{\n" +
-            "  \"posts\": [\n" +
-            "    { \"id\": 1, \"title\": \"json-server\", \"author\": \"typicode\" }\n" +
-            "  ],\n" +
-            "  \"comments\": [\n" +
-            "    { \"id\": 1, \"body\": \"some comment\", \"postId\": 1 }\n" +
-            "  ]\n" +
-            "}";
+
     public String testjson2="{posts: [{ id: 1, title: json-server, author: typicode }],comments: [{ id: 1, body: some comment, postId: 1 }]}";
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -203,7 +197,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 skipActivity(EImageAty.class);
                 break;
             case R.id.bt_test:
-                test();
+                test2();
                 break;
         }
     }
@@ -220,7 +214,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
         Logger.d(TAG, "logger with tag");
         Logger.d("tag3", "logger with tag");
         Logger.d("ta", "logger with tag");
-        Logger.json(testjson);
+
+    }
+    private void test2(){
+        DialogUtils.quickDialog(this, "Some awesome message");
     }
 	
 }
