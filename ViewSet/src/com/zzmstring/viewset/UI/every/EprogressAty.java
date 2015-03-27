@@ -9,10 +9,10 @@ import com.lidroid.xutils.ViewUtils;
 import com.lidroid.xutils.view.annotation.ViewInject;
 import com.zzmstring.viewset.Base.BaseActivity;
 import com.zzmstring.viewset.R;
+import com.zzmstring.viewset.UI.every.ProgressAty.CirAty;
 import com.zzmstring.viewset.UI.every.ProgressAty.ProgressMainAty;
 
-import butterknife.ButterKnife;
-import butterknife.InjectView;
+
 
 /**
  * Created by zzmstring on 2015/3/19.
@@ -38,40 +38,39 @@ public class EprogressAty extends BaseActivity {
     Button bt9p;
     @ViewInject(R.id.bt10p)
     Button bt10p;
-//    @ViewInject(R.id.bt11p)
-//    Button bt11p;
-//    @ViewInject(R.id.bt12p)
-//    Button bt12p;
-//    @ViewInject(R.id.bt13p)
-//    Button bt13p;
-//    @ViewInject(R.id.bt14p)
-//    Button bt14p;
-//    @ViewInject(R.id.bt15p)
-//    Button bt15p;
-//    @ViewInject(R.id.bt16p)
-//    Button bt16p;
-//    @ViewInject(R.id.bt17p)
-//    Button bt17p;
-//    @ViewInject(R.id.bt18p)
-//    Button bt18p;
-//    @ViewInject(R.id.bt19p)
-//    Button bt19p;
-//    @ViewInject(R.id.bt20p)
-//    Button bt20p;
-//    @ViewInject(R.id.bt21p)
-//    Button bt21p;
-//    @ViewInject(R.id.bt22p)
-//    Button bt22p;
-//    @ViewInject(R.id.bt23p)
-//    Button bt23p;
-//    @ViewInject(R.id.bt24p)
-//    Button bt24p;
-
+    @ViewInject(R.id.bt11p)
+    Button bt11p;
+    @ViewInject(R.id.bt12p)
+    Button bt12p;
+    @ViewInject(R.id.bt13p)
+    Button bt13p;
+    @ViewInject(R.id.bt14p)
+    Button bt14p;
+    @ViewInject(R.id.bt15p)
+    Button bt15p;
+    @ViewInject(R.id.bt16p)
+    Button bt16p;
+    @ViewInject(R.id.bt17p)
+    Button bt17p;
+    @ViewInject(R.id.bt18p)
+    Button bt18p;
+    @ViewInject(R.id.bt19p)
+    Button bt19p;
+    @ViewInject(R.id.bt20p)
+    Button bt20p;
+    @ViewInject(R.id.bt21p)
+    Button bt21p;
+    @ViewInject(R.id.bt22p)
+    Button bt22p;
+    @ViewInject(R.id.bt23p)
+    Button bt23p;
+    @ViewInject(R.id.bt24p)
+    Button bt24p;
+    private Intent intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_every_progress);
-        ViewUtils.inject(this);
+
 //        Button button= (Button) findViewById(R.id.bt1);
 //        button.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -84,29 +83,37 @@ public class EprogressAty extends BaseActivity {
 
     @Override
     public void initView() {
-
-
+        setContentView(R.layout.activity_every_progress);
+        ViewUtils.inject(this);
     }
 
     @Override
     public void initData() {
-
+        bt1p.setText("frag");
+        bt2p.setText("cir");
     }
 
     @Override
     public void initListener() {
         bt1p.setOnClickListener(this);
+        bt2p.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.bt1p:
-                Intent intent=new Intent(this, ProgressMainAty.class);
-                startActivity(intent);
+                skipActivity(ProgressMainAty.class);
+                break;
+            case R.id.bt2p:
+                skipActivity(CirAty.class);
                 break;
         }
 
 
+    }
+    private void skipActivity(Class<?> classOf) {
+        intent = new Intent(getApplicationContext(), classOf);
+        startActivity(intent);
     }
 }
