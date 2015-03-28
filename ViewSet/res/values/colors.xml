@@ -159,4 +159,12 @@
 
     <color name="black6c">#CCCCCC</color>
     <color name="black6e">#eeeeee</color>
+
+    <color name="card_shadow">#D4D4D4</color>
+    <color name="black_overlay">#60000000</color>
+    <color name="white_overlay">#40FFFFFF</color>
+
+    <color name="primary">#EF5350</color>
+    <color name="secondary">#B71C1C</color>
+    <color name="overlay_light">#F8F8F8</color>
 </resources>

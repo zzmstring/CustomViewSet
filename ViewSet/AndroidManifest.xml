@@ -74,7 +74,7 @@
         <activity android:name="com.zzmstring.viewset.UI.every.EprogressAty"/>
         <activity android:name="com.zzmstring.viewset.UI.every.ErefreshAty"/>
         <activity android:name="com.zzmstring.viewset.UI.every.ProgressAty.CirAty"/>
-
+        <activity android:name="com.zzmstring.viewset.UI.every.DiaAty.DiaPlusAty"/>
 
         <activity android:name="com.zzmstring.viewset.UI.every.ProgressAty.ProgressMainAty"/>
         <activity android:name="com.zzmstring.viewset.UI.every.ProgressAty.ProgressActivity"/>
