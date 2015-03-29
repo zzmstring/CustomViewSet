@@ -141,15 +141,15 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 skipActivity(CroutonActivity.class);
                 break;
             case R.id.bt_loadingprogresbar:
-                Intent intent5=new Intent(this, LoadingProgressBarActivity.class);
-                startActivity(intent5);
+//                Intent intent5=new Intent(this, LoadingProgressBarActivity.class);
+//                startActivity(intent5);
                 break;
             case R.id.bt_DragTopLayout:
                 Intent intent6=new Intent(this, DragTopLayoutActivity.class);
                 startActivity(intent6);
                 break;
             case R.id.bt_smoothprogressbar:
-                skipActivity(SmoothProgressBarActivity.class);
+//                skipActivity(SmoothProgressBarActivity.class);
                 break;
             case R.id.bt_RetalsPull:
                 skipActivity(RetalsPullToRefreshActvity.class);

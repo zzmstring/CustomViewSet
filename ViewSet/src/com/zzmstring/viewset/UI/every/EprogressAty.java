@@ -9,6 +9,8 @@ import com.lidroid.xutils.ViewUtils;
 import com.lidroid.xutils.view.annotation.ViewInject;
 import com.zzmstring.viewset.Base.BaseActivity;
 import com.zzmstring.viewset.R;
+import com.zzmstring.viewset.UI.LoadingProgressBarActivity;
+import com.zzmstring.viewset.UI.SmoothProgressBarActivity;
 import com.zzmstring.viewset.UI.every.ProgressAty.CirAty;
 import com.zzmstring.viewset.UI.every.ProgressAty.ProgressMainAty;
 
@@ -91,12 +93,16 @@ public class EprogressAty extends BaseActivity {
     public void initData() {
         bt1p.setText("frag");
         bt2p.setText("cir");
+        bt3p.setText("smooth");
+        bt4p.setText("loading");
     }
 
     @Override
     public void initListener() {
         bt1p.setOnClickListener(this);
         bt2p.setOnClickListener(this);
+        bt3p.setOnClickListener(this);
+        bt4p.setOnClickListener(this);
     }
 
     @Override
@@ -107,6 +113,12 @@ public class EprogressAty extends BaseActivity {
                 break;
             case R.id.bt2p:
                 skipActivity(CirAty.class);
+                break;
+            case R.id.bt3p:
+                skipActivity(SmoothProgressBarActivity.class);
+                break;
+            case R.id.bt4p:
+                skipActivity(LoadingProgressBarActivity.class);
                 break;
         }
 
