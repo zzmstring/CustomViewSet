@@ -7,6 +7,7 @@ import com.lidroid.xutils.ViewUtils;
 import com.lidroid.xutils.view.annotation.ViewInject;
 import com.zzmstring.viewset.Base.BaseActivity;
 import com.zzmstring.viewset.R;
+import com.zzmstring.viewset.View.NumberProgressBar.NumberProgressBar;
 import com.zzmstring.viewset.View.circleprogress.ArcProgress;
 import com.zzmstring.viewset.View.circleprogress.CircleProgress;
 import com.zzmstring.viewset.View.circleprogress.DonutProgress;
@@ -21,6 +22,8 @@ public class CirAty extends BaseActivity {
     CircleProgress circle_progress;
     @ViewInject(R.id.arc_progress)
     ArcProgress arc_progress;
+    @ViewInject(R.id.nb_1)
+    NumberProgressBar        nb_1;
     int progress = 0;
     private Handler handler;
     @Override
@@ -47,6 +50,7 @@ public class CirAty extends BaseActivity {
                     donut_progress.setProgress(finalI *2);
                     circle_progress.setProgress(finalI *2);
                     arc_progress.setProgress(finalI *2);
+                    nb_1.setProgress(finalI *2);
                 }
             },100*(i+1));
         }

@@ -32,6 +32,14 @@
                 android:layout_height="100dp"
                 custom:arc_progress="0"
                 custom:arc_bottom_text="MEMORY"/>
+            <com.zzmstring.viewset.View.NumberProgressBar.NumberProgressBar
+                android:id="@+id/nb_1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                custom:progress="0"
+                custom:progress_reached_bar_height="12dp"
+                custom:progress_unreached_bar_height="12dp"
+                />
             </LinearLayout>
         </ScrollView>
 </LinearLayout>

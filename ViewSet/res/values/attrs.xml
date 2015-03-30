@@ -6,6 +6,7 @@
             <enum name="jet" value="1" />
         </attr>
     </declare-styleable>
+    <!--numberprogressbar start-->
     <declare-styleable name="NumberProgressBar">
         <attr name="progress" format="integer"/>
         <attr name="max" format="integer"/>
@@ -26,6 +27,7 @@
             <enum name="invisible" value="1"/>
         </attr>
     </declare-styleable>
+    <!--numberprogressbar end-->
 
     <declare-styleable name="Themes">
         <attr name="numberProgressBarStyle" format="reference"/>
