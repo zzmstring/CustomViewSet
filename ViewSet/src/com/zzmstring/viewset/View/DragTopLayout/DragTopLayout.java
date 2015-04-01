@@ -30,6 +30,7 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
 import com.zzmstring.viewset.R;
+import com.zzmstring.viewset.Utils.ExLog;
 
 /**
  * Created by chenupt@gmail.com on 2015/1/18.
@@ -190,9 +191,11 @@ public class DragTopLayout extends FrameLayout {
         // Top layout is changed
         if (topViewHeight != newTopHeight) {
             if (panelState == PanelState.EXPANDED) {
+                ExLog.l("state is EXPANDED");
                 contentTop = newTopHeight;
                 handleSlide(newTopHeight);
             } else if(panelState == PanelState.COLLAPSED){
+                ExLog.l("state is COLLAPSED");
                 // update the drag content top when it is collapsed.
                 contentTop = collapseOffset;
             }
@@ -213,6 +216,7 @@ public class DragTopLayout extends FrameLayout {
             @Override
             public void run() {
                 dragHelper.smoothSlideViewTo(dragContentView, getPaddingLeft(), top);
+                ExLog.l(ExLog.getCurrentMethodName()+"padingleft is"+getPaddingLeft()+"top is "+ top);
                 postInvalidate();
             }
         });
@@ -222,6 +226,7 @@ public class DragTopLayout extends FrameLayout {
         contentTop = top;
         if (anim) {
             dragHelper.smoothSlideViewTo(dragContentView, getPaddingLeft(), contentTop);
+            ExLog.l(ExLog.getCurrentMethodName()+"padingleft is"+getPaddingLeft()+"contentTop is "+ contentTop);
             postInvalidate();
         } else {
             requestLayout();

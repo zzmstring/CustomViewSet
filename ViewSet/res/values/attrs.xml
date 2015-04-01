@@ -35,6 +35,7 @@
         <attr name="donutProgressStyle" format="reference"/>
         <attr name="arcProgressStyle" format="reference"/>
     </declare-styleable>
+    <!--draytoplayout start-->
     <declare-styleable name="DragTopLayout">
 
         <!--Set the collapse panel offset-->
@@ -53,6 +54,7 @@
         <attr name="dtlDragContentView" format="reference" />
 
     </declare-styleable>
+    <!--draytoplayout end-->
     <declare-styleable name="PagerSlidingTabStrip">
         <attr name="pstsIndicatorColor" format="color" />
         <attr name="pstsUnderlineColor" format="color" />
