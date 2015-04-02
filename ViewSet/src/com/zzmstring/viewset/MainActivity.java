@@ -128,9 +128,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
             case R.id.bt_gridview:
                 skipActivity(DragGridViewActivity.class);
                 break;
-            case R.id.bt_quickreturn:
-                skipActivity(QuickReturnActivity.class);
-                break;
+
             case R.id.bt_jni1:
                 skipActivity(JNI1Activity.class);
                 break;
@@ -140,24 +138,15 @@ public class MainActivity extends Activity implements View.OnClickListener {
             case R.id.bt_crouton:
                 skipActivity(CroutonActivity.class);
                 break;
-            case R.id.bt_loadingprogresbar:
 
-                break;
-            case R.id.bt_DragTopLayout:
 
-                break;
-            case R.id.bt_smoothprogressbar:
-//                skipActivity(SmoothProgressBarActivity.class);
-                break;
             case R.id.bt_RetalsPull:
                 skipActivity(RetalsPullToRefreshActvity.class);
                 break;
             case R.id.bt_refresh:
                 skipActivity(RefreshAndLoadActivity.class);
                 break;
-            case R.id.bt_wandouindex:
-                skipActivity(WandouIndexActivity.class);
-                break;
+
             case R.id.bt_slidemenu:
                 skipActivity(SlidingMenuActivity.class);
                 break;

@@ -10,6 +10,8 @@ import com.lidroid.xutils.view.annotation.ViewInject;
 import com.zzmstring.viewset.Base.BaseActivity;
 import com.zzmstring.viewset.R;
 import com.zzmstring.viewset.UI.DragTopLayoutActivity;
+import com.zzmstring.viewset.UI.QuickReturnActivity;
+import com.zzmstring.viewset.UI.WandouIndexActivity;
 
 
 /**
@@ -79,12 +81,15 @@ public class ElayoutAty extends BaseActivity {
     @Override
     public void initData() {
         bt1.setText("dragtop");
-
+        bt2.setText("quickre");
+        bt3.setText("wandou");
     }
 
     @Override
     public void initListener() {
         bt1.setOnClickListener(this);
+        bt2.setOnClickListener(this);
+        bt3.setOnClickListener(this);
     }
 
     @Override
@@ -92,6 +97,12 @@ public class ElayoutAty extends BaseActivity {
         switch (v.getId()){
             case R.id.bt1:
                 skipActivity(DragTopLayoutActivity.class);
+                break;
+            case R.id.bt2:
+                skipActivity(QuickReturnActivity.class);
+                break;
+            case R.id.bt3:
+                skipActivity(WandouIndexActivity.class);
                 break;
         }
     }
