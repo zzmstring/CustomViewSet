@@ -12,6 +12,8 @@ import com.zzmstring.viewset.R;
 import com.zzmstring.viewset.UI.DragTopLayoutActivity;
 import com.zzmstring.viewset.UI.QuickReturnActivity;
 import com.zzmstring.viewset.UI.WandouIndexActivity;
+import com.zzmstring.viewset.UI.splash.WelActivity;
+import com.zzmstring.viewset.UI.zokesupport.ZokeSupportMainActivity;
 
 
 /**
@@ -83,6 +85,8 @@ public class ElayoutAty extends BaseActivity {
         bt1.setText("dragtop");
         bt2.setText("quickre");
         bt3.setText("wandou");
+        bt4.setText("welaty");
+        bt5.setText("zoke");
     }
 
     @Override
@@ -90,6 +94,8 @@ public class ElayoutAty extends BaseActivity {
         bt1.setOnClickListener(this);
         bt2.setOnClickListener(this);
         bt3.setOnClickListener(this);
+        bt4.setOnClickListener(this);
+        bt5.setOnClickListener(this);
     }
 
     @Override
@@ -104,6 +110,13 @@ public class ElayoutAty extends BaseActivity {
             case R.id.bt3:
                 skipActivity(WandouIndexActivity.class);
                 break;
+            case R.id.bt4:
+                skipActivity(WelActivity.class);
+                break;
+            case R.id.bt5:
+                skipActivity(ZokeSupportMainActivity.class);
+                break;
+
         }
     }
     private void skipActivity(Class<?> classOf) {

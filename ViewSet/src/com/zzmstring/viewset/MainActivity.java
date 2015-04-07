@@ -154,10 +154,10 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 skipActivity(AppMsgActivity.class);
                 break;
             case R.id.bt_zoke:
-                skipActivity(ZokeSupportMainActivity.class);
+
                 break;
             case R.id.bt_wel:
-                skipActivity(WelActivity.class);
+
                 break;
             case R.id.bt_layout:
                 skipActivity(ElayoutAty.class);
