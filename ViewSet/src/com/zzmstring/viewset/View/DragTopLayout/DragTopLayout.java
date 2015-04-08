@@ -173,6 +173,7 @@ public class DragTopLayout extends FrameLayout {
     @Override
     protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
         super.onLayout(changed, left, top, right, bottom);
+        ExLog.l(ExLog.getCurrentMethodName());
         dragRange = getHeight();
 
         // In case of resetting the content top to target position before sliding.
@@ -187,6 +188,7 @@ public class DragTopLayout extends FrameLayout {
     }
 
     private void resetTopViewHeight() {
+        ExLog.l(ExLog.getCurrentMethodName());
         int newTopHeight = topView.getHeight();
         // Top layout is changed
         if (topViewHeight != newTopHeight) {
@@ -204,6 +206,7 @@ public class DragTopLayout extends FrameLayout {
     }
 
     private void resetContentHeight() {
+        ExLog.l(ExLog.getCurrentMethodName());
         if (dragContentView != null && dragContentView.getHeight() != 0) {
             ViewGroup.LayoutParams layoutParams = dragContentView.getLayoutParams();
             layoutParams.height = getHeight() - collapseOffset;
@@ -212,6 +215,7 @@ public class DragTopLayout extends FrameLayout {
     }
 
     private void handleSlide(final int top) {
+        ExLog.l(ExLog.getCurrentMethodName());
         new Handler().post(new Runnable() {
             @Override
             public void run() {
@@ -223,6 +227,7 @@ public class DragTopLayout extends FrameLayout {
     }
 
     private void resetDragContent(boolean anim, int top) {
+        ExLog.l(ExLog.getCurrentMethodName());
         contentTop = top;
         if (anim) {
             dragHelper.smoothSlideViewTo(dragContentView, getPaddingLeft(), contentTop);
@@ -234,6 +239,7 @@ public class DragTopLayout extends FrameLayout {
     }
 
     private void calculateRatio(float top) {
+        ExLog.l(ExLog.getCurrentMethodName());
         ratio = (top-collapseOffset) / (topViewHeight - collapseOffset);
         if (dispatchingChildrenContentView) {
             resetDispatchingContentView();
@@ -280,8 +286,10 @@ public class DragTopLayout extends FrameLayout {
     }
 
     private ViewDragHelper.Callback callback = new ViewDragHelper.Callback() {
+
         @Override
         public boolean tryCaptureView(View child, int pointerId) {
+            ExLog.l(ExLog.getCurrentMethodName());
             if (child == topView) {
                 dragHelper.captureChildView(dragContentView, pointerId);
                 return false;
@@ -291,6 +299,7 @@ public class DragTopLayout extends FrameLayout {
 
         @Override
         public void onViewPositionChanged(View changedView, int left, int top, int dx, int dy) {
+            ExLog.l(ExLog.getCurrentMethodName());
             super.onViewPositionChanged(changedView, left, top, dx, dy);
             contentTop = top;
             requestLayout();
@@ -299,11 +308,13 @@ public class DragTopLayout extends FrameLayout {
 
         @Override
         public int getViewVerticalDragRange(View child) {
+            ExLog.l(ExLog.getCurrentMethodName());
             return dragRange;
         }
 
         @Override
         public int clampViewPositionVertical(View child, int top, int dy) {
+            ExLog.l(ExLog.getCurrentMethodName());
             if (overDrag) {
                 // Drag over the top view height.
                 return Math.max(top, getPaddingTop() + collapseOffset);
@@ -314,6 +325,7 @@ public class DragTopLayout extends FrameLayout {
 
         @Override
         public void onViewReleased(View releasedChild, float xvel, float yvel) {
+            ExLog.l(ExLog.getCurrentMethodName());
             super.onViewReleased(releasedChild, xvel, yvel);
             // yvel > 0 Fling down || yvel < 0 Fling up
             int top;
@@ -328,6 +340,7 @@ public class DragTopLayout extends FrameLayout {
 
         @Override
         public void onViewDragStateChanged(int state) {
+            ExLog.l(ExLog.getCurrentMethodName());
             // 1 -> 2 -> 0
             if (state == ViewDragHelper.STATE_IDLE) {
                 // Change the panel state while the drag content view is idle.
@@ -348,6 +361,7 @@ public class DragTopLayout extends FrameLayout {
 
     @Override
     public void computeScroll() {
+
         if (dragHelper.continueSettling(true)) {
             ViewCompat.postInvalidateOnAnimation(this);
         }
@@ -355,6 +369,7 @@ public class DragTopLayout extends FrameLayout {
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
+
         try {
 
             boolean intercept = shouldIntercept && dragHelper.shouldInterceptTouchEvent(ev);
@@ -403,6 +418,7 @@ public class DragTopLayout extends FrameLayout {
     }
 
     private void resetDispatchingContentView() {
+        ExLog.l(ExLog.getCurrentMethodName());
         dispatchingChildrenDownFaked = false;
         dispatchingChildrenContentView = false;
         dispatchingChildrenStartedAtY = Float.MAX_VALUE;
@@ -414,6 +430,7 @@ public class DragTopLayout extends FrameLayout {
     //================
 
     public void openTopView(boolean anim) {
+        ExLog.l(ExLog.getCurrentMethodName());
         // Before created
         if (dragContentView.getHeight() == 0) {
             panelState = PanelState.EXPANDED;
@@ -426,6 +443,7 @@ public class DragTopLayout extends FrameLayout {
     }
 
     public void closeTopView(boolean anim) {
+        ExLog.l(ExLog.getCurrentMethodName());
         if (dragContentView.getHeight() == 0) {
             panelState = PanelState.COLLAPSED;
             if (panelListener != null) {

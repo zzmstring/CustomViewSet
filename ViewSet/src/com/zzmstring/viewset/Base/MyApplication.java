@@ -8,17 +8,19 @@ import java.util.Map;
 import android.app.Application;
 
 import com.zzmstring.viewset.DB.Channel.SQLHelper;
+import com.zzmstring.viewset.Utils.orhan.LogLevel;
+import com.zzmstring.viewset.Utils.orhan.Logger;
 
 
 /**
  * 存放全局变量
  * 
- * @author TopSage
+ *
  *
  */
 
 public class MyApplication extends Application {
-	public static int typeid;
+
 	private static MyApplication mAppApplication;
 	private SQLHelper sqlHelper;
 	@Override
@@ -26,6 +28,9 @@ public class MyApplication extends Application {
 		// TODO Auto-generated method stub
 		super.onCreate();
 		mAppApplication = this;
+        Logger.init()
+                .setMethodCount(1)
+                .setLogLevel(LogLevel.FULL);
 	}
 	/** 获取数据库Helper */
 	public SQLHelper getSQLHelper() {
@@ -34,18 +39,11 @@ public class MyApplication extends Application {
 		return sqlHelper;
 	}
 	
-	//保存加密视频的端口号
-	private int drmServerPort;
+
 	
 	private Map<String, Object> map = new HashMap<String, Object>();
 
-	public int getDrmServerPort() {
-		return drmServerPort;
-	}
 
-	public void setDrmServerPort(int drmServerPort) {
-		this.drmServerPort = drmServerPort;
-	}
 
 	public Map<String, Object> getMap() {
 		return map;

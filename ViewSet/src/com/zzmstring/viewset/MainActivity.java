@@ -91,9 +91,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-        Logger.init()
-                .setMethodCount(1)
-                .setLogLevel(LogLevel.FULL);
+
 		setContentView(R.layout.activity_main);
         ViewUtils.inject(this);
         bt_gridview.setOnClickListener(this);
