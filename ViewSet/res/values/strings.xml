@@ -165,4 +165,10 @@
     <string name="grid_holder">Grid Holder</string>
     <string name="show_header">Show header</string>
     <string name="show_footer">Show footer</string>
+
+
+
+    <string name="title_activity_simple">SimpleActivity</string>
+    <string name="title_activity_example1">Example1Activity</string>
+    <string name="title_activity_example2">Example2Activity</string>
 </resources>

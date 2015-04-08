@@ -12,6 +12,7 @@ import com.zzmstring.viewset.R;
 import com.zzmstring.viewset.UI.DragTopLayoutActivity;
 import com.zzmstring.viewset.UI.QuickReturnActivity;
 import com.zzmstring.viewset.UI.WandouIndexActivity;
+import com.zzmstring.viewset.UI.every.LayoutAty.LoadViewHelperAty;
 import com.zzmstring.viewset.UI.splash.WelActivity;
 import com.zzmstring.viewset.UI.zokesupport.ZokeSupportMainActivity;
 
@@ -87,6 +88,7 @@ public class ElayoutAty extends BaseActivity {
         bt3.setText("wandou");
         bt4.setText("welaty");
         bt5.setText("zoke");
+        bt6.setText("loadhelper");
     }
 
     @Override
@@ -96,6 +98,7 @@ public class ElayoutAty extends BaseActivity {
         bt3.setOnClickListener(this);
         bt4.setOnClickListener(this);
         bt5.setOnClickListener(this);
+        bt6.setOnClickListener(this);
     }
 
     @Override
@@ -115,6 +118,9 @@ public class ElayoutAty extends BaseActivity {
                 break;
             case R.id.bt5:
                 skipActivity(ZokeSupportMainActivity.class);
+                break;
+            case R.id.bt6:
+                skipActivity(LoadViewHelperAty.class);
                 break;
 
         }

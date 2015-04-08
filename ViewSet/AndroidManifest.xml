@@ -78,6 +78,11 @@
 
         <activity android:name="com.zzmstring.viewset.UI.every.ProgressAty.ProgressMainAty"/>
         <activity android:name="com.zzmstring.viewset.UI.every.ProgressAty.ProgressActivity"/>
+        <activity android:name="com.zzmstring.viewset.UI.every.LayoutAty.Example1Activity"/>
+        <activity android:name="com.zzmstring.viewset.UI.every.LayoutAty.Example2Activity"/>
+        <activity android:name="com.zzmstring.viewset.UI.every.LayoutAty.LoadViewHelperAty"/>
+        <activity android:name="com.zzmstring.viewset.UI.every.LayoutAty.SimpleActivity"/>
+
     </application>
 
 </manifest>

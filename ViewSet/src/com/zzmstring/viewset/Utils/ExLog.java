@@ -17,6 +17,7 @@ public class ExLog {
 		System.out.println(":::: @"+clazz+" -> "+line+" :::: "+message);
 	}
 
+
 	/**
 	 * 取得当前代码所在的方法名
 	 * @return 当前方法名
