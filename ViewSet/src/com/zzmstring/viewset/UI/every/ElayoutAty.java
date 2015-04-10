@@ -13,6 +13,7 @@ import com.zzmstring.viewset.UI.DragTopLayoutActivity;
 import com.zzmstring.viewset.UI.QuickReturnActivity;
 import com.zzmstring.viewset.UI.WandouIndexActivity;
 import com.zzmstring.viewset.UI.every.LayoutAty.LoadViewHelperAty;
+import com.zzmstring.viewset.UI.every.LayoutAty.ShadowLayoutAty;
 import com.zzmstring.viewset.UI.splash.WelActivity;
 import com.zzmstring.viewset.UI.zokesupport.ZokeSupportMainActivity;
 
@@ -125,7 +126,7 @@ public class ElayoutAty extends BaseActivity {
                 skipActivity(LoadViewHelperAty.class);
                 break;
             case R.id.bt7:
-
+                skipActivity(ShadowLayoutAty.class);
                 break;
 
         }

@@ -82,7 +82,7 @@
         <activity android:name="com.zzmstring.viewset.UI.every.LayoutAty.Example2Activity"/>
         <activity android:name="com.zzmstring.viewset.UI.every.LayoutAty.LoadViewHelperAty"/>
         <activity android:name="com.zzmstring.viewset.UI.every.LayoutAty.SimpleActivity"/>
-
+        <activity android:name="com.zzmstring.viewset.UI.every.LayoutAty.ShadowLayoutAty"/>
     </application>
 
 </manifest>
