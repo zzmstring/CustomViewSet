@@ -89,6 +89,7 @@ public class ElayoutAty extends BaseActivity {
         bt4.setText("welaty");
         bt5.setText("zoke");
         bt6.setText("loadhelper");
+        bt7.setText("shadowL");
     }
 
     @Override
@@ -99,6 +100,7 @@ public class ElayoutAty extends BaseActivity {
         bt4.setOnClickListener(this);
         bt5.setOnClickListener(this);
         bt6.setOnClickListener(this);
+        bt7.setOnClickListener(this);
     }
 
     @Override
@@ -121,6 +123,9 @@ public class ElayoutAty extends BaseActivity {
                 break;
             case R.id.bt6:
                 skipActivity(LoadViewHelperAty.class);
+                break;
+            case R.id.bt7:
+
                 break;
 
         }
