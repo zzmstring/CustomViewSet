@@ -183,8 +183,10 @@ public class DragTopLayout extends FrameLayout {
 
         topView.layout(left, Math.min(topView.getPaddingTop(), contentTop - topViewHeight), right,
                 contentTop);
+        ExLog.l(ExLog.getCurrentMethodName()+"left:"+left+"-top:"+Math.min(topView.getPaddingTop(), contentTop - topViewHeight)+"-right:"+right+"-bottom:"+contentTop);
         dragContentView.layout(left, contentTopTemp, right,
                 contentTopTemp + dragContentView.getHeight());
+        ExLog.l("left:"+left+"-top:"+contentTopTemp+"-right:"+right+"-bottom:"+contentTopTemp + dragContentView.getHeight());
     }
 
     private void resetTopViewHeight() {
@@ -210,6 +212,7 @@ public class DragTopLayout extends FrameLayout {
         if (dragContentView != null && dragContentView.getHeight() != 0) {
             ViewGroup.LayoutParams layoutParams = dragContentView.getLayoutParams();
             layoutParams.height = getHeight() - collapseOffset;
+            ExLog.l(ExLog.getCurrentMethodName()+"collapseOffset:"+collapseOffset);
             dragContentView.setLayoutParams(layoutParams);
         }
     }

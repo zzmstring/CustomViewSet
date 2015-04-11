@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app1="http://schemas.android.com/apk/res/com.zzmstring.viewset"
 
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -12,6 +13,7 @@
             xmlns:app="http://schemas.android.com/apk/res-auto"
             android:background="@color/colorPrimary"
             android:id="@+id/drag_layout"
+
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             >
