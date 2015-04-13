@@ -310,6 +310,11 @@ public class DragTopLayout extends FrameLayout {
         }
 
         @Override
+        public int getViewHorizontalDragRange(View child) {
+            return super.getViewHorizontalDragRange(child);
+        }
+
+        @Override
         public int getViewVerticalDragRange(View child) {
             ExLog.l(ExLog.getCurrentMethodName());
             return dragRange;
