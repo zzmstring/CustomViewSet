@@ -9,6 +9,7 @@ import com.lidroid.xutils.ViewUtils;
 import com.lidroid.xutils.view.annotation.ViewInject;
 import com.zzmstring.viewset.Base.BaseActivity;
 import com.zzmstring.viewset.R;
+import com.zzmstring.viewset.UI.PullToRefresh.IosPullToRefreshAty;
 import com.zzmstring.viewset.UI.RefreshAndLoadActivity;
 import com.zzmstring.viewset.UI.RetalsPullToRefreshActvity;
 
@@ -104,7 +105,7 @@ public class ErefreshAty extends BaseActivity {
                 skipActivity(RefreshAndLoadActivity.class);
                 break;
             case R.id.bt3:
-
+                skipActivity(IosPullToRefreshAty.class);
                 break;
         }
     }

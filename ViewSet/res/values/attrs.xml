@@ -234,4 +234,7 @@
         <attr name="sl_dx" format="dimension"/>
         <attr name="sl_dy" format="dimension"/>
     </declare-styleable>
+    <declare-styleable name="PullWidget" >
+
+    </declare-styleable>
 </resources>
