@@ -177,4 +177,6 @@
     <color name="blue">#ff2195f2</color>
     <color name="background">#ff333333</color>
     <color name="shadow">#AA000000</color>
+
+    <color name="black_p50">#7f000000</color>
 </resources>
