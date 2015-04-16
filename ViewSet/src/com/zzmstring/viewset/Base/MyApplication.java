@@ -7,6 +7,7 @@ import java.util.Map;
 
 import android.app.Application;
 
+import com.facebook.stetho.Stetho;
 import com.zzmstring.viewset.DB.Channel.SQLHelper;
 import com.zzmstring.viewset.Utils.orhan.LogLevel;
 import com.zzmstring.viewset.Utils.orhan.Logger;
@@ -31,6 +32,11 @@ public class MyApplication extends Application {
         Logger.init()
                 .setMethodCount(1)
                 .setLogLevel(LogLevel.FULL);
+        Stetho.initialize(
+                Stetho.newInitializerBuilder(this)
+                        .enableDumpapp(Stetho.defaultDumperPluginsProvider(this))
+                        .enableWebKitInspector(Stetho.defaultInspectorModulesProvider(this))
+                        .build());
 	}
 	/** 获取数据库Helper */
 	public SQLHelper getSQLHelper() {
