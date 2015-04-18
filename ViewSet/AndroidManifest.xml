@@ -85,6 +85,7 @@
         <activity android:name="com.zzmstring.viewset.UI.every.LayoutAty.ShadowLayoutAty"/>
         <activity android:name="com.zzmstring.viewset.UI.PullToRefresh.IosPullToRefreshAty"/>
         <activity android:name="com.zzmstring.viewset.UI.every.LayoutAty.SwipeBackAty"/>
+        <activity android:name="com.zzmstring.viewset.UI.every.LayoutAty.PullEyeAty"/>
     </application>
 
 </manifest>

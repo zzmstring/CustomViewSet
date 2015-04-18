@@ -13,6 +13,7 @@ import com.zzmstring.viewset.UI.DragTopLayoutActivity;
 import com.zzmstring.viewset.UI.QuickReturnActivity;
 import com.zzmstring.viewset.UI.WandouIndexActivity;
 import com.zzmstring.viewset.UI.every.LayoutAty.LoadViewHelperAty;
+import com.zzmstring.viewset.UI.every.LayoutAty.PullEyeAty;
 import com.zzmstring.viewset.UI.every.LayoutAty.ShadowLayoutAty;
 import com.zzmstring.viewset.UI.every.LayoutAty.SwipeBackAty;
 import com.zzmstring.viewset.UI.splash.WelActivity;
@@ -93,6 +94,7 @@ public class ElayoutAty extends BaseActivity {
         bt6.setText("loadhelper");
         bt7.setText("shadowL");
         bt8.setText("swipeback");
+        bt9.setText("pulleye");
     }
 
     @Override
@@ -105,6 +107,8 @@ public class ElayoutAty extends BaseActivity {
         bt6.setOnClickListener(this);
         bt7.setOnClickListener(this);
         bt8.setOnClickListener(this);
+        bt9.setOnClickListener(this);
+
     }
 
     @Override
@@ -133,6 +137,9 @@ public class ElayoutAty extends BaseActivity {
                 break;
             case R.id.bt8:
                 skipActivity(SwipeBackAty.class);
+                break;
+            case R.id.bt9:
+                skipActivity(PullEyeAty.class);
                 break;
 
         }

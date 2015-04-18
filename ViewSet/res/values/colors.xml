@@ -179,4 +179,6 @@
     <color name="shadow">#AA000000</color>
 
     <color name="black_p50">#7f000000</color>
+
+    <color name="transgray">#33555555</color>
 </resources>
