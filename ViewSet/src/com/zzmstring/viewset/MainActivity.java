@@ -29,11 +29,14 @@ import com.zzmstring.viewset.UI.every.ElayoutAty;
 import com.zzmstring.viewset.UI.every.ElistViewAty;
 import com.zzmstring.viewset.UI.every.EprogressAty;
 import com.zzmstring.viewset.UI.every.ErefreshAty;
+import com.zzmstring.viewset.UI.every.TestAty;
 import com.zzmstring.viewset.UI.splash.WelActivity;
 import com.zzmstring.viewset.UI.zokesupport.ZokeSupportMainActivity;
 import com.zzmstring.viewset.Utils.orhan.LogLevel;
 import com.zzmstring.viewset.Utils.orhan.Logger;
 
+import org.simple.eventbus.EventBus;
+import org.simple.eventbus.Subscriber;
 
 
 public class MainActivity extends Activity implements View.OnClickListener {
@@ -118,6 +121,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         bt_drawer.setOnClickListener(this);
         iv_image.setOnClickListener(this);
         bt_test.setOnClickListener(this);
+        EventBus.getDefault().register(this);
 
 	}
     @Override
@@ -182,7 +186,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 skipActivity(EImageAty.class);
                 break;
             case R.id.bt_test:
-                test2();
+                skipActivity(TestAty.class);
                 break;
         }
     }
@@ -204,5 +208,14 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private void test2(){
         DialogUtils.quickDialog(this, "Some awesome message");
     }
-	
+
+    @Override
+    protected void onDestroy() {
+        EventBus.getDefault().unregister(this);
+        super.onDestroy();
+    }
+    @Subscriber(tag = "my_tag")
+    private void updateUserWithTag(String user) {
+        Logger.v("", "### update username with my_tag, name = " + user);
+    }
 }

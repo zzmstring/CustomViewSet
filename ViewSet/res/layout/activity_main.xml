@@ -140,7 +140,6 @@
                     android:layout_margin="3dp"
                     android:layout_weight="1"
                     android:id="@+id/bt_quickreturn"
-                    android:text="quickreturn"
 
                     android:background="#ffffff"
                     android:layout_width="match_parent"
@@ -159,7 +158,6 @@
 
                     android:background="#ffffff"
                     android:id="@+id/bt_wel"
-                    android:text="welcom"
                     android:layout_weight="1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
@@ -170,7 +168,6 @@
                     android:layout_height="wrap_content">
                     <Button
                         android:layout_margin="3dp"
-                        android:text="null"
                         android:background="#ffffff"
                         android:layout_weight="1"
                         android:id="@+id/bt_loadingprogresbar"
@@ -179,7 +176,6 @@
                     <Button
                         android:layout_margin="3dp"
                         android:layout_weight="1"
-                        android:text="DTLayout"
                         android:background="#ffffff"
 
                         android:id="@+id/bt_DragTopLayout"
@@ -189,7 +185,6 @@
                         android:layout_margin="3dp"
                         android:layout_weight="1"
                         android:id="@+id/bt_smoothprogressbar"
-                        android:text="null"
                         android:background="#ffffff"
 
                         android:layout_width="match_parent"
@@ -208,7 +203,6 @@
 
                     android:id="@+id/bt_RetalsPull"
                     android:layout_weight="1"
-                    android:text="RetalsPull"
                     android:background="#ffffff"
                     android:layout_margin="3dp"
                     android:layout_width="0dp"
@@ -224,7 +218,6 @@
                 <Button
                     android:id="@+id/bt_zoke"
                     android:layout_weight="1"
-                    android:text="zoke"
                     android:background="#ffffff"
                     android:layout_margin="3dp"
                     android:layout_width="0dp"
@@ -238,7 +231,6 @@
                 <Button
                     android:id="@+id/bt_wandouindex"
                     android:layout_weight="1"
-                    android:text="wandoui"
                     android:background="#ffffff"
                     android:layout_margin="3dp"
                     android:layout_width="0dp"
