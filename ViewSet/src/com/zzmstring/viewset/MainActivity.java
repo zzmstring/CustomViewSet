@@ -90,7 +90,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     Button bt_test;
     private static final String TAG = MainActivity.class.getSimpleName();
 
-    public String testjson2="{posts: [{ id: 1, title: json-server, author: typicode }],comments: [{ id: 1, body: some comment, postId: 1 }]}";
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
