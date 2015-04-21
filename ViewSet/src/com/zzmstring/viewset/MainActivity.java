@@ -143,17 +143,16 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
 
             case R.id.bt_RetalsPull:
-                skipActivity(RetalsPullToRefreshActvity.class);
-                break;
+
             case R.id.bt_refresh:
-                skipActivity(RefreshAndLoadActivity.class);
+
                 break;
 
             case R.id.bt_slidemenu:
                 skipActivity(SlidingMenuActivity.class);
                 break;
             case R.id.bt_appmsg:
-                skipActivity(AppMsgActivity.class);
+
                 break;
             case R.id.bt_zoke:
 
