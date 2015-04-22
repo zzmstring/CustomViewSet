@@ -6,7 +6,10 @@ import android.widget.Button;
 
 import com.lidroid.xutils.ViewUtils;
 import com.lidroid.xutils.view.annotation.ViewInject;
+import com.path.android.jobqueue.JobManager;
 import com.zzmstring.viewset.Base.BaseActivity;
+import com.zzmstring.viewset.Base.MyApplication;
+import com.zzmstring.viewset.Bean.TestJob;
 import com.zzmstring.viewset.R;
 
 import org.simple.eventbus.EventBus;
@@ -63,6 +66,7 @@ public class TestAty extends BaseActivity {
     Button bt23;
     @ViewInject(R.id.bt24)
     Button bt24;
+    JobManager jobManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,10 +75,12 @@ public class TestAty extends BaseActivity {
     public void initView() {
         setContentView(R.layout.activity_every);
         ViewUtils.inject(this);
+        jobManager= MyApplication.getApp().getJobManager();
     }
     @Override
     public void initData() {
         bt1.setText("andevent");
+        bt2.setText("job");
 
     }
     @Override
@@ -87,9 +93,15 @@ public class TestAty extends BaseActivity {
             case R.id.bt1:
                 test1();
                 break;
+            case R.id.bt2:
+                test2();
+                break;
         }
     }
     private void test1(){
         EventBus.getDefault().post("zzm.string", "my_tag");
+    }
+    private void test2(){
+        jobManager.addJobInBackground(new TestJob("test"));
     }
 }

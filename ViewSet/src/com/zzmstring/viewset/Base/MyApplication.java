@@ -6,8 +6,12 @@ import java.util.Map;
 
 
 import android.app.Application;
+import android.util.Log;
 
 import com.facebook.stetho.Stetho;
+import com.path.android.jobqueue.JobManager;
+import com.path.android.jobqueue.config.Configuration;
+import com.path.android.jobqueue.log.CustomLogger;
 import com.zzmstring.viewset.DB.Channel.SQLHelper;
 import com.zzmstring.viewset.Utils.orhan.LogLevel;
 import com.zzmstring.viewset.Utils.orhan.Logger;
@@ -37,6 +41,7 @@ public class MyApplication extends Application {
                         .enableDumpapp(Stetho.defaultDumperPluginsProvider(this))
                         .enableWebKitInspector(Stetho.defaultInspectorModulesProvider(this))
                         .build());
+        configureJobManager();
 	}
 	/** 获取数据库Helper */
 	public SQLHelper getSQLHelper() {
@@ -70,7 +75,44 @@ public class MyApplication extends Application {
 		return map.get(key);
 
 	}
+    private JobManager jobManager;
 	public static MyApplication getApp() {
 		return mAppApplication;
 	}
+
+    private void configureJobManager() {
+        Configuration configuration = new Configuration.Builder(this)
+                .customLogger(new CustomLogger() {
+                    private static final String TAG = "JOBS";
+                    @Override
+                    public boolean isDebugEnabled() {
+                        return true;
+                    }
+
+                    @Override
+                    public void d(String text, Object... args) {
+                        Log.d(TAG, String.format(text, args));
+                    }
+
+                    @Override
+                    public void e(Throwable t, String text, Object... args) {
+                        Log.e(TAG, String.format(text, args), t);
+                    }
+
+                    @Override
+                    public void e(String text, Object... args) {
+                        Log.e(TAG, String.format(text, args));
+                    }
+                })
+                .minConsumerCount(1)//always keep at least one consumer alive
+                .maxConsumerCount(3)//up to 3 consumers at a time
+                .loadFactor(3)//3 jobs per consumer
+                .consumerKeepAlive(120)//wait 2 minute
+                .build();
+        jobManager = new JobManager(this, configuration);
+    }
+
+    public JobManager getJobManager() {
+        return jobManager;
+    }
 }
