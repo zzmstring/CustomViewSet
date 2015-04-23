@@ -87,6 +87,7 @@
         <activity android:name="com.zzmstring.viewset.UI.every.LayoutAty.SwipeBackAty"/>
         <activity android:name="com.zzmstring.viewset.UI.every.LayoutAty.PullEyeAty"/>
         <activity android:name="com.zzmstring.viewset.UI.every.TestAty"/>
+        <activity android:name="com.zzmstring.viewset.UI.other.AnimationsAty"/>
     </application>
 
 </manifest>

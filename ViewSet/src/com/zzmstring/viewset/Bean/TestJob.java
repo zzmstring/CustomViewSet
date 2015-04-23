@@ -22,25 +22,25 @@ public class TestJob extends Job {
     }
     @Override
     public void onAdded() {
-        Logger.v("onAdded",2);
+        Logger.v("onAdded",3);
 
     }
 
     @Override
     public void onRun() throws Throwable {
-        Logger.v("onRun",2);
+        Logger.v("onRun",3);
 
     }
 
     @Override
     protected void onCancel() {
-        Logger.v("onCancel",2);
+        Logger.v("onCancel",3);
 
     }
 
     @Override
     protected boolean shouldReRunOnThrowable(Throwable throwable) {
-        Logger.v("shouldReRunOnThrowable",2);
+        Logger.v("shouldReRunOnThrowable",3);
         return false;
     }
 }

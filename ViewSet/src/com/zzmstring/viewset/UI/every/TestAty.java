@@ -86,6 +86,7 @@ public class TestAty extends BaseActivity {
     @Override
     public void initListener() {
         bt1.setOnClickListener(this);
+        bt2.setOnClickListener(this);
     }
     @Override
     public void onClick(View v) {
