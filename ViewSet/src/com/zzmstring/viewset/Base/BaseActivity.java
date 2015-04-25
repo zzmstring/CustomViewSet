@@ -1,6 +1,8 @@
 package com.zzmstring.viewset.Base;
 
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 
@@ -9,7 +11,7 @@ import android.view.View;
 
 public  class BaseActivity extends FragmentActivity implements View.OnClickListener{
 
-
+    private Intent intent;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -52,6 +54,11 @@ public  class BaseActivity extends FragmentActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
 
+    }
+
+    public void skip(Class<? extends Activity> claz){
+        intent=new Intent(this,claz);
+        startActivity(intent);
     }
 
 

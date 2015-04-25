@@ -1,11 +1,17 @@
 package com.zzmstring.viewset.UI.every;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.lidroid.xutils.ViewUtils;
+import com.lidroid.xutils.view.annotation.ViewInject;
 import com.zzmstring.viewset.Base.BaseActivity;
 import com.zzmstring.viewset.R;
+import com.zzmstring.viewset.UI.every.ListAty.SegmentControlAty;
+import com.zzmstring.viewset.View.SegmentControl.SegmentControl;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -14,53 +20,53 @@ import butterknife.InjectView;
  * Created by zzmstring on 2015/3/19.
  */
 public class ElistViewAty extends BaseActivity {
-    @InjectView(R.id.bt1)
+    @ViewInject(R.id.bt1)
     Button bt1;
-    @InjectView(R.id.bt2)
+    @ViewInject(R.id.bt2)
     Button bt2;
-    @InjectView(R.id.bt3)
+    @ViewInject(R.id.bt3)
     Button bt3;
-    @InjectView(R.id.bt4)
+    @ViewInject(R.id.bt4)
     Button bt4;
-    @InjectView(R.id.bt5)
+    @ViewInject(R.id.bt5)
     Button bt5;
-    @InjectView(R.id.bt6)
+    @ViewInject(R.id.bt6)
     Button bt6;
-    @InjectView(R.id.bt7)
+    @ViewInject(R.id.bt7)
     Button bt7;
-    @InjectView(R.id.bt8)
+    @ViewInject(R.id.bt8)
     Button bt8;
-    @InjectView(R.id.bt9)
+    @ViewInject(R.id.bt9)
     Button bt9;
-    @InjectView(R.id.bt10)
+    @ViewInject(R.id.bt10)
     Button bt10;
-    @InjectView(R.id.bt11)
+    @ViewInject(R.id.bt11)
     Button bt11;
-    @InjectView(R.id.bt12)
+    @ViewInject(R.id.bt12)
     Button bt12;
-    @InjectView(R.id.bt13)
+    @ViewInject(R.id.bt13)
     Button bt13;
-    @InjectView(R.id.bt14)
+    @ViewInject(R.id.bt14)
     Button bt14;
-    @InjectView(R.id.bt15)
+    @ViewInject(R.id.bt15)
     Button bt15;
-    @InjectView(R.id.bt16)
+    @ViewInject(R.id.bt16)
     Button bt16;
-    @InjectView(R.id.bt17)
+    @ViewInject(R.id.bt17)
     Button bt17;
-    @InjectView(R.id.bt18)
+    @ViewInject(R.id.bt18)
     Button bt18;
-    @InjectView(R.id.bt19)
+    @ViewInject(R.id.bt19)
     Button bt19;
-    @InjectView(R.id.bt20)
+    @ViewInject(R.id.bt20)
     Button bt20;
-    @InjectView(R.id.bt21)
+    @ViewInject(R.id.bt21)
     Button bt21;
-    @InjectView(R.id.bt22)
+    @ViewInject(R.id.bt22)
     Button bt22;
-    @InjectView(R.id.bt23)
+    @ViewInject(R.id.bt23)
     Button bt23;
-    @InjectView(R.id.bt24)
+    @ViewInject(R.id.bt24)
     Button bt24;
 
     @Override
@@ -71,21 +77,26 @@ public class ElistViewAty extends BaseActivity {
     @Override
     public void initView() {
         setContentView(R.layout.activity_every);
-        ButterKnife.inject(this);
+        ViewUtils.inject(this);
     }
 
     @Override
     public void initData() {
-
+        bt1.setText("SHsegment");
     }
 
     @Override
     public void initListener() {
-
+        bt1.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-
+        switch (v.getId()){
+            case R.id.bt1:
+                skip(SegmentControlAty.class);
+                break;
+        }
     }
+
 }

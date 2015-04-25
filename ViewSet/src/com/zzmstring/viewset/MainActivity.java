@@ -30,6 +30,7 @@ import com.zzmstring.viewset.UI.every.ElistViewAty;
 import com.zzmstring.viewset.UI.every.EprogressAty;
 import com.zzmstring.viewset.UI.every.ErefreshAty;
 import com.zzmstring.viewset.UI.every.TestAty;
+import com.zzmstring.viewset.UI.other.AnimationsAty;
 import com.zzmstring.viewset.UI.splash.WelActivity;
 import com.zzmstring.viewset.UI.zokesupport.ZokeSupportMainActivity;
 import com.zzmstring.viewset.Utils.orhan.LogLevel;
@@ -145,7 +146,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
             case R.id.bt_RetalsPull:
 
             case R.id.bt_refresh:
-
+                skipActivity(AnimationsAty.class);
                 break;
 
             case R.id.bt_slidemenu:
