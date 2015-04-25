@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:segmentcontrol="http://schemas.android.com/apk/res/com.zzmstring.viewset"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.zzmstring.viewset.View.SegmentControl.SegmentControl
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        segmentcontrol:texts="啊啊|啦啦啦|哈哈哈|顶顶顶顶"
+        segmentcontrol:colors="#0099CC"
+        segmentcontrol:cornerRadius="5dip"
+        segmentcontrol:direction="vertical"
+        segmentcontrol:verticalGap="8dip"
+        segmentcontrol:horizonGap="8dip"/>
+</LinearLayout>

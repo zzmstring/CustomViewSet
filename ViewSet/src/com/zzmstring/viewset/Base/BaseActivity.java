@@ -57,7 +57,7 @@ public  class BaseActivity extends FragmentActivity implements View.OnClickListe
     }
 
     public void skip(Class<? extends Activity> claz){
-        intent=new Intent(this,claz);
+        intent=new Intent(getApplicationContext(),claz);
         startActivity(intent);
     }
 
