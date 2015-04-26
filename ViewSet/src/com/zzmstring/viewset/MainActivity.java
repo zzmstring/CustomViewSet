@@ -23,6 +23,7 @@ import com.zzmstring.viewset.UI.TClipActivity;
 import com.zzmstring.viewset.UI.WandouIndexActivity;
 import com.zzmstring.viewset.UI.every.EImageAty;
 import com.zzmstring.viewset.UI.every.EMdAty;
+import com.zzmstring.viewset.UI.every.EVewPagerAty;
 import com.zzmstring.viewset.UI.every.EdialogAty;
 import com.zzmstring.viewset.UI.every.EdrawerAty;
 import com.zzmstring.viewset.UI.every.ElayoutAty;
@@ -128,6 +129,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         switch (v.getId()){
+            case R.id.bt_quickreturn:
+                skipActivity(EVewPagerAty.class);
+                break;
             case R.id.bt_gridview:
                 skipActivity(DragGridViewActivity.class);
                 break;

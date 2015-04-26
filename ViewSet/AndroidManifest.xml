@@ -89,6 +89,7 @@
         <activity android:name="com.zzmstring.viewset.UI.every.TestAty"/>
         <activity android:name="com.zzmstring.viewset.UI.other.AnimationsAty"/>
         <activity android:name="com.zzmstring.viewset.UI.every.ListAty.SegmentControlAty"/>
+        <activity android:name="com.zzmstring.viewset.UI.every.EVewPagerAty"/>
     </application>
 
 </manifest>
