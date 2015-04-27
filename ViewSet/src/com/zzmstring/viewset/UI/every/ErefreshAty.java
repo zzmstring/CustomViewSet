@@ -84,6 +84,7 @@ public class ErefreshAty extends BaseActivity {
         bt1.setText("Retals");
         bt2.setText("ReAndLo");
         bt3.setText("iosrefresh");
+        bt4.setText("refresh");
 
     }
 
@@ -92,6 +93,7 @@ public class ErefreshAty extends BaseActivity {
         bt1.setOnClickListener(this);
         bt2.setOnClickListener(this);
         bt3.setOnClickListener(this);
+        bt4.setOnClickListener(this);
 
     }
 
@@ -107,6 +109,9 @@ public class ErefreshAty extends BaseActivity {
             case R.id.bt3:
                 skipActivity(IosPullToRefreshAty.class);
                 break;
+            case R.id.bt4:
+                break;
+
         }
     }
     private Intent intent;
