@@ -278,4 +278,7 @@
         <attr name="stl_customTabTextViewId" format="reference"/>
         <attr name="stl_distributeEvenly" format="boolean"/>
     </declare-styleable>
+
+
+    <attr name="windowActionBar" format="boolean" />
 </resources>

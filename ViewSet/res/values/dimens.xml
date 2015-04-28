@@ -44,4 +44,12 @@
     <!-- PullWidget -->
     <dimen name="minimum_height">40dip</dimen>
     <dimen name="minimum_content_height">30dip</dimen>
+
+
+
+    <!--topnewtab-->
+    <dimen name="title_bar_height">44.0dip</dimen>
+    <dimen name="head_size">28.0dip</dimen>
+    <dimen name="top_category_height">40.0dip</dimen>
+    <dimen name="category_tab_text">15.0sp</dimen>
 </resources>

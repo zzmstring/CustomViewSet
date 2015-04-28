@@ -91,6 +91,9 @@
         <activity android:name="com.zzmstring.viewset.UI.every.ListAty.SegmentControlAty"/>
         <activity android:name="com.zzmstring.viewset.UI.every.EVewPagerAty"/>
         <activity android:name="com.zzmstring.viewset.UI.every.viewpager.SmartTabAty"/>
+        <activity android:name="com.zzmstring.viewset.UI.every.refresh.ShowActivity"/>
+        <activity android:name="com.zzmstring.viewset.UI.every.viewpager.TopNewsAty"/>
+
     </application>
 
 </manifest>

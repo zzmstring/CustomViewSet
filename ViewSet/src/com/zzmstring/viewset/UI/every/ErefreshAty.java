@@ -12,6 +12,7 @@ import com.zzmstring.viewset.R;
 import com.zzmstring.viewset.UI.PullToRefresh.IosPullToRefreshAty;
 import com.zzmstring.viewset.UI.RefreshAndLoadActivity;
 import com.zzmstring.viewset.UI.RetalsPullToRefreshActvity;
+import com.zzmstring.viewset.UI.every.refresh.ArefreshAty;
 
 
 /**
@@ -110,6 +111,7 @@ public class ErefreshAty extends BaseActivity {
                 skipActivity(IosPullToRefreshAty.class);
                 break;
             case R.id.bt4:
+                skip(ArefreshAty.class);
                 break;
 
         }
