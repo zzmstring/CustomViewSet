@@ -8,7 +8,9 @@ import com.lidroid.xutils.ViewUtils;
 import com.lidroid.xutils.view.annotation.ViewInject;
 import com.zzmstring.viewset.Base.BaseActivity;
 import com.zzmstring.viewset.R;
+import com.zzmstring.viewset.UI.DragTopLayoutActivity;
 import com.zzmstring.viewset.UI.every.viewpager.SmartTabAty;
+import com.zzmstring.viewset.UI.every.viewpager.TopNewsAty;
 
 /**
  * Created by zzmstring on 2015/4/26.
@@ -77,11 +79,15 @@ public class EVewPagerAty extends BaseActivity {
     @Override
     public void initData() {
         bt1.setText("SmartTab");
+        bt2.setText("topnews");
+        bt3.setText("PagerSlidingTabStrip");
     }
 
     @Override
     public void initListener() {
         bt1.setOnClickListener(this);
+        bt2.setOnClickListener(this);
+        bt3.setOnClickListener(this);
     }
 
     @Override
@@ -89,6 +95,12 @@ public class EVewPagerAty extends BaseActivity {
         switch (v.getId()){
             case R.id.bt1:
                 skip(SmartTabAty.class);
+                break;
+            case R.id.bt2:
+                skip(TopNewsAty.class);
+                break;
+            case R.id.bt3:
+                skip(DragTopLayoutActivity.class);
                 break;
         }
     }

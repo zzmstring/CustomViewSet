@@ -280,5 +280,5 @@
     </declare-styleable>
 
 
-    <attr name="windowActionBar" format="boolean" />
+
 </resources>
