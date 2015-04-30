@@ -8,19 +8,16 @@ import android.widget.Button;
 import com.lidroid.xutils.ViewUtils;
 import com.lidroid.xutils.view.annotation.ViewInject;
 import com.percolate.caffeine.DialogUtils;
-import com.zzmstring.viewset.UI.AppMsgActivity;
+
 import com.zzmstring.viewset.UI.CroutonActivity;
 import com.zzmstring.viewset.UI.DragGridViewActivity;
-import com.zzmstring.viewset.UI.DragTopLayoutActivity;
+
 import com.zzmstring.viewset.UI.JNI1Activity;
-import com.zzmstring.viewset.UI.LoadingProgressBarActivity;
-import com.zzmstring.viewset.UI.QuickReturnActivity;
-import com.zzmstring.viewset.UI.RefreshAndLoadActivity;
-import com.zzmstring.viewset.UI.RetalsPullToRefreshActvity;
+
 import com.zzmstring.viewset.UI.SlidingMenuActivity;
-import com.zzmstring.viewset.UI.SmoothProgressBarActivity;
+
 import com.zzmstring.viewset.UI.TClipActivity;
-import com.zzmstring.viewset.UI.WandouIndexActivity;
+
 import com.zzmstring.viewset.UI.every.EImageAty;
 import com.zzmstring.viewset.UI.every.EMdAty;
 import com.zzmstring.viewset.UI.every.EVewPagerAty;
@@ -32,9 +29,7 @@ import com.zzmstring.viewset.UI.every.EprogressAty;
 import com.zzmstring.viewset.UI.every.ErefreshAty;
 import com.zzmstring.viewset.UI.every.TestAty;
 import com.zzmstring.viewset.UI.other.AnimationsAty;
-import com.zzmstring.viewset.UI.splash.WelActivity;
-import com.zzmstring.viewset.UI.zokesupport.ZokeSupportMainActivity;
-import com.zzmstring.viewset.Utils.orhan.LogLevel;
+
 import com.zzmstring.viewset.Utils.orhan.Logger;
 
 import org.simple.eventbus.EventBus;

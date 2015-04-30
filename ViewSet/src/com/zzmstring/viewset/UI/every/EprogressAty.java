@@ -13,7 +13,8 @@ import com.zzmstring.viewset.UI.LoadingProgressBarActivity;
 import com.zzmstring.viewset.UI.SmoothProgressBarActivity;
 import com.zzmstring.viewset.UI.every.ProgressAty.CirAty;
 import com.zzmstring.viewset.UI.every.ProgressAty.ProgressMainAty;
-
+import com.zzmstring.viewset.UI.every.ProgressAty.ProgressPieAty;
+import com.zzmstring.viewset.UI.every.ProgressAty.Radar1Aty;
 
 
 /**
@@ -95,6 +96,8 @@ public class EprogressAty extends BaseActivity {
         bt2p.setText("cir");
         bt3p.setText("smooth");
         bt4p.setText("loading");
+        bt5p.setText("pie");
+        bt6p.setText("radar1");
     }
 
     @Override
@@ -103,6 +106,8 @@ public class EprogressAty extends BaseActivity {
         bt2p.setOnClickListener(this);
         bt3p.setOnClickListener(this);
         bt4p.setOnClickListener(this);
+        bt5p.setOnClickListener(this);
+        bt6p.setOnClickListener(this);
     }
 
     @Override
@@ -119,6 +124,12 @@ public class EprogressAty extends BaseActivity {
                 break;
             case R.id.bt4p:
                 skipActivity(LoadingProgressBarActivity.class);
+                break;
+            case R.id.bt5p:
+                skipActivity(ProgressPieAty.class);
+                break;
+            case R.id.bt6p:
+                skip(Radar1Aty.class);
                 break;
         }
 

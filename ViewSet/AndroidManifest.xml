@@ -93,7 +93,8 @@
         <activity android:name="com.zzmstring.viewset.UI.every.viewpager.SmartTabAty"/>
         <activity android:name="com.zzmstring.viewset.UI.every.refresh.ShowActivity"/>
         <activity android:name="com.zzmstring.viewset.UI.every.viewpager.TopNewsAty"/>
-
+        <activity android:name="com.zzmstring.viewset.UI.every.ProgressAty.ProgressPieAty"/>
+        <activity android:name="com.zzmstring.viewset.UI.every.ProgressAty.Radar1Aty"/>
     </application>
 
 </manifest>
