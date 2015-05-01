@@ -102,13 +102,13 @@ public class ErefreshAty extends BaseActivity {
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.bt1:
-                skipActivity(RetalsPullToRefreshActvity.class);
+                skip(RetalsPullToRefreshActvity.class);
                 break;
             case R.id.bt2:
-                skipActivity(RefreshAndLoadActivity.class);
+                skip(RefreshAndLoadActivity.class);
                 break;
             case R.id.bt3:
-                skipActivity(IosPullToRefreshAty.class);
+                skip(IosPullToRefreshAty.class);
                 break;
             case R.id.bt4:
                 skip(ArefreshAty.class);
@@ -116,9 +116,5 @@ public class ErefreshAty extends BaseActivity {
 
         }
     }
-    private Intent intent;
-    private void skipActivity(Class<?> classOf) {
-        intent = new Intent(getApplicationContext(), classOf);
-        startActivity(intent);
-    }
+
 }

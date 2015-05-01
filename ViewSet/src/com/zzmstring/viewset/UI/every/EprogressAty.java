@@ -114,19 +114,19 @@ public class EprogressAty extends BaseActivity {
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.bt1p:
-                skipActivity(ProgressMainAty.class);
+                skip(ProgressMainAty.class);
                 break;
             case R.id.bt2p:
-                skipActivity(CirAty.class);
+                skip(CirAty.class);
                 break;
             case R.id.bt3p:
-                skipActivity(SmoothProgressBarActivity.class);
+                skip(SmoothProgressBarActivity.class);
                 break;
             case R.id.bt4p:
-                skipActivity(LoadingProgressBarActivity.class);
+                skip(LoadingProgressBarActivity.class);
                 break;
             case R.id.bt5p:
-                skipActivity(ProgressPieAty.class);
+                skip(ProgressPieAty.class);
                 break;
             case R.id.bt6p:
                 skip(Radar1Aty.class);
@@ -135,8 +135,5 @@ public class EprogressAty extends BaseActivity {
 
 
     }
-    private void skipActivity(Class<?> classOf) {
-        intent = new Intent(getApplicationContext(), classOf);
-        startActivity(intent);
-    }
+
 }

@@ -13,6 +13,8 @@ import com.zzmstring.viewset.R;
 
 /**
  * Created by zzmstring on 2015/4/29.
+ *
+ *
  */
 public class RadarView extends View {
     private Paint circlePaint;//圆形画笔

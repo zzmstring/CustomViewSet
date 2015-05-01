@@ -115,37 +115,34 @@ public class ElayoutAty extends BaseActivity {
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.bt1:
-                skipActivity(DragTopLayoutActivity.class);
+                skip(DragTopLayoutActivity.class);
                 break;
             case R.id.bt2:
-                skipActivity(QuickReturnActivity.class);
+                skip(QuickReturnActivity.class);
                 break;
             case R.id.bt3:
-                skipActivity(WandouIndexActivity.class);
+                skip(WandouIndexActivity.class);
                 break;
             case R.id.bt4:
-                skipActivity(WelActivity.class);
+                skip(WelActivity.class);
                 break;
             case R.id.bt5:
-                skipActivity(ZokeSupportMainActivity.class);
+                skip(ZokeSupportMainActivity.class);
                 break;
             case R.id.bt6:
-                skipActivity(LoadViewHelperAty.class);
+                skip(LoadViewHelperAty.class);
                 break;
             case R.id.bt7:
-                skipActivity(ShadowLayoutAty.class);
+                skip(ShadowLayoutAty.class);
                 break;
             case R.id.bt8:
-                skipActivity(SwipeBackAty.class);
+                skip(SwipeBackAty.class);
                 break;
             case R.id.bt9:
-                skipActivity(PullEyeAty.class);
+                skip(PullEyeAty.class);
                 break;
 
         }
     }
-    private void skipActivity(Class<?> classOf) {
-        Intent intent = new Intent(getApplicationContext(), classOf);
-        startActivity(intent);
-    }
+
 }

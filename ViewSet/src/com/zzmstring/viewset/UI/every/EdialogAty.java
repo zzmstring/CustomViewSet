@@ -94,14 +94,11 @@ public class EdialogAty extends BaseActivity {
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.bt1:
-                skipActivity(DiaPlusAty.class);
+                skip(DiaPlusAty.class);
                 break;
         }
 
 
     }
-    private void skipActivity(Class<?> classOf) {
-        intent = new Intent(getApplicationContext(), classOf);
-        startActivity(intent);
-    }
+
 }
