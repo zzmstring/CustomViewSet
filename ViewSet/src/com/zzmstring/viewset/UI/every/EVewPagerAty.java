@@ -10,6 +10,7 @@ import com.zzmstring.viewset.Base.BaseActivity;
 import com.zzmstring.viewset.R;
 import com.zzmstring.viewset.UI.DragTopLayoutActivity;
 import com.zzmstring.viewset.UI.every.viewpager.SmartTabAty;
+import com.zzmstring.viewset.UI.every.viewpager.SpringIndAty;
 import com.zzmstring.viewset.UI.every.viewpager.TopNewsAty;
 
 /**
@@ -81,6 +82,7 @@ public class EVewPagerAty extends BaseActivity {
         bt1.setText("SmartTab");
         bt2.setText("topnews");
         bt3.setText("PagerSlidingTabStrip");
+        bt4.setText("springid");
     }
 
     @Override
@@ -88,6 +90,7 @@ public class EVewPagerAty extends BaseActivity {
         bt1.setOnClickListener(this);
         bt2.setOnClickListener(this);
         bt3.setOnClickListener(this);
+        bt4.setOnClickListener(this);
     }
 
     @Override
@@ -101,6 +104,9 @@ public class EVewPagerAty extends BaseActivity {
                 break;
             case R.id.bt3:
                 skip(DragTopLayoutActivity.class);
+                break;
+            case R.id.bt4:
+                skip(SpringIndAty.class);
                 break;
         }
     }
