@@ -238,7 +238,7 @@
                 <Button
                     android:id="@+id/bt_slidemenu"
                     android:layout_weight="1"
-                    android:text="slidemenu"
+                    android:text=""
                     android:background="#ffffff"
                     android:layout_margin="3dp"
                     android:layout_width="0dp"

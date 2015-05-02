@@ -33,6 +33,9 @@ public class SpringIndAty extends BaseActivity {
 
     @Override
     public void initView() {
+
+        setContentView(R.layout.activity_spring);
+        ViewUtils.inject(this);
         mListFragment=new ArrayList<Fragment>();
         ListFragment listFragment=new ListFragment();
         ListFragment2 listFragment2=new ListFragment2();
@@ -47,8 +50,6 @@ public class SpringIndAty extends BaseActivity {
         mListFragment.add(listFragment5);
         mListFragment.add(listFragment6);
         FragmentAdapter fragmentAdapter=new FragmentAdapter(getSupportFragmentManager(),mListFragment);
-        setContentView(R.layout.activity_spring);
-        ViewUtils.inject(this);
         viewPager = (ScrollerViewPager) findViewById(R.id.view_pager);
         SpringIndicator springIndicator = (SpringIndicator) findViewById(R.id.indicator);
 

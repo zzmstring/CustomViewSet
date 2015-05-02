@@ -8,6 +8,7 @@ import com.lidroid.xutils.ViewUtils;
 import com.lidroid.xutils.view.annotation.ViewInject;
 import com.zzmstring.viewset.Base.BaseActivity;
 import com.zzmstring.viewset.R;
+import com.zzmstring.viewset.UI.SlidingMenuActivity;
 
 
 /**
@@ -75,16 +76,21 @@ public class EdrawerAty extends BaseActivity {
 
     @Override
     public void initData() {
-
+        bt1.setText("slidemenu");
     }
 
     @Override
     public void initListener() {
-
+        bt1.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.bt1:
+                skip(SlidingMenuActivity.class);
+                break;
+        }
 
     }
 }

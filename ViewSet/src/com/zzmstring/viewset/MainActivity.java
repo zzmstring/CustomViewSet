@@ -149,7 +149,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 break;
 
             case R.id.bt_slidemenu:
-                skipActivity(SlidingMenuActivity.class);
+
                 break;
             case R.id.bt_appmsg:
 
