@@ -143,7 +143,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
 
             case R.id.bt_RetalsPull:
-
+                break;
             case R.id.bt_refresh:
                 skipActivity(AnimationsAty.class);
                 break;

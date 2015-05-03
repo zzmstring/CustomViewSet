@@ -10,6 +10,7 @@ import com.lidroid.xutils.view.annotation.ViewInject;
 import com.zzmstring.viewset.Base.BaseActivity;
 import com.zzmstring.viewset.R;
 import com.zzmstring.viewset.UI.every.DiaAty.DiaPlusAty;
+import com.zzmstring.viewset.UI.every.DiaAty.MessBarAty;
 
 
 /**
@@ -83,11 +84,13 @@ public class EdialogAty extends BaseActivity {
     @Override
     public void initData() {
         bt1.setText("diaplus");
+        bt2.setText("messbar");
     }
 
     @Override
     public void initListener() {
         bt1.setOnClickListener(this);
+        bt2.setOnClickListener(this);
     }
 
     @Override
@@ -95,6 +98,9 @@ public class EdialogAty extends BaseActivity {
         switch (v.getId()){
             case R.id.bt1:
                 skip(DiaPlusAty.class);
+                break;
+            case R.id.bt2:
+                skip(MessBarAty.class);
                 break;
         }
 
