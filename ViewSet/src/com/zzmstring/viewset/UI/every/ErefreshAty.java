@@ -9,7 +9,9 @@ import com.lidroid.xutils.ViewUtils;
 import com.lidroid.xutils.view.annotation.ViewInject;
 import com.zzmstring.viewset.Base.BaseActivity;
 import com.zzmstring.viewset.R;
+import com.zzmstring.viewset.UI.PullToRefresh.DropAndDownListViewActivity;
 import com.zzmstring.viewset.UI.PullToRefresh.IosPullToRefreshAty;
+import com.zzmstring.viewset.UI.PullToRefresh.UltraPulltoRefreshActivity;
 import com.zzmstring.viewset.UI.RefreshAndLoadActivity;
 import com.zzmstring.viewset.UI.RetalsPullToRefreshActvity;
 import com.zzmstring.viewset.UI.every.refresh.ArefreshAty;
@@ -83,9 +85,10 @@ public class ErefreshAty extends BaseActivity {
     @Override
     public void initData() {
         bt1.setText("Retals");
-        bt2.setText("ReAndLo");
+        bt2.setText("UltraPull");
         bt3.setText("iosrefresh");
         bt4.setText("refresh");
+        bt5.setText("DropAndDown");
 
     }
 
@@ -95,6 +98,7 @@ public class ErefreshAty extends BaseActivity {
         bt2.setOnClickListener(this);
         bt3.setOnClickListener(this);
         bt4.setOnClickListener(this);
+        bt5.setOnClickListener(this);
 
     }
 
@@ -105,13 +109,16 @@ public class ErefreshAty extends BaseActivity {
                 skip(RetalsPullToRefreshActvity.class);
                 break;
             case R.id.bt2:
-                skip(RefreshAndLoadActivity.class);
+                skip(UltraPulltoRefreshActivity.class);
                 break;
             case R.id.bt3:
                 skip(IosPullToRefreshAty.class);
                 break;
             case R.id.bt4:
                 skip(ArefreshAty.class);
+                break;
+            case R.id.bt5:
+                skip(DropAndDownListViewActivity.class);
                 break;
 
         }
