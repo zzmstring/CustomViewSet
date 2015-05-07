@@ -112,17 +112,7 @@ public class RadarView extends View {
         float minlength = s/2;//短刻度线长度
         float maxlength = s;//长刻度线长度
 
-//        for(int i=0;i<24;i++){
-//            float fromX,toX;
-//            fromX=toX=s*i;
-//            if(i%4!=0){//与圆形重叠处不画刻度
-//                if(i%2!=0){
-//                    canvas.drawLine(fromX,-minlength,toX,minlength, linePaint);//绘制X轴短刻度
-//                }else{
-//                    canvas.drawLine(fromX,-maxlength,toX,maxlength, linePaint);//绘制X轴长刻度
-//                }
-//            }
-//        }
+
 
         canvas.restore();
 //        canvas.translate(pointX, 10);//设置相对竖线起始坐标
