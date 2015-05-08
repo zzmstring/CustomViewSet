@@ -115,18 +115,7 @@ public class RadarView extends View {
 
 
         canvas.restore();
-//        canvas.translate(pointX, 10);//设置相对竖线起始坐标
-//        for(int i=0;i<24;i++){
-//            float fromY,toY;
-//            fromY=toY=s*i;
-//            if(i%4!=0){
-//                if(i%2!=0){
-//                    canvas.drawLine(-minlength,fromY,minlength,toY, linePaint);//绘制Y短轴刻度
-//                }else{
-//                    canvas.drawLine(-maxlength,fromY,maxlength,toY, linePaint);//绘制Y长轴刻度
-//                }
-//            }
-//        }
+
 
     }
 }
