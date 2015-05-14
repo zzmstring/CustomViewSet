@@ -5,6 +5,7 @@ import android.graphics.BitmapShader;
 import android.graphics.Canvas;
 import android.graphics.ColorFilter;
 import android.graphics.Paint;
+import android.graphics.PixelFormat;
 import android.graphics.RectF;
 import android.graphics.Shader;
 import android.graphics.drawable.Drawable;
@@ -27,22 +28,39 @@ public class RoundImageDrawable extends Drawable {
         mPaint.setShader(bitmapShader);
     }
     @Override
+    public void setBounds(int left, int top, int right, int bottom)
+    {
+        super.setBounds(left, top, right, bottom);
+        rectF = new RectF(left, top, right, bottom);
+    }
+    @Override
     public void draw(Canvas canvas) {
-
+        canvas.drawRoundRect(rectF, 30, 30, mPaint);
+    }
+    @Override
+    public int getIntrinsicWidth()
+    {
+        return mBitmap.getWidth();
     }
 
     @Override
+    public int getIntrinsicHeight()
+    {
+        return mBitmap.getHeight();
+    }
+    @Override
     public void setAlpha(int i) {
+        mPaint.setAlpha(i);
 
     }
 
     @Override
     public void setColorFilter(ColorFilter colorFilter) {
-
+        mPaint.setColorFilter(colorFilter);
     }
 
     @Override
     public int getOpacity() {
-        return 0;
+        return PixelFormat.TRANSLUCENT;
     }
 }
