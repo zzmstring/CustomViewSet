@@ -76,16 +76,20 @@ public class EImageAty extends BaseActivity {
 
     @Override
     public void initData() {
-
+        bt1.setText("drawable");
     }
 
     @Override
     public void initListener() {
-
+        bt1.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-
+        switch (v.getId()){
+            case R.id.bt1:
+                skip(DrawableAty.class);
+                break;
+        }
     }
 }
