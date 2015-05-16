@@ -9,6 +9,7 @@ import com.lidroid.xutils.ViewUtils;
 import com.lidroid.xutils.view.annotation.ViewInject;
 import com.zzmstring.viewset.Base.BaseActivity;
 import com.zzmstring.viewset.R;
+import com.zzmstring.viewset.View.my.CircleImageDrawable;
 import com.zzmstring.viewset.View.my.RoundImageDrawable;
 
 /**
@@ -41,6 +42,7 @@ public class DrawableAty extends BaseActivity{
                 R.drawable.mv1);
 
         iv_1.setImageDrawable(new RoundImageDrawable(bitmap));
+        iv_2.setImageDrawable(new CircleImageDrawable(bitmap));
     }
 
     @Override
