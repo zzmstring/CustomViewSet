@@ -453,4 +453,11 @@
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">#fff</item>
     </style>
+
+
+    <style
+        name="Theme.Default.NoActionBar"
+        parent="@android:style/android:Theme.Holo.Light" >
+        <item name="android:windowBackground">@drawable/logo</item>
+    </style>
 </resources>

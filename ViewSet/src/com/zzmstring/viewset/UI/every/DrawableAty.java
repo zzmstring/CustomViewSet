@@ -42,7 +42,7 @@ public class DrawableAty extends BaseActivity{
 
         iv_1.setImageDrawable(new RoundImageDrawable(bitmap));
         iv_2.setImageDrawable(new CircleImageDrawable(bitmap));
-        mes_1.setMessageReaded(true);
+        mes_1.setMessageReaded(false);
     }
 
     @Override

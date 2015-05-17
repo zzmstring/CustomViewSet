@@ -97,7 +97,7 @@
         <activity android:name="com.zzmstring.viewset.UI.every.ProgressAty.Radar1Aty"/>
         <activity android:name="com.zzmstring.viewset.UI.every.viewpager.SpringIndAty"/>
         <activity android:name="com.zzmstring.viewset.UI.every.DiaAty.MessBarAty"/>
-        <activity android:name="com.zzmstring.viewset.UI.every.DrawableAty"/>
+        <activity android:name="com.zzmstring.viewset.UI.every.DrawableAty" android:theme="@style/Theme.Default.NoActionBar"/>
     </application>
 
 </manifest>

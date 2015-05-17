@@ -27,8 +27,16 @@
                 android:id="@+id/mes_1"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:background="@drawable/mv1" >
-
+                android:background="@color/abs__background_holo_dark" >
+                <ImageView
+                    android:id="@+id/id_msg_item_icon"
+                    android:layout_width="30dp"
+                    android:src="@drawable/mv1"
+                    android:layout_height="wrap_content"
+                    android:duplicateParentState="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    />
 
 
             </com.zzmstring.viewset.View.my.MessageListItem>
