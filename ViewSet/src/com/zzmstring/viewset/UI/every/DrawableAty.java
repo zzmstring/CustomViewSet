@@ -10,6 +10,7 @@ import com.lidroid.xutils.view.annotation.ViewInject;
 import com.zzmstring.viewset.Base.BaseActivity;
 import com.zzmstring.viewset.R;
 import com.zzmstring.viewset.View.my.CircleImageDrawable;
+import com.zzmstring.viewset.View.my.MessageListItem;
 import com.zzmstring.viewset.View.my.RoundImageDrawable;
 
 /**
@@ -20,10 +21,8 @@ public class DrawableAty extends BaseActivity{
     ImageView iv_1;
     @ViewInject(R.id.iv_2)
     ImageView iv_2;
-    @ViewInject(R.id.iv_3)
-    ImageView iv_3;
-    @ViewInject(R.id.iv_4)
-    ImageView iv_4;
+    @ViewInject(R.id.mes_1)
+    MessageListItem mes_1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +42,7 @@ public class DrawableAty extends BaseActivity{
 
         iv_1.setImageDrawable(new RoundImageDrawable(bitmap));
         iv_2.setImageDrawable(new CircleImageDrawable(bitmap));
+        mes_1.setMessageReaded(true);
     }
 
     @Override
