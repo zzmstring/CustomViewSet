@@ -5,9 +5,12 @@ import android.support.v4.view.GestureDetectorCompat;
 import android.support.v4.view.ViewCompat;
 import android.support.v4.widget.ViewDragHelper;
 import android.util.AttributeSet;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
+
+import com.zzmstring.viewset.Utils.ExLog;
 
 /**
  * Created by zzmstring on 2015/5/12.
@@ -19,17 +22,37 @@ public class MyLayout2 extends FrameLayout {
     private RelativeLayout topView;
     private RelativeLayout contentView;
     private Status status = Status.Close;
+    private boolean shouldIntercept = true;
+    private int topViewHeight;
+    private int dragRange;
+    private int contentTop;
+    private int topViewWid;
+
 
     public MyLayout2(Context context) {
         this(context, null);
     }
-    public MyLayout2(Context context,AttributeSet attributeSet){
+
+    public MyLayout2(Context context, AttributeSet attributeSet) {
         this(context, attributeSet, 0);
         this.context = context;
     }
-    public MyLayout2(Context context,AttributeSet attrs, int defStyle){
+
+    public MyLayout2(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         dragHelper = ViewDragHelper.create(this, dragHelperCallback);
+    }
+
+    @Override
+    protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
+        super.onLayout(changed, left, top, right, bottom);
+//        ExLog.l(ExLog.getCurrentMethodName());
+        dragRange = getHeight();
+        topViewHeight = topView.getHeight();
+        topViewWid=topView.getWidth();
+        contentView.layout(0,contentTop,topViewWid,contentTop+dragRange);
+        topView.layout(0,0-topViewHeight/2+contentTop/2,topViewWid,topViewHeight/2+contentTop/2);
+
     }
 
     @Override
@@ -38,9 +61,20 @@ public class MyLayout2 extends FrameLayout {
         if (getChildCount() < 2) {
             throw new RuntimeException("Content view must contains two child views at least.");
         }
-        topView= (RelativeLayout) getChildAt(0);
-        contentView= (RelativeLayout) getChildAt(1);
+        topView = (RelativeLayout) getChildAt(0);
+        contentView = (RelativeLayout) getChildAt(1);
     }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent e) {
+        try {
+            dragHelper.processTouchEvent(e);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return true;
+    }
+
     @Override
     public void computeScroll() {
 
@@ -49,27 +83,89 @@ public class MyLayout2 extends FrameLayout {
         }
     }
 
-    private ViewDragHelper.Callback dragHelperCallback=new ViewDragHelper.Callback() {
+    @Override
+    public boolean onInterceptTouchEvent(MotionEvent ev) {
+
+        try {
+
+            boolean intercept = shouldIntercept && dragHelper.shouldInterceptTouchEvent(ev);
+            return intercept;
+        } catch (NullPointerException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    private ViewDragHelper.Callback dragHelperCallback = new ViewDragHelper.Callback() {
         @Override
         public boolean tryCaptureView(View view, int i) {
-            return false;
+            if (view == topView) {
+                dragHelper.captureChildView(contentView, i);
+                return false;
+            }
+            return view == contentView;
         }
+
+        @Override
+        public int getViewVerticalDragRange(View child) {
+
+            return dragRange;
+        }
+
         @Override
         public int clampViewPositionHorizontal(View child, int left, int dx) {
             return 0;
         }
+
+        @Override
+        public int clampViewPositionVertical(View child, int top, int dy) {
+//            ExLog.l(ExLog.getCurrentMethodName()+Math.min(topViewHeight, Math.max(top, getPaddingTop())));
+            return Math.min(topViewHeight, Math.max(top, getPaddingTop()));
+
+        }
+
         @Override
         public void onViewReleased(View releasedChild, float xvel, float yvel) {
             super.onViewReleased(releasedChild, xvel, yvel);
+            int top;
+            if (yvel > 0 || contentTop > topViewHeight) {
+                top = topViewHeight + getPaddingTop();
+            } else {
+                top = getPaddingTop();
+            }
+//            ExLog.l(ExLog.getCurrentMethodName()+top);
+            dragHelper.settleCapturedViewAt(releasedChild.getLeft(), top);
+            postInvalidate();
 
         }
+
         @Override
         public void onViewPositionChanged(View changedView, int left, int top,
                                           int dx, int dy) {
+            contentTop = top;
+//            ExLog.l(ExLog.getCurrentMethodName()+top);
+            requestLayout();
+        }
+        @Override
+        public void onViewDragStateChanged(int state) {
+//            ExLog.l(ExLog.getCurrentMethodName());
+            // 1 -> 2 -> 0
+            if (state == ViewDragHelper.STATE_IDLE) {
+                // Change the panel state while the drag content view is idle.
+                if (contentTop > getPaddingTop() ) {
+                    status = Status.Open;
+                } else {
+                    status = Status.Close;
+                }
+            } else {
+                status = Status.Sliding;
+            }
 
+            super.onViewDragStateChanged(state);
         }
     };
+
     public enum Status {
-         Open, Close
+        Open, Close,Sliding
     }
 }

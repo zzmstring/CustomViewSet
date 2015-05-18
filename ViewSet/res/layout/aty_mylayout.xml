@@ -6,11 +6,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <RelativeLayout
+        android:background="@drawable/topbg"
         android:layout_width="match_parent"
-        android:layout_height="200dp">
+        android:layout_height="400dp">
 
         </RelativeLayout>
     <RelativeLayout
+        android:background="@drawable/contentbg"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 

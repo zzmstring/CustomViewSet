@@ -11,6 +11,7 @@ import com.zzmstring.viewset.Base.BaseActivity;
 import com.zzmstring.viewset.Base.MyApplication;
 import com.zzmstring.viewset.Bean.TestJob;
 import com.zzmstring.viewset.R;
+import com.zzmstring.viewset.UI.other.GanjiAty;
 
 import org.simple.eventbus.EventBus;
 
@@ -67,16 +68,19 @@ public class TestAty extends BaseActivity {
     @ViewInject(R.id.bt24)
     Button bt24;
     JobManager jobManager;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
+
     @Override
     public void initView() {
         setContentView(R.layout.activity_every);
         ViewUtils.inject(this);
-        jobManager= MyApplication.getApp().getJobManager();
+        jobManager = MyApplication.getApp().getJobManager();
     }
+
     @Override
     public void initData() {
         bt1.setText("andevent");
@@ -84,15 +88,17 @@ public class TestAty extends BaseActivity {
         bt3.setText("ganji");
 
     }
+
     @Override
     public void initListener() {
         bt1.setOnClickListener(this);
         bt2.setOnClickListener(this);
         bt3.setOnClickListener(this);
     }
+
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.bt1:
                 test1();
                 break;
@@ -100,14 +106,16 @@ public class TestAty extends BaseActivity {
                 test2();
                 break;
             case R.id.bt3:
-
+                skip(GanjiAty.class);
                 break;
         }
     }
-    private void test1(){
+
+    private void test1() {
         EventBus.getDefault().post("zzm.string", "my_tag");
     }
-    private void test2(){
+
+    private void test2() {
         jobManager.addJobInBackground(new TestJob("test"));
     }
 }
