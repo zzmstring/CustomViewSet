@@ -32,11 +32,14 @@ public class MessageListItem  extends RelativeLayout {
     {
         if (mMessgeReaded)
         {
+
             final int[] drawableState = super
                     .onCreateDrawableState(extraSpace + 1);
             mergeDrawableStates(drawableState, STATE_MESSAGE_READED);
             return drawableState;
         }
+
         return super.onCreateDrawableState(extraSpace);
+
     }
 }

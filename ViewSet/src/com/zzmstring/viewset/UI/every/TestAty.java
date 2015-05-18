@@ -81,12 +81,14 @@ public class TestAty extends BaseActivity {
     public void initData() {
         bt1.setText("andevent");
         bt2.setText("job");
+        bt3.setText("ganji");
 
     }
     @Override
     public void initListener() {
         bt1.setOnClickListener(this);
         bt2.setOnClickListener(this);
+        bt3.setOnClickListener(this);
     }
     @Override
     public void onClick(View v) {
@@ -96,6 +98,9 @@ public class TestAty extends BaseActivity {
                 break;
             case R.id.bt2:
                 test2();
+                break;
+            case R.id.bt3:
+
                 break;
         }
     }
