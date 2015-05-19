@@ -337,7 +337,7 @@ public class DragTopLayout extends FrameLayout {
             super.onViewReleased(releasedChild, xvel, yvel);
             // yvel > 0 Fling down || yvel < 0 Fling up
             int top;
-            if (yvel > 0 || contentTop > topViewHeight) {
+            if (yvel > 0 || contentTop > topViewHeight+getPaddingTop()) {
                 top = topViewHeight + getPaddingTop();
             } else {
                 top = getPaddingTop() + collapseOffset;

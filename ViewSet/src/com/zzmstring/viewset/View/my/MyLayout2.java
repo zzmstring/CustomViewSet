@@ -27,6 +27,7 @@ public class MyLayout2 extends FrameLayout {
     private int dragRange;
     private int contentTop;
     private int topViewWid;
+    private int tempDy;
 
 
     public MyLayout2(Context context) {
@@ -40,7 +41,7 @@ public class MyLayout2 extends FrameLayout {
 
     public MyLayout2(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        dragHelper = ViewDragHelper.create(this, dragHelperCallback);
+        dragHelper = ViewDragHelper.create(this, 1.0f,dragHelperCallback);
     }
 
     @Override
@@ -120,6 +121,8 @@ public class MyLayout2 extends FrameLayout {
         @Override
         public int clampViewPositionVertical(View child, int top, int dy) {
 //            ExLog.l(ExLog.getCurrentMethodName()+Math.min(topViewHeight, Math.max(top, getPaddingTop())));
+            tempDy=dy;
+            ExLog.l("dy="+dy);
             return Math.min(topViewHeight, Math.max(top, getPaddingTop()));
 
         }
@@ -127,12 +130,18 @@ public class MyLayout2 extends FrameLayout {
         @Override
         public void onViewReleased(View releasedChild, float xvel, float yvel) {
             super.onViewReleased(releasedChild, xvel, yvel);
-            int top;
-            if (yvel > 0 || contentTop > topViewHeight) {
+            int top = 0;
+            ExLog.l("yvel="+yvel);
+            if (yvel > 0 ||tempDy > 0) {
+                ExLog.l("contenttop="+contentTop);
                 top = topViewHeight + getPaddingTop();
-            } else {
+            }else if(yvel < 0||tempDy <= 0){
                 top = getPaddingTop();
+            }else {
+                top = contentTop > topViewHeight/2 ? topViewHeight + getPaddingTop() : getPaddingTop();
             }
+
+
 //            ExLog.l(ExLog.getCurrentMethodName()+top);
             dragHelper.settleCapturedViewAt(releasedChild.getLeft(), top);
             postInvalidate();
@@ -152,10 +161,10 @@ public class MyLayout2 extends FrameLayout {
             // 1 -> 2 -> 0
             if (state == ViewDragHelper.STATE_IDLE) {
                 // Change the panel state while the drag content view is idle.
-                if (contentTop > getPaddingTop() ) {
-                    status = Status.Open;
-                } else {
+                if (contentTop == getPaddingTop() ) {
                     status = Status.Close;
+                } else {
+                    status = Status.Open;
                 }
             } else {
                 status = Status.Sliding;

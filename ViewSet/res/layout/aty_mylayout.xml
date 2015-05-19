@@ -4,18 +4,29 @@
     xmlns:app="http://schemas.android.com/apk/res/com.zzmstring.viewset"
 
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="680dp">
+
     <RelativeLayout
         android:background="@drawable/topbg"
         android:layout_width="match_parent"
-        android:layout_height="400dp">
-
+        android:layout_height="300dp">
+        <Button
+            android:layout_alignParentBottom="true"
+            android:id="@+id/bt_1"
+            android:text="hhaha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
         </RelativeLayout>
     <RelativeLayout
         android:background="@drawable/contentbg"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <Button
 
+            android:id="@+id/bt_2"
+            android:text="hahahhhhhhhhhh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </RelativeLayout>
 
 </com.zzmstring.viewset.View.my.MyLayout2>
