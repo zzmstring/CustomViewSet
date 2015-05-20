@@ -1,7 +1,6 @@
 package com.zzmstring.viewset.View.my;
 
 import android.content.Context;
-import android.support.v4.view.GestureDetectorCompat;
 import android.support.v4.view.ViewCompat;
 import android.support.v4.widget.ViewDragHelper;
 import android.util.AttributeSet;
@@ -9,37 +8,39 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 
 import com.zzmstring.viewset.Utils.ExLog;
 
 /**
  * Created by zzmstring on 2015/5/12.
  */
-public class MyLayout2 extends FrameLayout {
+public class MyLayout3 extends FrameLayout {
     private ViewDragHelper dragHelper;
     private int range;
     private Context context;
     private RelativeLayout topView;
-    private RelativeLayout contentView;
-    private Status status = Status.Close;
+    private ObservableScrollView  contentView;
+    private Status status =Status.Close;
     private boolean shouldIntercept = true;
     private int topViewHeight;
     private int dragRange;
     private int contentTop;
     private int topViewWid;
     private int tempDy;
+    private int scrollY;
 
 
-    public MyLayout2(Context context) {
+    public MyLayout3(Context context) {
         this(context, null);
     }
 
-    public MyLayout2(Context context, AttributeSet attributeSet) {
+    public MyLayout3(Context context, AttributeSet attributeSet) {
         this(context, attributeSet, 0);
         this.context = context;
     }
 
-    public MyLayout2(Context context, AttributeSet attrs, int defStyle) {
+    public MyLayout3(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         dragHelper = ViewDragHelper.create(this, 1.0f,dragHelperCallback);
     }
@@ -63,7 +64,14 @@ public class MyLayout2 extends FrameLayout {
             throw new RuntimeException("Content view must contains two child views at least.");
         }
         topView = (RelativeLayout) getChildAt(0);
-        contentView = (RelativeLayout) getChildAt(1);
+        contentView = (ObservableScrollView ) getChildAt(1);
+        contentView.setScrollViewListener(new ScrollViewListener() {
+            @Override
+            public void onScrollChanged(ObservableScrollView scrollView, int x, int y, int oldx, int oldy) {
+                ExLog.l("x="+x+" y="+y+" oldx="+oldx+" oldy="+oldy);
+                scrollY=y;
+            }
+        });
     }
 
     @Override
@@ -88,9 +96,25 @@ public class MyLayout2 extends FrameLayout {
     public boolean onInterceptTouchEvent(MotionEvent ev) {
 
         try {
-
+            ExLog.l("scrollY="+scrollY);
+//            if(status==Status.Close){
+//                ExLog.l("oninter  close");
+//                if(scrollY==0){
+//                    return true;
+//                }else {
+//                    return false;
+//                }
+//
+//            }
+            if(scrollY==0){
+                if(tempDy<0){
+                    return false;
+                }else {
+                    return true;
+                }
+            }
             boolean intercept = shouldIntercept && dragHelper.shouldInterceptTouchEvent(ev);
-//            return true;
+
             return intercept;
         } catch (NullPointerException e) {
             e.printStackTrace();

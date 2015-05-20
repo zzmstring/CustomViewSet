@@ -12,6 +12,7 @@ import com.zzmstring.viewset.Base.MyApplication;
 import com.zzmstring.viewset.Bean.TestJob;
 import com.zzmstring.viewset.R;
 import com.zzmstring.viewset.UI.other.GanjiAty;
+import com.zzmstring.viewset.UI.other.GanjiAty2;
 
 import org.simple.eventbus.EventBus;
 
@@ -86,7 +87,7 @@ public class TestAty extends BaseActivity {
         bt1.setText("andevent");
         bt2.setText("job");
         bt3.setText("ganji");
-
+        bt4.setText("ganji2");
     }
 
     @Override
@@ -94,6 +95,7 @@ public class TestAty extends BaseActivity {
         bt1.setOnClickListener(this);
         bt2.setOnClickListener(this);
         bt3.setOnClickListener(this);
+        bt4.setOnClickListener(this);
     }
 
     @Override
@@ -108,6 +110,10 @@ public class TestAty extends BaseActivity {
             case R.id.bt3:
                 skip(GanjiAty.class);
                 break;
+            case R.id.bt4:
+                skip(GanjiAty2.class);
+                break;
+            
         }
     }
 

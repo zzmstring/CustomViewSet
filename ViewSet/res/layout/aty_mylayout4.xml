@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.zzmstring.viewset.View.my.MyLayout2 xmlns:android="http://schemas.android.com/apk/res/android"
+<com.zzmstring.viewset.View.my.MyLayout3 xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res/com.zzmstring.viewset"
 
     android:layout_width="match_parent"
@@ -18,28 +18,23 @@
             android:text="hhaha" />
     </RelativeLayout>
 
-    <RelativeLayout
 
+    <com.zzmstring.viewset.View.my.ObservableScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
-        <ScrollView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <LinearLayout
+            <View
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_height="1080dp"
+                android:background="@drawable/contentbg" />
+        </LinearLayout>
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="680dp"
-                    android:background="@drawable/contentbg" />
-            </LinearLayout>
+    </com.zzmstring.viewset.View.my.ObservableScrollView>
 
-        </ScrollView>
 
-    </RelativeLayout>
-
-</com.zzmstring.viewset.View.my.MyLayout2>
+</com.zzmstring.viewset.View.my.MyLayout3>

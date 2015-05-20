@@ -13,7 +13,7 @@ import com.zzmstring.viewset.Utils.ExLog;
 /**
  * Created by zzmstring on 2015/5/18.
  */
-public class GanjiAty extends BaseActivity {
+public class GanjiAty2 extends BaseActivity {
     @ViewInject(R.id.bt_1)
     Button bt_1;
 
@@ -24,7 +24,7 @@ public class GanjiAty extends BaseActivity {
 
     @Override
     public void initView() {
-        setContentView(R.layout.aty_mylayout);
+        setContentView(R.layout.aty_mylayout4);
         ViewUtils.inject(this);
     }
 

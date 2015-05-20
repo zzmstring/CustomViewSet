@@ -99,6 +99,7 @@
         <activity android:name="com.zzmstring.viewset.UI.every.DiaAty.MessBarAty"/>
         <activity android:name="com.zzmstring.viewset.UI.every.DrawableAty" android:theme="@style/Theme.Default.NoActionBar"/>
         <activity android:name="com.zzmstring.viewset.UI.other.GanjiAty"/>
+        <activity android:name="com.zzmstring.viewset.UI.other.GanjiAty2"/>
     </application>
 
 </manifest>
