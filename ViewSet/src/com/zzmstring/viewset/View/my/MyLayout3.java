@@ -113,6 +113,12 @@ public class MyLayout3 extends FrameLayout {
                     return true;
                 }
             }
+
+
+
+
+
+
             boolean intercept = shouldIntercept && dragHelper.shouldInterceptTouchEvent(ev);
 
             return intercept;
