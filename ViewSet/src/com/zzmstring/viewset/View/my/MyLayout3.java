@@ -113,15 +113,9 @@ public class MyLayout3 extends FrameLayout {
                     return true;
                 }
             }
-
-
-
-
-
-
             boolean intercept = shouldIntercept && dragHelper.shouldInterceptTouchEvent(ev);
-
-            return intercept;
+            ExLog.l("拦截的是"+intercept);
+            return true;
         } catch (NullPointerException e) {
             e.printStackTrace();
         }
