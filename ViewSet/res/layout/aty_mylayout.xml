@@ -19,26 +19,11 @@
     </RelativeLayout>
 
     <RelativeLayout
-
+        android:background="@drawable/contentbg"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="680dp"
-                    android:background="@drawable/contentbg" />
-            </LinearLayout>
-
-        </ScrollView>
 
     </RelativeLayout>
 

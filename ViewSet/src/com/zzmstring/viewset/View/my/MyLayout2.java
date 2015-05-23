@@ -28,8 +28,6 @@ public class MyLayout2 extends FrameLayout {
     private int contentTop;
     private int topViewWid;
     private int tempDy;
-
-
     public MyLayout2(Context context) {
         this(context, null);
     }
@@ -38,24 +36,19 @@ public class MyLayout2 extends FrameLayout {
         this(context, attributeSet, 0);
         this.context = context;
     }
-
     public MyLayout2(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         dragHelper = ViewDragHelper.create(this, 1.0f,dragHelperCallback);
     }
-
     @Override
     protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
         super.onLayout(changed, left, top, right, bottom);
-//        ExLog.l(ExLog.getCurrentMethodName());
         dragRange = getHeight();
         topViewHeight = topView.getHeight();
         topViewWid=topView.getWidth();
         contentView.layout(0,contentTop,topViewWid,contentTop+dragRange);
         topView.layout(0,0-topViewHeight/2+contentTop/2,topViewWid,topViewHeight/2+contentTop/2);
-
     }
-
     @Override
     protected void onFinishInflate() {
         super.onFinishInflate();
@@ -65,7 +58,6 @@ public class MyLayout2 extends FrameLayout {
         topView = (RelativeLayout) getChildAt(0);
         contentView = (RelativeLayout) getChildAt(1);
     }
-
     @Override
     public boolean onTouchEvent(MotionEvent e) {
         try {
@@ -75,29 +67,22 @@ public class MyLayout2 extends FrameLayout {
         }
         return true;
     }
-
     @Override
     public void computeScroll() {
-
         if (dragHelper.continueSettling(true)) {
             ViewCompat.postInvalidateOnAnimation(this);
         }
     }
-
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
-
         try {
-
             boolean intercept = shouldIntercept && dragHelper.shouldInterceptTouchEvent(ev);
-//            return true;
             return intercept;
         } catch (NullPointerException e) {
             e.printStackTrace();
         }
         return false;
     }
-
     private ViewDragHelper.Callback dragHelperCallback = new ViewDragHelper.Callback() {
         @Override
         public boolean tryCaptureView(View view, int i) {
@@ -107,27 +92,21 @@ public class MyLayout2 extends FrameLayout {
             }
             return view == contentView;
         }
-
         @Override
         public int getViewVerticalDragRange(View child) {
-
             return dragRange;
         }
-
         @Override
         public int clampViewPositionHorizontal(View child, int left, int dx) {
             return 0;
         }
-
         @Override
         public int clampViewPositionVertical(View child, int top, int dy) {
 //            ExLog.l(ExLog.getCurrentMethodName()+Math.min(topViewHeight, Math.max(top, getPaddingTop())));
             tempDy=dy;
             ExLog.l("dy="+dy);
             return Math.min(topViewHeight, Math.max(top, getPaddingTop()));
-
         }
-
         @Override
         public void onViewReleased(View releasedChild, float xvel, float yvel) {
             super.onViewReleased(releasedChild, xvel, yvel);
@@ -141,14 +120,10 @@ public class MyLayout2 extends FrameLayout {
             }else {
                 top = contentTop > topViewHeight/2 ? topViewHeight + getPaddingTop() : getPaddingTop();
             }
-
-
 //            ExLog.l(ExLog.getCurrentMethodName()+top);
             dragHelper.settleCapturedViewAt(releasedChild.getLeft(), top);
             postInvalidate();
-
         }
-
         @Override
         public void onViewPositionChanged(View changedView, int left, int top,
                                           int dx, int dy) {
@@ -170,7 +145,6 @@ public class MyLayout2 extends FrameLayout {
             } else {
                 status = Status.Sliding;
             }
-
             super.onViewDragStateChanged(state);
         }
     };

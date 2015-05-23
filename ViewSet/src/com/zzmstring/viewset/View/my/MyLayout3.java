@@ -29,7 +29,8 @@ public class MyLayout3 extends FrameLayout {
     private int topViewWid;
     private int tempDy;
     private int scrollY;
-
+    private float lastY=0;
+    private float hahaY=0;
 
     public MyLayout3(Context context) {
         this(context, null);
@@ -72,6 +73,19 @@ public class MyLayout3 extends FrameLayout {
                 scrollY=y;
             }
         });
+        contentView.setOnTouchListener(new OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                if(motionEvent.getAction()==MotionEvent.ACTION_MOVE){
+                    float curY=motionEvent.getY();
+                    ExLog.l("hahah"+(curY-lastY));
+                    hahaY=curY-lastY;
+                    lastY=curY;
+
+                }
+                return false;
+            }
+        });
     }
 
     @Override
@@ -107,7 +121,10 @@ public class MyLayout3 extends FrameLayout {
 //
 //            }
             if(scrollY==0){
-                if(tempDy<0){
+                if(tempDy<=-1){
+                    if(hahaY>0){
+                        return true;
+                    }
                     ExLog.l("未拦截");
                     return false;
                 }else {
@@ -115,6 +132,7 @@ public class MyLayout3 extends FrameLayout {
                     return true;
                 }
             }
+
             boolean intercept = shouldIntercept && dragHelper.shouldInterceptTouchEvent(ev);
             ExLog.l("拦截的是"+intercept);
             return false;

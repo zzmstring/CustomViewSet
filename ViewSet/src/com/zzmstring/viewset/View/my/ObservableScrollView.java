@@ -2,6 +2,7 @@ package com.zzmstring.viewset.View.my;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import android.view.MotionEvent;
 import android.widget.ScrollView;
 
 /**
@@ -25,6 +26,12 @@ public class ObservableScrollView extends ScrollView {
 
     public void setScrollViewListener(ScrollViewListener scrollViewListener) {
         this.scrollViewListener = scrollViewListener;
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent ev) {
+
+        return super.onTouchEvent(ev);
     }
 
     @Override
