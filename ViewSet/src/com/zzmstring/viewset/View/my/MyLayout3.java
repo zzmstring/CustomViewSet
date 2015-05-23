@@ -123,6 +123,7 @@ public class MyLayout3 extends FrameLayout {
             if(scrollY==0){
                 if(tempDy<=-1){
                     if(hahaY>0){
+                        ExLog.l("拦截");
                         return true;
                     }
                     ExLog.l("未拦截");
@@ -167,6 +168,7 @@ public class MyLayout3 extends FrameLayout {
         public int clampViewPositionVertical(View child, int top, int dy) {
 //            ExLog.l(ExLog.getCurrentMethodName()+Math.min(topViewHeight, Math.max(top, getPaddingTop())));
             tempDy=dy;
+            hahaY=dy;
             ExLog.l("dy="+dy);
             return Math.min(topViewHeight, Math.max(top, getPaddingTop()));
 
