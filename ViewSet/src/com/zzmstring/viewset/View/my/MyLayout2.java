@@ -1,6 +1,7 @@
 package com.zzmstring.viewset.View.my;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.v4.view.GestureDetectorCompat;
 import android.support.v4.view.ViewCompat;
 import android.support.v4.widget.ViewDragHelper;
@@ -10,6 +11,7 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 
+import com.nineoldandroids.view.ViewHelper;
 import com.zzmstring.viewset.Utils.ExLog;
 
 /**
@@ -28,6 +30,7 @@ public class MyLayout2 extends FrameLayout {
     private int contentTop;
     private int topViewWid;
     private int tempDy;
+    private View topTopView;
     public MyLayout2(Context context) {
         this(context, null);
     }
@@ -39,6 +42,7 @@ public class MyLayout2 extends FrameLayout {
     public MyLayout2(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         dragHelper = ViewDragHelper.create(this, 1.0f,dragHelperCallback);
+        topTopView=new View(context);
     }
     @Override
     protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
@@ -46,6 +50,7 @@ public class MyLayout2 extends FrameLayout {
         dragRange = getHeight();
         topViewHeight = topView.getHeight();
         topViewWid=topView.getWidth();
+
         contentView.layout(0,contentTop,topViewWid,contentTop+dragRange);
         topView.layout(0,0-topViewHeight/2+contentTop/2,topViewWid,topViewHeight/2+contentTop/2);
     }
@@ -57,6 +62,13 @@ public class MyLayout2 extends FrameLayout {
         }
         topView = (RelativeLayout) getChildAt(0);
         contentView = (RelativeLayout) getChildAt(1);
+        int viewcount=topView.getChildCount();
+
+        topTopView.setLayoutParams(topView.getLayoutParams());
+        topTopView.setBackgroundColor(Color.BLACK);
+        int index = viewcount==0 ? 0 : viewcount ;
+        topView.removeAllViews();
+        topView.addView(topTopView,index);
     }
     @Override
     public boolean onTouchEvent(MotionEvent e) {
@@ -128,6 +140,7 @@ public class MyLayout2 extends FrameLayout {
         public void onViewPositionChanged(View changedView, int left, int top,
                                           int dx, int dy) {
             contentTop = top;
+            animate(contentTop);
 //            ExLog.l(ExLog.getCurrentMethodName()+top);
             requestLayout();
         }
@@ -152,4 +165,10 @@ public class MyLayout2 extends FrameLayout {
     public enum Status {
         Open, Close,Sliding
     }
+    private void animate(int t){
+        float percent =1.0f - (float) t / topViewHeight;
+
+        ViewHelper.setAlpha(topTopView,percent);
+    }
+
 }

@@ -14,8 +14,7 @@ import com.zzmstring.viewset.Utils.ExLog;
  * Created by zzmstring on 2015/5/18.
  */
 public class GanjiAty extends BaseActivity {
-    @ViewInject(R.id.bt_1)
-    Button bt_1;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,16 +29,14 @@ public class GanjiAty extends BaseActivity {
 
     @Override
     public void initListener() {
-        bt_1.setOnClickListener(this);
+
 
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.bt_1:
-                ExLog.l("点击了bt1");
-                break;
+
 
 
         }
