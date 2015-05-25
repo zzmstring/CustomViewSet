@@ -67,7 +67,7 @@ public class MyLayout2 extends FrameLayout {
         topTopView.setLayoutParams(topView.getLayoutParams());
         topTopView.setBackgroundColor(Color.BLACK);
         int index = viewcount==0 ? 0 : viewcount ;
-        topView.removeAllViews();
+
         topView.addView(topTopView,index);
     }
     @Override
