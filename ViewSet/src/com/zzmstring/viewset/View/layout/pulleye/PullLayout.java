@@ -15,6 +15,7 @@ import com.nineoldandroids.animation.Animator.AnimatorListener;
 import com.nineoldandroids.animation.ObjectAnimator;
 import com.nineoldandroids.view.ViewHelper;
 import com.zzmstring.viewset.R;
+import com.zzmstring.viewset.Utils.ExLog;
 
 public class PullLayout extends ScrollView {
 
@@ -167,15 +168,22 @@ public class PullLayout extends ScrollView {
 
     private void animateScroll(int t) {
         float percent = (float) t / range;
+        ExLog.l("percent>>"+percent);
         ViewHelper.setTranslationY(rl_top, t);
+        ExLog.l("t>>"+t);
         ViewHelper.setTranslationY(ll_content, tvHeight * percent);
         ViewHelper.setScaleX(tv, 2 - percent);
         ViewHelper.setScaleY(tv, 2 - percent);
+        ExLog.l("2 - percent>>"+(2 - percent));
         ViewHelper.setTranslationX(tv, tvWidth * (1 - percent) / 2f);
+        ExLog.l("tvWidth * (1 - percent) / 2f>>"+(tvWidth * (1 - percent) / 2f));
         ViewHelper.setTranslationY(tv, t + tvHeight * (1 - percent) / 2f);
+
         ViewHelper.setTranslationY(ev, -t / 2);
+        ExLog.l("-t / 2>>"+(-t / 2));
         ViewHelper.setTranslationY(ll_weather, -t / 2);
         ev.setRadius((int) (range * 0.25f * (1 - percent)));
+        ExLog.l("1 - percent>>"+(1 - percent));
         tv.setTextColor(evaluate(percent, Color.WHITE, Color.BLACK));
     }
 
