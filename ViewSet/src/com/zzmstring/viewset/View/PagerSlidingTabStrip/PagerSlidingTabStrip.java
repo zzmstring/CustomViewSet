@@ -40,6 +40,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.zzmstring.viewset.R;
+import com.zzmstring.viewset.Utils.ExLog;
 
 import java.util.Locale;
 
@@ -295,10 +296,12 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
 
 		if (position > 0 || offset > 0) {
 			newScrollX -= scrollOffset;
+            ExLog.l("newScrollx>>"+newScrollX);
 		}
 
 		if (newScrollX != lastScrollX) {
 			lastScrollX = newScrollX;
+            ExLog.l("lastScrollX>>"+lastScrollX);
 			scrollTo(newScrollX, 0);
 		}
 
