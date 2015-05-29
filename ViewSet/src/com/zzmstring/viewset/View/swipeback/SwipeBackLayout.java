@@ -28,6 +28,8 @@ import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.ScrollView;
 
+import com.zzmstring.viewset.Utils.ExLog;
+
 /**
  * Swipe or Pull to finish a Activity.
  * <p/>
@@ -233,8 +235,10 @@ public class SwipeBackLayout extends ViewGroup {
                 return verticalDragRange;
             case LEFT:
             case RIGHT:
+                ExLog.l("horizontalDragRange>>"+horizontalDragRange);
                 return horizontalDragRange;
             default:
+                ExLog.l("verticalDragRange>>"+verticalDragRange);
                 return verticalDragRange;
         }
     }
