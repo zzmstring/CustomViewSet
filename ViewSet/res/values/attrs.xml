@@ -390,4 +390,9 @@
         </attr>
         <attr name="bga_sil_springDistance" format="dimension" />
     </declare-styleable>
+
+    <declare-styleable name="BGAMoocStyleRefreshView">
+        <attr name="mv_ultimateColor" format="reference|color"/>
+        <attr name="mv_originalImg" format="reference" />
+    </declare-styleable>
 </resources>
