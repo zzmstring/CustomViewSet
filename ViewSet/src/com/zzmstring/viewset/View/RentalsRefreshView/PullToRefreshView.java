@@ -17,6 +17,7 @@ import android.widget.AbsListView;
 import android.widget.ImageView;
 
 import com.zzmstring.viewset.R;
+import com.zzmstring.viewset.Utils.ExLog;
 import com.zzmstring.viewset.Utils.UIUtils;
 import com.zzmstring.viewset.View.RentalsRefreshView.refresh_view.BaseRefreshView;
 import com.zzmstring.viewset.View.RentalsRefreshView.refresh_view.SunRefreshView;
@@ -388,7 +389,7 @@ public class PullToRefreshView extends ViewGroup {
         int top = getPaddingTop();
         int right = getPaddingRight();
         int bottom = getPaddingBottom();
-
+        ExLog.l("height>"+height+"width>"+width+"left>"+left+"top>"+top+"right>"+right+"bottom>"+bottom);
         mTarget.layout(left, top + mCurrentOffsetTop, left + width - right, top + height - bottom + mCurrentOffsetTop);
         mRefreshView.layout(left, top, left + width - right, top + height - bottom);
     }
