@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup.LayoutParams;
 
 import com.zzmstring.viewset.R;
+import com.zzmstring.viewset.Utils.ExLog;
 
 
 /**
@@ -232,7 +233,7 @@ public class PullWidget extends View{
 	private  void measureDraw(int width, int height){
 		centerPoint.x = width / 2;
 		centerPoint.y = height / 2;
-		
+        ExLog.l("centerPoint.x>>"+centerPoint.x+"centerPoint.y>"+centerPoint.y );
 		topBound.left = centerPoint.x - minimumContentHeight / 2;
 		topBound.top = (minimumHeight - minimumContentHeight) / 2;
 		topBound.right = topBound.left + minimumContentHeight;
