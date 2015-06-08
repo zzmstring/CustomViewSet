@@ -335,6 +335,7 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
 
 			lineLeft = (currentPositionOffset * nextTabLeft + (1f - currentPositionOffset) * lineLeft);
 			lineRight = (currentPositionOffset * nextTabRight + (1f - currentPositionOffset) * lineRight);
+
 		}
 
 		canvas.drawRect(lineLeft, height - indicatorHeight, lineRight, height, rectPaint);
