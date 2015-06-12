@@ -23,6 +23,8 @@ import android.view.View;
 import android.view.animation.TranslateAnimation;
 import android.widget.ScrollView;
 
+import com.zzmstring.viewset.Utils.ExLog;
+
 /**
  * 有弹性的ScrollView 实现下拉弹回和上拉弹回<br>
  * 
@@ -96,6 +98,7 @@ public class KJScrollView extends ScrollView {
         if (contentView == null)
             return;
         // ScrollView中的唯一子控件的位置信息, 这个位置信息在整个控件的生命周期中保持不变
+        ExLog.l("l>"+contentView.getLeft()+"t>"+contentView.getTop()+"b>"+contentView.getBottom());
         originalRect.set(contentView.getLeft(), contentView.getTop(),
                 contentView.getRight(), contentView.getBottom());
     }
