@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.animation.TranslateAnimation;
 import android.widget.ScrollView;
 
+import com.zzmstring.viewset.Utils.ExLog;
+
 /**
  * 可以拖动的ScrollView
  *
@@ -51,6 +53,7 @@ public class CustomerScrollView extends ScrollView {
 		switch (action) {
 		case MotionEvent.ACTION_DOWN:
 			y = ev.getY();
+            ExLog.l("y>"+y);
 			break;
 		case MotionEvent.ACTION_UP:
 			if (isNeedAnimation()) {
@@ -61,6 +64,8 @@ public class CustomerScrollView extends ScrollView {
 		case MotionEvent.ACTION_MOVE:
 			final float preY = y;
 			float nowY = ev.getY();
+            ExLog.l("preY>"+preY);
+            ExLog.l("nowY>"+nowY);
 			/**
 			 * size=4 表示 拖动的距离为屏幕的高度的1/4
 			 */
@@ -69,6 +74,7 @@ public class CustomerScrollView extends ScrollView {
 			// scrollBy(0, deltaY);
 
 			y = nowY;
+
 			if (isNeedMove()) {
 				if (normal.isEmpty()) {
 					normal.set(inner.getLeft(), inner.getTop(),
@@ -80,6 +86,7 @@ public class CustomerScrollView extends ScrollView {
 				// 移动布局
 				inner.layout(inner.getLeft(), yy, inner.getRight(),
 						inner.getBottom() - deltaY);
+                ExLog.l("Left>"+inner.getLeft()+"right>"+inner.getRight()+"bottom>"+inner.getBottom());
 			}
 			break;
 		default:
@@ -92,7 +99,9 @@ public class CustomerScrollView extends ScrollView {
 				normal.top);
 		ta.setDuration(200);
 		inner.startAnimation(ta);
+
 		inner.layout(normal.left, normal.top, normal.right, normal.bottom);
+        ExLog.l("Left>"+normal.left+"top>"+normal.top+"bottom>"+normal.bottom);
 		normal.setEmpty();
 	}
 
