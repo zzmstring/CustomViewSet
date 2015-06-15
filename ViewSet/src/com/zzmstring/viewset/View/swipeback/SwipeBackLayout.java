@@ -193,6 +193,7 @@ public class SwipeBackLayout extends ViewGroup {
         int childTop = getPaddingTop();
         int childRight = childLeft + childWidth;
         int childBottom = childTop + childHeight;
+        ExLog.l("childL>"+childLeft+"childTop>"+childTop+"childRight>"+childRight+"childBottom>"+childBottom);
         child.layout(childLeft, childTop, childRight, childBottom);
     }
 
