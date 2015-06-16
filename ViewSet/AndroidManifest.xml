@@ -101,6 +101,7 @@
         <activity android:name="com.zzmstring.viewset.UI.other.GanjiAty"/>
         <activity android:name="com.zzmstring.viewset.UI.other.GanjiAty2"/>
         <activity android:name="com.zzmstring.viewset.UI.every.DiaAty.DragDAty"/>
+        <activity android:name="com.zzmstring.viewset.UI.every.refresh.XListViewAty"/>
     </application>
 
 </manifest>
