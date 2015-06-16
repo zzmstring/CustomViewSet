@@ -18,6 +18,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.zzmstring.viewset.R;
+import com.zzmstring.viewset.Utils.ExLog;
 
 public class CategoryTabStrip extends HorizontalScrollView {
     private LayoutInflater mLayoutInflater;
@@ -80,6 +81,7 @@ public class CategoryTabStrip extends HorizontalScrollView {
         // 左右边界阴影效果
         left_edge = getResources().getDrawable(R.drawable.ic_category_left_edge);
         right_edge = getResources().getDrawable(R.drawable.ic_category_right_edge);
+
     }
 
     // 绑定与CategoryTabStrip控件对应的ViewPager控件，实现联动
