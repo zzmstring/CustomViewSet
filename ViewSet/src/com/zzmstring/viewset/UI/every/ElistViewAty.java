@@ -11,6 +11,7 @@ import com.lidroid.xutils.view.annotation.ViewInject;
 import com.zzmstring.viewset.Base.BaseActivity;
 import com.zzmstring.viewset.R;
 import com.zzmstring.viewset.UI.every.ListAty.SegmentControlAty;
+import com.zzmstring.viewset.UI.every.refresh.XListViewAty;
 import com.zzmstring.viewset.View.SegmentControl.SegmentControl;
 
 import butterknife.ButterKnife;
@@ -83,11 +84,13 @@ public class ElistViewAty extends BaseActivity {
     @Override
     public void initData() {
         bt1.setText("SHsegment");
+        bt2.setText("xlistview");
     }
 
     @Override
     public void initListener() {
         bt1.setOnClickListener(this);
+        bt2.setOnClickListener(this);
     }
 
     @Override
@@ -95,6 +98,9 @@ public class ElistViewAty extends BaseActivity {
         switch (v.getId()){
             case R.id.bt1:
                 skip(SegmentControlAty.class);
+                break;
+            case R.id.bt2:
+                skip(XListViewAty.class);
                 break;
         }
     }
